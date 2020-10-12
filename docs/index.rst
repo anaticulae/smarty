@@ -1,5 +1,10 @@
 Welcome to I am sooo smart
-=================================
+==========================
+
+.. toctree::
+  :maxdepth: 1
+
+  overview
 
 Progress
 --------
