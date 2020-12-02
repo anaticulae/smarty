@@ -7,6 +7,8 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import smarty.utils
+
 ABBREVIATION = """\
 ABM-Maßnahme
 ABS-System
@@ -22,6 +24,7 @@ PIN-Nummer
 RAM-Speicher
 SMS-Dienst
 """
+ABBREVIATION = smarty.utils.init(ABBREVIATION)
 
 DUPLICATED = """\
 angeblich sollen
@@ -37,6 +40,7 @@ runterreduzieren
 wahrscheinlich scheinen
 zusammenaddieren
 """
+DUPLICATED = smarty.utils.init(DUPLICATED)
 
 NOUN = """\
 Attentatsversuch
@@ -85,6 +89,7 @@ Zukunftsprognosen
 Zwangsexekution
 der Einzigste
 """
+NOUN = smarty.utils.init(NOUN)
 
 WORDHULL = """\
 Wirtschaftskreis
@@ -112,3 +117,4 @@ kommunaler Sektor
 landwirtschaftlicher Sektor
 Bankensektor
 """
+WORDHULL = smarty.utils.init(WORDHULL)

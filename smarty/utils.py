@@ -7,50 +7,6 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import smarty.utils
 
-NOT_REQUIRED = """\
-abblocken
-abklären
-abmildern
-abprüfen
-absegnen
-absenken
-absichern
-absinken
-abstoppen
-abstützen
-abtesten
-abzielen
-anbetreffen
-anheben
-ankaufen
-anschwellen
-ansteigen
-anwachsen
-aufaddieren
-auffülllen
-auflisten
-aufoktroyieren
-aufspalten
-aufsummieren
-aufzeigen
-ausborgen
-auseinanderklaffen
-ausleihen
-befüllen
-hochskalieren
-losstarten
-mit einbeziehen
-mit einschließen
-mithelfen
-verbuchen
-verfüllen
-vorankommen
-vorwarnen
-weglöschen
-zuliefern
-zuschicken
-überprüfen
-"""
-NOT_REQUIRED = smarty.utils.init(NOT_REQUIRED)
+def init(text: str) -> set:
+    return {item.lower() for item in text.splitlines() if item}

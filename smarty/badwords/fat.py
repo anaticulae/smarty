@@ -7,6 +7,8 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import smarty.utils
+
 FAT = """\
 aber
 abermals
@@ -250,3 +252,4 @@ zweifelsohne
 überhaupt
 übrigens
 """
+FAT = smarty.utils.init(FAT)
