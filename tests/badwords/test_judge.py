@@ -8,7 +8,11 @@
 # =============================================================================
 
 import german
+import power
+import serializeraw
 import utila
+import words.path
+import words.utils
 
 import smarty
 
@@ -25,3 +29,14 @@ def test_badword_judge():
 def test_badword_ratio_fat():
     ratio = smarty.ratio_fat(TEXT)
     assert ratio == utila.roundme(3 / len(TEXT))
+
+
+def test_master72_ratio_fat():
+    source = power.link(power.MASTER072_PDF)
+    headlines = words.path.headlines(source)
+    headlines = serializeraw.load_headlines(headlines)
+    text = words.path.text(source)
+    text = serializeraw.load_text(text, headlines=headlines)
+
+    ratio = smarty.ratio_fat_fromtext(text)
+    assert utila.near(ratio, 0.04, diff=0.01), ratio

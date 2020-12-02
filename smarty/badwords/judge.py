@@ -9,7 +9,9 @@
 
 import enum
 
+import german
 import utila
+import words.utils
 
 import smarty.badwords.adjective
 import smarty.badwords.fat
@@ -51,3 +53,12 @@ def ratio_fat(words: list) -> float:
     fat = [item for item in flat if item == BadWord.FAT]
     ratio = utila.roundme(len(fat) / len(words))
     return ratio
+
+
+def ratio_fat_fromtext(text) -> float:
+    collected = []
+    for _, sentence in words.utils.sentences(text):
+        splitted = german.split_words(items=sentence, validate_sentences=False)
+        collected.extend(splitted)
+    result = ratio_fat(collected)
+    return result

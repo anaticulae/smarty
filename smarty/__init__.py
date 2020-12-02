@@ -28,6 +28,7 @@ import os
 
 from smarty.badwords.judge import badwords_judge
 from smarty.badwords.judge import ratio_fat
+from smarty.badwords.judge import ratio_fat_fromtext
 
 __version__ = '0.0.0'
 
