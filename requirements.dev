@@ -7,4 +7,12 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+# split sentence
 german==0.11.5
+
+# load and visit sentences
+words==0.22.0
+
+# generate test resources
+power==1.0.0
+genex==0.3.0
