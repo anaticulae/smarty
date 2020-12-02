@@ -6,10 +6,11 @@
 # use or distribution is an offensive act against international law and may
 # be prosecuted under federal law. Its content is company confidential.
 #==============================================================================
+
 import utila
 import utila.cli
 
-from smarty import __version__
+import smarty
 
 COMMANDS = []  # add additional commands here
 
@@ -18,7 +19,7 @@ COMMANDS = []  # add additional commands here
 def main():
     parser = utila.cli.create_parser(
         COMMANDS,
-        version=__version__,
+        version=smarty.__version__,
         config=utila.ParserConfiguration(
             outputparameter=True,
             inputparameter=True,
