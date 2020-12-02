@@ -48,6 +48,9 @@ def ratio_fat(wordlist: list) -> float:
     """Determine count of `fat` words in list of `wordlist`."""
     if not wordlist:
         return None
+    # remove marks etc.
+    wordlist = [item for item in wordlist if isinstance(item, str)]
+    # judge word list
     bad = badwords_judge(wordlist, skip_empty=True)
     flat = utila.flatten(bad)
     fat = [item for item in flat if item == BadWord.FAT]

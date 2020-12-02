@@ -9,6 +9,7 @@
 
 import german
 import power
+import pytest
 import serializeraw
 import utila
 import words.path
@@ -27,16 +28,23 @@ def test_badword_judge():
 
 
 def test_badword_ratio_fat():
-    ratio = smarty.ratio_fat(TEXT)
-    assert ratio == utila.roundme(3 / len(TEXT))
+    text = [item for item in TEXT if isinstance(item, str)]
+    ratio = smarty.ratio_fat(text)
+    assert ratio == utila.roundme(3 / len(text))
 
 
-def test_master72_ratio_fat():
-    source = power.link(power.MASTER072_PDF)
+@pytest.mark.parametrize('source, expected', [
+    pytest.param(power.BACHELOR090_PDF, 0.01, id='bachelor90'),
+    pytest.param(power.BACHELOR128_PDF, 0.04, id='bachelor128'),
+    pytest.param(power.MASTER072_PDF, 0.05, id='master72'),
+    pytest.param(power.MASTER099_PDF, 0.02, id='master99'),
+    pytest.param(power.MASTER110_PDF, 0.02, id='master110'),
+])
+def test_document_ratio_fat(source, expected):
+    source = power.link(source)
     headlines = words.path.headlines(source)
     headlines = serializeraw.load_headlines(headlines)
     text = words.path.text(source)
     text = serializeraw.load_text(text, headlines=headlines)
-
     ratio = smarty.ratio_fat_fromtext(text)
-    assert utila.near(ratio, 0.04, diff=0.01), ratio
+    assert utila.near(ratio, expected, diff=0.01), ratio

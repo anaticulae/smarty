@@ -21,9 +21,11 @@ PACKAGE = smarty.PACKAGE
 power.setup(smarty.ROOT)
 
 RESOURCES = [
-    power.MASTER072_PDF,
     power.BACHELOR090_PDF,
     power.BACHELOR128_PDF,
+    power.MASTER072_PDF,
+    power.MASTER099_PDF,
+    power.MASTER110_PDF,
 ]
 
 WORKER = 8
