@@ -7,6 +7,9 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+# test environment
+utilatest==0.2.2
+
 # split sentence
 german==0.11.5
 
