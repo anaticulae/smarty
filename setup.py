@@ -51,6 +51,7 @@ if __name__ == "__main__":
         ],
         packages=[
             'smarty',
+            'smarty.badwords',
             'smarty.cli',
         ],
         entry_points={
