@@ -7,6 +7,17 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import german
+import words.utils
+
 
 def init(text: str) -> set:
     return {item.lower() for item in text.splitlines() if item}
+
+
+def words_fromtext(text) -> list:
+    collected = []
+    for _, sentence in words.utils.sentences(text):
+        splitted = german.split_words(items=sentence, validate_sentences=False)
+        collected.extend(splitted)
+    return collected

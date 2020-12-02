@@ -9,14 +9,13 @@
 
 import enum
 
-import german
 import utila
-import words.utils
 
 import smarty.badwords.adjective
 import smarty.badwords.fat
 import smarty.badwords.pleonasmen
 import smarty.badwords.prefix
+import smarty.utils
 
 
 class BadWord(enum.Enum):
@@ -59,9 +58,6 @@ def ratio_fat(wordlist: list) -> float:
 
 
 def ratio_fat_fromtext(text) -> float:
-    collected = []
-    for _, sentence in words.utils.sentences(text):
-        splitted = german.split_words(items=sentence, validate_sentences=False)
-        collected.extend(splitted)
+    collected = smarty.utils.words_fromtext(text)
     result = ratio_fat(collected)
     return result
