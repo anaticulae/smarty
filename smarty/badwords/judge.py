@@ -26,9 +26,9 @@ class BadWord(enum.Enum):
     PLEONASMEN = enum.auto()
 
 
-def badwords_judge(words: list, skip_empty: bool = False) -> list:
+def badwords_judge(wordlist: list, skip_empty: bool = False) -> list:
     result = []
-    for word in words:
+    for word in wordlist:
         current = set()
         if word in smarty.badwords.adjective.AVOID:
             current.add(BadWord.AVOID_ADJECTIVE)
@@ -44,14 +44,14 @@ def badwords_judge(words: list, skip_empty: bool = False) -> list:
     return result
 
 
-def ratio_fat(words: list) -> float:
-    """Determine count of `fat` words in list of `words`."""
-    if not words:
+def ratio_fat(wordlist: list) -> float:
+    """Determine count of `fat` words in list of `wordlist`."""
+    if not wordlist:
         return None
-    bad = badwords_judge(words, skip_empty=True)
+    bad = badwords_judge(wordlist, skip_empty=True)
     flat = utila.flatten(bad)
     fat = [item for item in flat if item == BadWord.FAT]
-    ratio = utila.roundme(len(fat) / len(words))
+    ratio = utila.roundme(len(fat) / len(wordlist))
     return ratio
 
 
