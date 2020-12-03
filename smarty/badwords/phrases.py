@@ -10,6 +10,7 @@
 import german
 import words.utils
 
+import smarty.serialize
 import smarty.utils
 
 NEGATIVE = """\
@@ -50,11 +51,16 @@ def phrases_search(sentence: str):
     return matched
 
 
-def phrases_fromtext(text):
+def phrases_fromtext(text) -> smarty.serialize.Phrases:
     result = []
     for page, number, sentence in words.utils.sentences(text, numbers=True):
         detected = phrases_search(sentence)
         if not detected:
             continue
-        result.append((page, number, detected))
+        result.append(
+            smarty.serialize.Phrase(
+                page=page,
+                sentence=number,
+                marked=detected,
+            ))
     return result

@@ -7,15 +7,10 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import serializeraw
+import docref.serialize
 
-import smarty.badwords.phrases
+Phrase = docref.serialize.DocRef
+Phrases = docref.serialize.DocRefs
 
-
-def work(text: str, headlines: str, pages: tuple = None) -> str:
-    headlines = serializeraw.load_headlines(headlines, pages=pages)
-    text = serializeraw.load_text(text, headlines=headlines, pages=pages)
-
-    parsed = smarty.badwords.phrases.phrases_fromtext(text)
-    dumped = smarty.serialize.dump_phrases(parsed)
-    return dumped
+dump_phrases = docref.serialize.dump_docref  # pylint:disable=C0103
+load_phrases = docref.serialize.load_docref  # pylint:disable=C0103

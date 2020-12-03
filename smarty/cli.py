@@ -12,7 +12,9 @@ import utila.cli
 
 import smarty
 
-COMMANDS = [
+DESCRIPTION = ''
+
+WORKPLAN = [
     utila.create_step(
         'phrases',
         inputs=[
@@ -24,18 +26,16 @@ COMMANDS = [
 ]
 
 
-@utila.saveme
 def main():
-    parser = utila.cli.create_parser(
-        COMMANDS,
-        version=smarty.__version__,
-        config=utila.ParserConfiguration(
-            outputparameter=True,
-            inputparameter=True,
+    utila.featurepack(
+        root=smarty.ROOT,
+        workplan=WORKPLAN,
+        featurepackage='smarty.features',
+        config=utila.FeaturePackConfig(
+            description=DESCRIPTION,
             multiprocessed=True,
+            name=smarty.PROCESS,
+            pages=True,
+            version=smarty.__version__,
         ),
     )
-    args = utila.parse(parser)
-    inputpath, output, _ = utila.sources(args)  # pylint:disable=W0612
-
-    return utila.SUCCESS
