@@ -15,9 +15,11 @@ def init(text: str) -> set:
     return {item.lower() for item in text.splitlines() if item}
 
 
-def words_fromtext(text) -> list:
+def words_fromtext(text, nomarks: bool = False) -> list:
     collected = []
     for _, sentence in words.utils.sentences(text):
         splitted = german.split_words(items=sentence, validate_sentences=False)
         collected.extend(splitted)
+    if nomarks:
+        collected = [item for item in collected if isinstance(item, str)]
     return collected
