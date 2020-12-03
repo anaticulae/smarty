@@ -13,9 +13,9 @@ import smarty.utils
 
 
 def count_words(text) -> dict:
-    words = smarty.utils.words_fromtext(text, nomarks=True)
+    wordlist = smarty.utils.words_fromtext(text, nomarks=True)
     collected = collections.defaultdict(int)
-    for word in words:
+    for word in wordlist:
         collected[word.lower()] += 1
     result = dict(collected)  # enable KeyError
     return result
