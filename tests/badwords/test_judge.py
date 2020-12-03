@@ -10,12 +10,10 @@
 import german
 import power
 import pytest
-import serializeraw
 import utila
-import words.path
-import words.utils
 
 import smarty
+import tests
 
 TEXT = german.split_words("""Die Registrierung und Protokollierung
 sollte jedoch nicht allzu verzögert erfolgen, um ein möglichst genaues
@@ -41,10 +39,6 @@ def test_badword_ratio_fat():
     pytest.param(power.MASTER110_PDF, 0.02, id='master110'),
 ])
 def test_document_ratio_fat(source, expected):
-    source = power.link(source)
-    headlines = words.path.headlines(source)
-    headlines = serializeraw.load_headlines(headlines)
-    text = words.path.text(source)
-    text = serializeraw.load_text(text, headlines=headlines)
+    text = tests.load_text(source)
     ratio = smarty.ratio_fat_fromtext(text)
     assert utila.near(ratio, expected, diff=0.01), ratio

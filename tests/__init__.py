@@ -6,3 +6,17 @@
 # use or distribution is an offensive act against international law and may
 # be prosecuted under federal law. Its content is company confidential.
 #==============================================================================
+
+import iamraw
+import power
+import serializeraw
+import words.path
+
+
+def load_text(source: str) -> iamraw.PageContentTexts:
+    source = power.link(source)
+    headlines = words.path.headlines(source)
+    headlines = serializeraw.load_headlines(headlines)
+    text = words.path.text(source)
+    text = serializeraw.load_text(text, headlines=headlines)
+    return text
