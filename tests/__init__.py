@@ -7,10 +7,16 @@
 # be prosecuted under federal law. Its content is company confidential.
 #==============================================================================
 
+import functools
+
 import iamraw
 import power
 import serializeraw
+import utilatest
 import words.path
+
+import smarty
+import smarty.cli
 
 
 def load_text(source: str) -> iamraw.PageContentTexts:
@@ -20,3 +26,18 @@ def load_text(source: str) -> iamraw.PageContentTexts:
     text = words.path.text(source)
     text = serializeraw.load_text(text, headlines=headlines)
     return text
+
+
+run = functools.partial(  #pylint:disable=C0103
+    utilatest.run_command,
+    main=smarty.cli.main,
+    process=smarty.PROCESS,
+    success=True,
+)
+
+fail = functools.partial(  #pylint:disable=C0103
+    utilatest.run_command,
+    main=smarty.cli.main,
+    process=smarty.PROCESS,
+    success=False,
+)
