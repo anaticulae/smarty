@@ -12,7 +12,16 @@ import utila.cli
 
 import smarty
 
-COMMANDS = []  # add additional commands here
+COMMANDS = [
+    utila.create_step(
+        'phrases',
+        inputs=[
+            utila.ResultFile('words', 'word_result'),
+            utila.ResultFile('words', 'headlines_headlines'),
+        ],
+        output=('detected',),
+    ),
+]
 
 
 @utila.saveme
@@ -23,6 +32,7 @@ def main():
         config=utila.ParserConfiguration(
             outputparameter=True,
             inputparameter=True,
+            multiprocessed=True,
         ),
     )
     args = utila.parse(parser)
