@@ -7,24 +7,10 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import power
+import utila
 
 import smarty
-import smarty.path
-import tests
 
 
-def test_phrases_fromtext_bachelor128():
-    source = power.BACHELOR128_PDF
-    text = tests.load_text(source)
-
-    detected = smarty.phrases_fromtext(text)
-    assert len(detected) >= 9
-
-
-def test_phrases_master110(testdir, monkeypatch):
-    source = power.link(power.MASTER110_PDF)
-    tests.run(f'-i {source} --phrases', monkeypatch=monkeypatch)
-    path = smarty.path.smarty_phrases(testdir.tmpdir)
-    loaded = smarty.serialize.load_phrases(path)
-    assert loaded
+def smarty_phrases(path: str, prefix: str = '') -> str:
+    return utila.pathconnector(path, smarty.PROCESS, 'phrases_detected', prefix)

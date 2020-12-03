@@ -18,6 +18,9 @@ Blickfeld der Öffentlichkeit
 Ideen gesät
 Schreckgespenst betrachtet
 auf den Punkt gebracht
+kurz erwähnt
+spielt im Bereich
+Gesamtpaket
 bereits heute
 breites Spektrum
 eine immense Zahl

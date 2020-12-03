@@ -26,6 +26,7 @@ class Advice:
 
 import os
 
+import smarty.path
 from smarty.badwords.judge import badwords_judge
 from smarty.badwords.judge import ratio_fat
 from smarty.badwords.judge import ratio_fat_fromtext
