@@ -8,12 +8,14 @@
 # =============================================================================
 
 import power
+import utilatest
 
 import smarty
 import smarty.path
 import tests
 
 
+@utilatest.longrun
 def test_phrases_fromtext_bachelor128():
     source = power.BACHELOR128_PDF
     text = tests.load_text(source)
@@ -22,6 +24,7 @@ def test_phrases_fromtext_bachelor128():
     assert len(detected) >= 9
 
 
+@utilatest.longrun
 def test_phrases_master110(testdir, monkeypatch):
     source = power.link(power.MASTER110_PDF)
     tests.run(f'-i {source} --phrases', monkeypatch=monkeypatch)
