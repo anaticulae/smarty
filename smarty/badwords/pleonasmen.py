@@ -111,6 +111,7 @@ technischer Bereich
 sprachlicher Bereich
 Erziehungsbereich
 erzieherischer Bereich
+wissenschaftlichen Disziplinen
 politischer Raum
 Erfahrungsraum
 kommunaler Sektor
