@@ -7,8 +7,27 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import power
+import pytest
+import utilatest
+
+import smarty.path
+import smarty.serialize
 import tests
 
 
 def test_help(monkeypatch):
     tests.run('--help', monkeypatch=monkeypatch)
+
+
+@pytest.mark.parametrize('source', [
+    pytest.param(power.MASTER110_PDF, id='master110'),
+    pytest.param(power.BACHELOR128_PDF, id='bachelor128'),
+])
+@utilatest.longrun
+def test_cli_badwords(source, testdir, monkeypatch):
+    source = power.link(source)
+    tests.run(f'-i {source} --badwords', monkeypatch=monkeypatch)
+    path = smarty.path.smarty_phrases(testdir.tmpdir)
+    loaded = smarty.serialize.load_phrases(path)
+    assert loaded

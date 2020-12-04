@@ -16,12 +16,12 @@ DESCRIPTION = ''
 
 WORKPLAN = [
     utila.create_step(
-        'phrases',
+        'badwords',
         inputs=[
             utila.ResultFile('words', 'word_result'),
             utila.ResultFile('words', 'headlines_headlines'),
         ],
-        output=('detected',),
+        output=('phrases', 'pleonasms', 'invalid_prefix'),
     ),
 ]
 

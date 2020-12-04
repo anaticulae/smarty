@@ -11,7 +11,6 @@ import power
 import utilatest
 
 import smarty
-import smarty.path
 import tests
 
 
@@ -22,12 +21,3 @@ def test_phrases_fromtext_bachelor128():
 
     detected = smarty.phrases_fromtext(text)
     assert len(detected) >= 9
-
-
-@utilatest.longrun
-def test_phrases_master110(testdir, monkeypatch):
-    source = power.link(power.MASTER110_PDF)
-    tests.run(f'-i {source} --phrases', monkeypatch=monkeypatch)
-    path = smarty.path.smarty_phrases(testdir.tmpdir)
-    loaded = smarty.serialize.load_phrases(path)
-    assert loaded

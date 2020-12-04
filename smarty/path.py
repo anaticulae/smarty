@@ -13,4 +13,4 @@ import smarty
 
 
 def smarty_phrases(path: str, prefix: str = '') -> str:
-    return utila.pathconnector(path, smarty.PROCESS, 'phrases_detected', prefix)
+    return utila.pathconnector(path, smarty.PROCESS, 'badwords_phrases', prefix)
