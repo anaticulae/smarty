@@ -7,6 +7,9 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import german
+import words.utils
+
 import smarty.utils
 
 NOT_REQUIRED = """\
@@ -54,3 +57,27 @@ zuschicken
 überprüfen
 """
 NOT_REQUIRED = smarty.utils.init(NOT_REQUIRED)
+
+
+def prefix_not_required_search(sentence: str):
+    matched = german.searches(
+        tokenslist=NOT_REQUIRED,
+        sentence=sentence,
+        tokens_complex=False,
+    )
+    return matched
+
+
+def prefix_not_required_fromtext(text):
+    result = []
+    for page, number, sentence in words.utils.sentences(text, numbers=True):
+        detected = prefix_not_required_search(sentence)
+        if not detected:
+            continue
+        result.append(
+            smarty.serialize.Phrase(
+                page=page,
+                sentence=number,
+                marked=detected,
+            ))
+    return result

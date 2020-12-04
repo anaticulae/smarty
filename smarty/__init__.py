@@ -34,6 +34,8 @@ from smarty.badwords.phrases import phrases_fromtext
 from smarty.badwords.phrases import phrases_search
 from smarty.badwords.pleonasmen import pleonasmen_fromtext
 from smarty.badwords.pleonasmen import pleonasmen_search
+from smarty.badwords.prefix import prefix_not_required_fromtext
+from smarty.badwords.prefix import prefix_not_required_search
 from smarty.statistics import count_questions
 from smarty.statistics import count_words
 from smarty.statistics import ratio_questions_fromtext
