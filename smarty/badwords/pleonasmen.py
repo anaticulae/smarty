@@ -7,6 +7,10 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import german
+import words.utils
+
+import smarty.serialize
 import smarty.utils
 
 ABBREVIATION = """\
@@ -119,3 +123,27 @@ wissenschaftlichen Disziplinen
 wissenschaftlicher Bereich
 """
 WORDHULL = smarty.utils.init(WORDHULL)
+
+
+def pleonasmen_search(sentence: str):
+    matched = german.searches(
+        tokenslist=ABBREVIATION | DUPLICATED | NOUN | WORDHULL,
+        sentence=sentence,
+        tokens_complex=False,
+    )
+    return matched
+
+
+def pleonasmen_fromtext(text) -> smarty.serialize.Phrases:
+    result = []
+    for page, number, sentence in words.utils.sentences(text, numbers=True):
+        detected = pleonasmen_search(sentence)
+        if not detected:
+            continue
+        result.append(
+            smarty.serialize.Phrase(
+                page=page,
+                sentence=number,
+                marked=detected,
+            ))
+    return result
