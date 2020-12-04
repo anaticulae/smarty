@@ -92,30 +92,30 @@ der Einzigste
 NOUN = smarty.utils.init(NOUN)
 
 WORDHULL = """\
-Wirtschaftskreis
-Unternehmenskreis
-Bankenkreis
-Problemkreis
-Wirtschaftsbereich
-Unternehmensbereich
-Industriebereich
-Werbebereich
 Bankenbereich
-F&E-Bereich
-Themenbereich
-im Bereich der Wirtschaft
-im Bereich der Werbung
-wissenschaftlicher Bereich
-unternehmerischer Bereich
-technischer Bereich
-sprachlicher Bereich
-Erziehungsbereich
-erzieherischer Bereich
-wissenschaftlichen Disziplinen
-politischer Raum
+Bankenkreis
+Bankensektor
 Erfahrungsraum
+Erziehungsbereich
+F&E-Bereich
+Industriebereich
+Problemkreis
+Themenbereich
+Unternehmensbereich
+Unternehmenskreis
+Werbebereich
+Wirtschaftsbereich
+Wirtschaftskreis
+erzieherischer Bereich
+im Bereich der Werbung
+im Bereich der Wirtschaft
 kommunaler Sektor
 landwirtschaftlicher Sektor
-Bankensektor
+politischer Raum
+sprachlicher Bereich
+technischer Bereich
+unternehmerischer Bereich
+wissenschaftlichen Disziplinen
+wissenschaftlicher Bereich
 """
 WORDHULL = smarty.utils.init(WORDHULL)
