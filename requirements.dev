@@ -11,11 +11,11 @@
 utilatest==0.2.2
 
 # split sentence
-german==0.11.5
+german==0.12.1
 
 # load and visit sentences
-words==0.22.0
+words==0.22.1
 
 # generate test resources
 power==1.0.0
-genex==0.3.0
+genex==0.4.1
