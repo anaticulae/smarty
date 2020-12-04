@@ -41,7 +41,7 @@ from smarty.statistics import count_questions
 from smarty.statistics import count_words
 from smarty.statistics import ratio_questions_fromtext
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 PACKAGE = 'smarty'
