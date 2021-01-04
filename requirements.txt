@@ -11,3 +11,8 @@ utila==2.16.1
 
 # docref.serialize(serializeraw.dump_docref)
 iamraw>=4.6.0<5.0.0
+
+# split sentence
+german==0.13.4
+# load and visit sentences
+words==0.25.2
