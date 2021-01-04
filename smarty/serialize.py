@@ -7,10 +7,11 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import docref.serialize
+import iamraw
+import serializeraw
 
-Phrase = docref.serialize.DocRef
-Phrases = docref.serialize.DocRefs
+Phrase = iamraw.DocRef
+Phrases = iamraw.DocRefs
 
-dump_phrases = docref.serialize.dump_docref  # pylint:disable=C0103
-load_phrases = docref.serialize.load_docref  # pylint:disable=C0103
+dump_phrases = serializeraw.dump_docref  # pylint:disable=C0103
+load_phrases = serializeraw.load_docref  # pylint:disable=C0103
