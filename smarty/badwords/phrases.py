@@ -15,12 +15,10 @@ import smarty.utils
 
 NEGATIVE = """\
 Blickfeld der Öffentlichkeit
+Gesamtpaket
 Ideen gesät
 Schreckgespenst betrachtet
 auf den Punkt gebracht
-kurz erwähnt
-spielt im Bereich
-Gesamtpaket
 bereits heute
 breites Spektrum
 eine immense Zahl
@@ -31,10 +29,15 @@ ihnen herrscht
 im Stich gelassen
 in aller Munde
 knapp bemessen
+kurz erwähnt
 löst Angst und Schrecken aus
 macht es Sinn
 man kann nur Mutmaßungen anstellen
+nicht unerwähnt
+nicht unerwähnt bleiben
+soll nicht unerwähnt bleiben
 soziale Kitt
+spielt im Bereich
 unermesslichen Breite
 war durchaus positiv
 werden wir auf eine Katastrophe zusteuern
