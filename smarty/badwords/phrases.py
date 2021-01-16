@@ -17,15 +17,19 @@ NEGATIVE = """\
 Blickfeld der Öffentlichkeit
 Gesamtpaket
 Ideen gesät
+Leben lassen mussten
 Schreckgespenst betrachtet
 auf den Punkt gebracht
 bereits heute
 breites Spektrum
 eine immense Zahl
+erschreckende Schlagzeilen
+erschütternde Zahlen
 etwas Positives abzugewinnen
 etwas abschauen
 fruchtbarer Boden
 ihnen herrscht
+ihr Leben lassen mussten
 im Stich gelassen
 in aller Munde
 knapp bemessen
@@ -35,6 +39,7 @@ macht es Sinn
 man kann nur Mutmaßungen anstellen
 nicht unerwähnt
 nicht unerwähnt bleiben
+schwerwiegende Erkenntnis
 soll nicht unerwähnt bleiben
 soziale Kitt
 spielt im Bereich
