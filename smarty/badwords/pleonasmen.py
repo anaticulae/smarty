@@ -24,6 +24,7 @@ IP-Protokoll
 ISBN-Nummer
 ISDN-Netz
 LCD-Anzeige
+LCD-Screen
 PIN-Nummer
 RAM-Speicher
 SMS-Dienst
