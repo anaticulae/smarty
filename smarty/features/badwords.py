@@ -7,7 +7,6 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import functools
 import typing
 
 import serializeraw
@@ -24,17 +23,20 @@ def work(
     headlines = serializeraw.load_headlines(headlines, pages=pages)
     text = serializeraw.load_text(text, headlines=headlines, pages=pages)
 
-    phrases = functools.partial(smarty.badwords.phrases.phrases_fromtext, text)
-    pleonasmen = functools.partial(
-        smarty.badwords.pleonasmen.pleonasmen_fromtext,
-        text,
-    )
-    prefix = functools.partial(
-        smarty.badwords.prefix.prefix_not_required_fromtext,
-        text,
-    )
-    # run parallel
-    done = utila.fork(phrases, pleonasmen, prefix)
+    with utila.GeorgFork(process=True, returncode=False, worker=3) as parallel:
+        parallel.fork(
+            smarty.badwords.phrases.phrases_fromtext,
+            text=text,
+        )
+        parallel.fork(
+            smarty.badwords.pleonasmen.pleonasmen_fromtext,
+            text=text,
+        )
+        parallel.fork(
+            smarty.badwords.prefix.prefix_not_required_fromtext,
+            text=text,
+        )
     # dump results
-    dumped = [smarty.serialize.dump_phrases(item) for item in done]
+    # phrases, pleonasmen, prefix = parallel.result
+    dumped = [smarty.serialize.dump_phrases(item) for item in parallel.result]
     return dumped
