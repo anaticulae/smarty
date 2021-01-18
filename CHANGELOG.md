@@ -2,6 +2,16 @@
 
 Every noteable change is logged here.
 
+## v0.2.0
+
+### Feature
+
+* use process to improve speed (75f568b8580b)
+
+### Documentation
+
+* Happy New Year! (5d19b3b89e32)
+
 ## v0.1.4
 
 ### Feature
