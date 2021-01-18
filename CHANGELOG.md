@@ -2,6 +2,15 @@
 
 Every noteable change is logged here.
 
+## v0.1.4
+
+### Feature
+
+* extends pleonasms (a55a1cc7ed17)
+* detect more phrases (55ebde499948)
+* add first draft of word improvement feature (7f8d677adc07)
+* extend phrases dictionary (e9f27d8e9048)
+
 ## v0.1.3
 
 ## v0.1.2
