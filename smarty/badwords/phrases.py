@@ -14,6 +14,7 @@ import smarty.serialize
 import smarty.utils
 
 NEGATIVE = """\
+Arbeitswelt
 Blickfeld der Öffentlichkeit
 Gesamtpaket
 Ideen gesät
@@ -21,18 +22,29 @@ Leben lassen mussten
 Schreckgespenst betrachtet
 auf den Punkt gebracht
 bereits heute
+beschleunigten Alltagskultur
 breites Spektrum
 eine immense Zahl
+enorm
 erschreckende Schlagzeilen
 erschütternde Zahlen
+es spielen
 etwas Positives abzugewinnen
 etwas abschauen
 fruchtbarer Boden
+gewinnt im Zuge
+heutige Arbeitswelt
+heutige Lebenswelt
+heutigen Zeit
+häufig Mangelware
 ihnen herrscht
 ihr Leben lassen mussten
 im Stich gelassen
+immer wieder aufs Neue
 in aller Munde
+jeder hat schon einmal
 knapp bemessen
+kostbares Gut
 kurz erwähnt
 löst Angst und Schrecken aus
 macht es Sinn
@@ -40,6 +52,8 @@ man kann nur Mutmaßungen anstellen
 nicht unerwähnt
 nicht unerwähnt bleiben
 schwerwiegende Erkenntnis
+sehr wichtiger Faktor
+solides Grundwissen
 soll nicht unerwähnt bleiben
 soziale Kitt
 spielt im Bereich
