@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v0.2.1
+
+### Feature
+
+* add more phrases (7a37a82b5905)
+
 ## v0.2.0
 
 ### Feature
