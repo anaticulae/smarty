@@ -19,12 +19,15 @@ Blickfeld der Öffentlichkeit
 Gesamtpaket
 Ideen gesät
 Leben lassen mussten
+Schlüsselfrage
 Schreckgespenst betrachtet
 auf den Punkt gebracht
 bereits heute
 beschleunigten Alltagskultur
 breites Spektrum
 eine immense Zahl
+eine wichtige Rolle
+einige aufgeführt
 enorm
 erschreckende Schlagzeilen
 erschütternde Zahlen
@@ -57,10 +60,12 @@ solides Grundwissen
 soll nicht unerwähnt bleiben
 soziale Kitt
 spielt im Bereich
+umfangreiche Quellen
 unermesslichen Breite
 war durchaus positiv
 werden wir auf eine Katastrophe zusteuern
 zu entzaubern
+ältesten Disziplinen
 äußerst wichtig
 öffentlichen Hand
 """
