@@ -8,8 +8,8 @@
 # =============================================================================
 
 # test environment
-utilatest==0.4.1
+utilatest==0.9.0
 
 # generate test resources
-power==1.3.0
-genex==0.7.3
+power==2.2.0
+genex==0.18.0
