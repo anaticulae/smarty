@@ -15,21 +15,14 @@ import setuptools
 
 ROOT = os.path.abspath(os.path.dirname(__file__))
 
+with open(os.path.join(ROOT, 'README.md'), encoding='utf8') as fp:
+    README = fp.read()
 
-def read(file):
-    with open(file, mode='rt', encoding='utf8') as fp:
-        return fp.read()
+with open(os.path.join(ROOT, 'smarty/__init__.py'), encoding='utf8') as fp:
+    VERSION = re.search(r'__version__ = \'(.*?)\'', fp.read()).group(1)
 
-
-README = read(os.path.join(ROOT, 'README.md'))
-
-VERSION = read(os.path.join(ROOT, 'smarty/__init__.py'))
-VERSION = re.search(r'__version__ = \'(.*?)\'', VERSION).group(1)
-
-INSTALL_REQUIRES = read(os.path.join(ROOT, "requirements.txt"))
-INSTALL_REQUIRES = [
-    line for line in INSTALL_REQUIRES.splitlines() if line and '#' not in line
-]
+with open(os.path.join(ROOT, 'requirements.txt'), encoding='utf8') as fp:
+    REQUIRES = [line for line in fp.readlines() if line and '#' not in line]
 
 if __name__ == "__main__":
     # allow ssetup.py to run from another directory
@@ -38,7 +31,7 @@ if __name__ == "__main__":
         author='Helmut Konrad Fahrendholz',
         author_email='info@checkitweg.de',
         description='i am sooo smart',
-        install_requires=INSTALL_REQUIRES,
+        install_requires=REQUIRES,
         long_description=README,
         name='smarty',
         platforms='any',
