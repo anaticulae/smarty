@@ -2,6 +2,13 @@
 
 Every noteable change is logged here.
 
+## v0.3.0
+
+### Feature
+
+* add user advices (15a62f8f7cac)
+* extend phrase list (9d7d6b141eb4)
+
 ## v0.2.1
 
 ### Feature
