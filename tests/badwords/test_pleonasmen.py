@@ -16,4 +16,4 @@ import tests
 def test_pleonasmen_fromtext_bachelor128():
     text = tests.load_text(power.BACHELOR128_PDF)
     detected = smarty.pleonasmen_fromtext(text)
-    assert len(detected) >= 3
+    assert len(detected) >= 2
