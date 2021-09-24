@@ -16,9 +16,9 @@ import smarty.badwords.phrases
 
 
 def work(
-        text: str,
-        headlines: str,
-        pages: tuple = None,
+    text: str,
+    headlines: str,
+    pages: tuple = None,
 ) -> typing.Tuple[str, str, str]:
     headlines = serializeraw.load_headlines(headlines, pages=pages)
     text = serializeraw.load_text(text, headlines=headlines, pages=pages)
