@@ -14,51 +14,51 @@ import smarty.serialize
 import smarty.utils
 
 ABBREVIATION = """\
-ABM-Maßnahme
-ABS-System
-ASCII-Code
+ABM-Maßnahme                        Arbeitsbeschaffungsmaßnahme
+ABS-System                          Anti-Blockier-System
+ASCII-Code                          Amarican Standard Code of Information Exchange
 GIF-Format
 GUS-Staaten
 HIV-Virus
 IP-Protokoll
-ISBN-Nummer
+ISBN-Nummer                         Internation Standard Book Number
 ISDN-Netz
-LCD-Anzeige
-LCD-Screen
-PIN-Nummer
-RAM-Speicher
-SMS-Dienst
+LCD-Anzeige                         Liquid Cristal Display
+LCD-Screen                          Liquid Cristal Display
+PIN-Nummer                          Persönliche Indentifikations Nummber
+RAM-Speicher                        Random Access Memory
+SMS-Dienst                          Short Message Service
 """
 ABBREVIATION = smarty.utils.init(ABBREVIATION)
 
 DUPLICATED = """\
-angeblich sollen
+angeblich sollen                    sollen
 auseinanderdividieren
-durchkalkulieren
-herausselektieren
-hochstilisieren
-in der Mitte halbieren
-möglich sein können
-nachrecherchieren
-reinvestieren
-runterreduzieren
-wahrscheinlich scheinen
-zusammenaddieren
+durchkalkulieren                    kalkulieren
+herausselektieren                   selektieren
+hochstilisieren                     stilisieren
+in der Mitte halbieren              halbieren
+möglich sein können                 sein können
+nachrecherchieren                   recharchieren
+reinvestieren                       investieren
+runterreduzieren                    reduzieren
+wahrscheinlich scheinen             scheinen
+zusammenaddieren                    addieren
 """
 DUPLICATED = smarty.utils.init(DUPLICATED)
 
 NOUN = """\
-Attentatsversuch
-Ausgangsvoraussetzungen
-Auslandsexport
-Außenfassade
-Düsenjet
-Einzelindividuum
-Endergebnis
-Freitextfeld
-Frontlinie
-Frühpionier
-Fußpedal
+Attentatsversuch                    Attentat
+Ausgangsvoraussetzungen             Voraussetzung
+Auslandsexport                      Export
+Außenfassade                        Fassade
+Düsenjet                            Jet
+Einzelindividuum                    Individuum
+Endergebnis                         Ergebnis
+Freitextfeld                        Textfeld
+Frontlinie                          Front
+Frühpionier                         Pionier
+Fußpedal                            Pedal
 Gehbewegung
 Gesichtsmimik
 Gesprächsaustausch
