@@ -43,7 +43,6 @@ def extract(resources):
     # single file the parental determination is not possible. Therefore we
     # have to add the data root of all test files.
     utila.log(f'root: {power.REPOSITORY}')
-    resources.append(power.REPOSITORY)
     genex.extract(
         files=resources,
         destination=power.generated(),
@@ -57,4 +56,5 @@ def extract(resources):
         tablero=False,
         worker=WORKER,
         pages=':',
+        base=power.REPOSITORY,
     )
