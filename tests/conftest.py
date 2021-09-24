@@ -51,6 +51,10 @@ def extract(resources):
         sections=True,
         words=True,
         magic=True,
+        codero=False,
+        formulero=False,
+        rawmaker_cleanup=False,
+        tablero=False,
         worker=WORKER,
         pages=':',
     )
