@@ -8,7 +8,6 @@
 # =============================================================================
 
 import german
-import words.utils
 
 import smarty.utils
 
@@ -70,7 +69,7 @@ def prefix_not_required_search(sentence: str):
 
 def prefix_not_required_fromtext(text):
     result = []
-    for page, number, sentence in words.utils.sentences(text, numbers=True):
+    for page, number, sentence in smarty.utils.sentences(text, numbers=True):
         detected = prefix_not_required_search(sentence)
         if not detected:
             continue

@@ -9,8 +9,6 @@
 
 import collections
 
-import words.utils
-
 import smarty.utils
 
 
@@ -25,14 +23,14 @@ def count_words(text) -> dict:
 
 def count_questions(text) -> int:
     result = 0
-    for _, sentence in words.utils.sentences(text):
+    for _, sentence in smarty.utils.sentences(text):
         if '?' in sentence[-5:]:
             result += 1
     return result
 
 
 def ratio_questions_fromtext(text) -> float:
-    sentence_count = len(list(words.utils.sentences(text)))
+    sentence_count = len(list(smarty.utils.sentences(text)))
     question_count = count_questions(text)
     if not sentence_count:
         return None

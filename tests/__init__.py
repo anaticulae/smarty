@@ -13,18 +13,19 @@ import iamraw
 import power
 import serializeraw
 import utilatest
-import words.path
 
 import smarty
 import smarty.cli
 
 
-def load_text(source: str) -> iamraw.PageContentTexts:
+def load_text(source: str, pages: tuple = None) -> iamraw.PageContentTexts:
     source = power.link(source)
-    headlines = words.path.headlines(source)
-    headlines = serializeraw.load_headlines(headlines)
-    text = words.path.text(source)
-    text = serializeraw.load_text(text, headlines=headlines)
+    headlines = serializeraw.load_headlines(source, pages=pages)
+    text = serializeraw.load_text(
+        content=source,
+        headlines=headlines,
+        pages=pages,
+    )
     return text
 
 

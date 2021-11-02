@@ -8,7 +8,6 @@
 # =============================================================================
 
 import german
-import words.utils
 
 import smarty.serialize
 import smarty.utils
@@ -137,7 +136,7 @@ def pleonasmen_search(sentence: str):
 
 def pleonasmen_fromtext(text) -> smarty.serialize.Phrases:
     result = []
-    for page, number, sentence in words.utils.sentences(text, numbers=True):
+    for page, number, sentence in smarty.utils.sentences(text, numbers=True):
         detected = pleonasmen_search(sentence)
         if not detected:
             continue

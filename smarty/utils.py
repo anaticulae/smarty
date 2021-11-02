@@ -8,7 +8,6 @@
 # =============================================================================
 
 import german
-import words.utils
 
 
 def init(text: str) -> set:
@@ -17,9 +16,25 @@ def init(text: str) -> set:
 
 def words_fromtext(text, nomarks: bool = False) -> list:
     collected = []
-    for _, sentence in words.utils.sentences(text):
+    for _, sentence in sentences(text):
         splitted = german.split_words(items=sentence, validate_sentences=False)
         collected.extend(splitted)
     if nomarks:
         collected = [item for item in collected if isinstance(item, str)]
     return collected
+
+
+def sentences(texts, numbers: bool = False):
+    number, current = 0, None
+    for chunk in texts:
+        for section in chunk.content:
+            for page, sentence in zip(section.pages, section.content):
+                if not numbers:
+                    yield page, sentence
+                else:
+                    if current != page:
+                        number = 0
+                        current = page
+                    else:
+                        number += 1
+                    yield page, number, sentence
