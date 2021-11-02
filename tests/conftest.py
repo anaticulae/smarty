@@ -28,12 +28,12 @@ RESOURCES = [
     power.MASTER110_PDF,
 ]
 
-WORKER = 8
+WORKER = 4
 
 
 @pytest.mark.usefixtures('session')
 def pytest_sessionstart():
-    power.run([power.generated()])
+    power.run()
 
 
 def extract(resources):
@@ -50,10 +50,6 @@ def extract(resources):
         sections=True,
         words=True,
         magic=True,
-        codero=False,
-        formulero=False,
-        rawmaker_cleanup=False,
-        tablero=False,
         worker=WORKER,
         pages=':',
         base=power.REPOSITORY,
