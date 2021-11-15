@@ -16,11 +16,25 @@ DESCRIPTION = ''
 
 WORKPLAN = [
     utila.create_step(
-        'badwords',
+        'phrases',
         inputs=[
             utila.ResultFile('words', 'sentences_sentences'),
         ],
-        output=('phrases', 'pleonasms', 'invalid_prefix'),
+        output=('phrases',),
+    ),
+    utila.create_step(
+        'pleonasma',
+        inputs=[
+            utila.ResultFile('words', 'sentences_sentences'),
+        ],
+        output=('pleonasma',),
+    ),
+    utila.create_step(
+        'reduce',
+        inputs=[
+            utila.ResultFile('words', 'sentences_sentences'),
+        ],
+        output=('reduce',),
     ),
 ]
 

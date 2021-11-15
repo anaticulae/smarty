@@ -7,16 +7,16 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import utila
+import serializeraw
+
+import smarty.badwords.prefix
 
 
-def smarty_phrases(path: str, prefix: str = '') -> str:
-    return utila.pathconnector(path, 'smarty', 'phrases_phrases', prefix)
-
-
-def smarty_pleonasmas(path: str, prefix: str = '') -> str:
-    return utila.pathconnector(path, 'smarty', 'pleonasma_pleonasma', prefix)
-
-
-def smarty_reduces(path: str, prefix: str = '') -> str:
-    return utila.pathconnector(path, 'smarty', 'reduce_reduce', prefix)
+def work(
+    sentences: str,
+    pages: tuple = None,
+) -> str:
+    sentences = serializeraw.load_text(sentences, pages=pages)
+    detected = smarty.badwords.prefix.prefix_not_required_fromtext(sentences)
+    dumped = smarty.serialize.dump_phrases(detected)
+    return dumped

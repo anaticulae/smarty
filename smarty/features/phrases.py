@@ -7,10 +7,7 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import typing
-
 import serializeraw
-import utila
 
 import smarty.badwords.phrases
 
@@ -18,22 +15,8 @@ import smarty.badwords.phrases
 def work(
     sentences: str,
     pages: tuple = None,
-) -> typing.Tuple[str, str, str]:
+) -> str:
     sentences = serializeraw.load_text(sentences, pages=pages)
-    with utila.GeorgFork(process=True, returncode=False, worker=3) as parallel:
-        parallel.fork(
-            smarty.badwords.phrases.phrases_fromtext,
-            sentences=sentences,
-        )
-        parallel.fork(
-            smarty.badwords.pleonasmen.pleonasmen_fromtext,
-            sentences=sentences,
-        )
-        parallel.fork(
-            smarty.badwords.prefix.prefix_not_required_fromtext,
-            sentences=sentences,
-        )
-    # dump results
-    # phrases, pleonasmen, prefix = parallel.result
-    dumped = [smarty.serialize.dump_phrases(item) for item in parallel.result]
+    detected = smarty.badwords.phrases.phrases_fromtext(sentences)
+    dumped = smarty.serialize.dump_phrases(detected)
     return dumped

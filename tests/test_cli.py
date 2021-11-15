@@ -27,7 +27,7 @@ def test_help(monkeypatch):
 @utilatest.longrun
 def test_cli_badwords(source, testdir, monkeypatch):
     source = power.link(source)
-    tests.run(f'-i {source} --badwords', monkeypatch=monkeypatch)
+    tests.run(f'-i {source} --phrases', monkeypatch=monkeypatch)
     path = smarty.path.smarty_phrases(testdir.tmpdir)
     loaded = smarty.serialize.load_phrases(path)
     assert loaded
