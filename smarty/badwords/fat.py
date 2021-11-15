@@ -7,9 +7,9 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import smarty.utils
+import utila
 
-FAT = """\
+FAT = utila.splitlines("""\
 aber
 abermals
 allein
@@ -251,5 +251,4 @@ zweifelsohne
 überdies
 überhaupt
 übrigens
-"""
-FAT = smarty.utils.init(FAT)
+""")

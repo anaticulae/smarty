@@ -8,11 +8,12 @@
 # =============================================================================
 
 import german
+import utila
 
 import smarty.serialize
 import smarty.utils
 
-NEGATIVE = """\
+NEGATIVE = utila.splitlines("""\
 arbeitswelt
 auf den punkt gebracht
 bereits heute
@@ -67,8 +68,7 @@ zu entzaubern
 ältesten disziplinen
 äußerst wichtig
 öffentlichen hand
-"""
-NEGATIVE = smarty.utils.init(NEGATIVE)
+""")
 
 
 def phrases_search(sentence: str):

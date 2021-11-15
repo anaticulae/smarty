@@ -8,6 +8,7 @@
 # =============================================================================
 
 import german
+import utila
 
 import smarty.serialize
 import smarty.utils
@@ -46,7 +47,7 @@ zusammenaddieren                    addieren
 """
 DUPLICATED = smarty.utils.init(DUPLICATED)
 
-NOUN = """\
+NOUN = smarty.utils.init("""\
 attentatsversuch                    attentat
 ausgangsvoraussetzungen             voraussetzung
 auslandsexport                      export
@@ -92,10 +93,9 @@ zukunftsperspektiven
 zukunftspläne
 zukunftsprognosen
 zwangsexekution
-"""
-NOUN = smarty.utils.init(NOUN)
+""")
 
-WORDHULL = """\
+WORDHULL = utila.splitlines("""\
 bankenbereich
 bankenkreis
 bankensektor
@@ -121,8 +121,7 @@ wirtschaftsbereich
 wirtschaftskreis
 wissenschaftlichen disziplinen
 wissenschaftlicher bereich
-"""
-WORDHULL = smarty.utils.init(WORDHULL)
+""")
 
 
 def pleonasmen_search(sentence: str):

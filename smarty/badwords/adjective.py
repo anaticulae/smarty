@@ -7,13 +7,12 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import smarty.utils
+import utila
 
-AVOID = """\
+AVOID = utila.splitlines("""\
 eklatant
 geflissentlich
 ungeahnt
 unmissverständlich
 zukunftsweisend
-"""
-AVOID = smarty.utils.init(AVOID)
+""")
