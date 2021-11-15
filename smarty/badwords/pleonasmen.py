@@ -13,20 +13,20 @@ import smarty.serialize
 import smarty.utils
 
 ABBREVIATION = """\
-ABM-Maßnahme                        Arbeitsbeschaffungsmaßnahme
-ABS-System                          Anti-Blockier-System
-ASCII-Code                          Amarican Standard Code of Information Exchange
-GIF-Format
-GUS-Staaten
-HIV-Virus
-IP-Protokoll
-ISBN-Nummer                         Internation Standard Book Number
-ISDN-Netz
-LCD-Anzeige                         Liquid Cristal Display
-LCD-Screen                          Liquid Cristal Display
-PIN-Nummer                          Persönliche Indentifikations Nummber
-RAM-Speicher                        Random Access Memory
-SMS-Dienst                          Short Message Service
+abm-maßnahme                        arbeitsbeschaffungsmaßnahme
+abs-system                          anti-blockier-system
+ascii-code                          amarican standard code of information exchange
+gif-format
+gus-staaten
+hiv-virus
+ip-protokoll
+isbn-nummer                         internation standard book number
+isdn-netz
+lcd-anzeige                         liquid cristal display
+lcd-screen                          liquid cristal display
+pin-nummer                          persönliche indentifikations nummber
+ram-speicher                        random access memory
+sms-dienst                          short message service
 """
 ABBREVIATION = smarty.utils.init(ABBREVIATION)
 
@@ -36,7 +36,7 @@ auseinanderdividieren
 durchkalkulieren                    kalkulieren
 herausselektieren                   selektieren
 hochstilisieren                     stilisieren
-in der Mitte halbieren              halbieren
+in der mitte halbieren              halbieren
 möglich sein können                 sein können
 nachrecherchieren                   recharchieren
 reinvestieren                       investieren
@@ -47,80 +47,80 @@ zusammenaddieren                    addieren
 DUPLICATED = smarty.utils.init(DUPLICATED)
 
 NOUN = """\
-Attentatsversuch                    Attentat
-Ausgangsvoraussetzungen             Voraussetzung
-Auslandsexport                      Export
-Außenfassade                        Fassade
-Düsenjet                            Jet
-Einzelindividuum                    Individuum
-Endergebnis                         Ergebnis
-Freitextfeld                        Textfeld
-Frontlinie                          Front
-Frühpionier                         Pionier
-Fußpedal                            Pedal
-Gehbewegung
-Gesichtsmimik
-Gesprächsaustausch
-Glasvitrine
-Gratisgeschenk
-Grundkonzept
-Grundprinzip
-Haarfrisur
-Heizkamin
-Heizofen
-Kampfhandlung
-Mitbeteiligung
-Mitkollegen
-Mitkonkurrenten
-Musikband
-Niederschlagstätigkeit
-Pulsschlag
-Restrisiko
-Rückantwort
-Rückerinnerung
-Rückerstattung
-Rückstau
-Standdüne
-Subkomponente
-Testversuch
-Verkehrsaufkommen
-Volksdemokratie
-Vorderfront
-Vorermittlungen
-Zukunftsperspektiven
-Zukunftspläne
-Zukunftsprognosen
-Zwangsexekution
-der Einzigste
+attentatsversuch                    attentat
+ausgangsvoraussetzungen             voraussetzung
+auslandsexport                      export
+außenfassade                        fassade
+der einzigste
+düsenjet                            jet
+einzelindividuum                    individuum
+endergebnis                         ergebnis
+freitextfeld                        textfeld
+frontlinie                          front
+frühpionier                         pionier
+fußpedal                            pedal
+gehbewegung
+gesichtsmimik
+gesprächsaustausch
+glasvitrine
+gratisgeschenk
+grundkonzept
+grundprinzip
+haarfrisur
+heizkamin
+heizofen
+kampfhandlung
+mitbeteiligung
+mitkollegen
+mitkonkurrenten
+musikband
+niederschlagstätigkeit
+pulsschlag
+restrisiko
+rückantwort
+rückerinnerung
+rückerstattung
+rückstau
+standdüne
+subkomponente
+testversuch
+verkehrsaufkommen
+volksdemokratie
+vorderfront
+vorermittlungen
+zukunftsperspektiven
+zukunftspläne
+zukunftsprognosen
+zwangsexekution
 """
 NOUN = smarty.utils.init(NOUN)
 
 WORDHULL = """\
-Bankenbereich
-Bankenkreis
-Bankensektor
-Erfahrungsraum
-Erziehungsbereich
-F&E-Bereich
-Industriebereich
-Problemkreis
-Themenbereich
-Unternehmensbereich
-Unternehmenskreis
-Werbebereich
-Wirtschaftsbereich
-Wirtschaftskreis
-erzieherischer Bereich
-im Bereich der Werbung
-im Bereich der Wirtschaft
-kommunaler Sektor
-landwirtschaftlicher Sektor
-politischer Raum
-sprachlicher Bereich
-technischer Bereich
-unternehmerischer Bereich
-wissenschaftlichen Disziplinen
-wissenschaftlicher Bereich
+bankenbereich
+bankenkreis
+bankensektor
+erfahrungsraum
+erzieherischer bereich
+erziehungsbereich
+f&e-bereich
+im bereich der werbung
+im bereich der wirtschaft
+industriebereich
+kommunaler sektor
+landwirtschaftlicher sektor
+politischer raum
+problemkreis
+sprachlicher bereich
+technischer bereich
+themenbereich
+unternehmensbereich
+unternehmenskreis
+unternehmerischer bereich
+werbebereich
+wirtschaftsbereich
+wirtschaftskreis
+wissenschaftlichen disziplinen
+wissenschaftlicher bereich
 """
 WORDHULL = smarty.utils.init(WORDHULL)
 

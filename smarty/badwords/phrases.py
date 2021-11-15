@@ -13,60 +13,60 @@ import smarty.serialize
 import smarty.utils
 
 NEGATIVE = """\
-Arbeitswelt
-Blickfeld der Öffentlichkeit
-Gesamtpaket
-Ideen gesät
-Leben lassen mussten
-Schlüsselfrage
-Schreckgespenst betrachtet
-auf den Punkt gebracht
+arbeitswelt
+auf den punkt gebracht
 bereits heute
-beschleunigten Alltagskultur
-breites Spektrum
-eine immense Zahl
-eine wichtige Rolle
+beschleunigten alltagskultur
+blickfeld der öffentlichkeit
+breites spektrum
+eine immense zahl
+eine wichtige rolle
 einige aufgeführt
 enorm
-erschreckende Schlagzeilen
-erschütternde Zahlen
+erschreckende schlagzeilen
+erschütternde zahlen
 es spielen
-etwas Positives abzugewinnen
 etwas abschauen
-fruchtbarer Boden
-gewinnt im Zuge
-heutige Arbeitswelt
-heutige Lebenswelt
-heutigen Zeit
-häufig Mangelware
+etwas positives abzugewinnen
+fruchtbarer boden
+gesamtpaket
+gewinnt im zuge
+heutige arbeitswelt
+heutige lebenswelt
+heutigen zeit
+häufig mangelware
+ideen gesät
 ihnen herrscht
-ihr Leben lassen mussten
-im Stich gelassen
-immer wieder aufs Neue
-in aller Munde
+ihr leben lassen mussten
+im stich gelassen
+immer wieder aufs neue
+in aller munde
 jeder hat schon einmal
 knapp bemessen
-kostbares Gut
+kostbares gut
 kurz erwähnt
-löst Angst und Schrecken aus
-macht es Sinn
-man kann nur Mutmaßungen anstellen
+leben lassen mussten
+löst angst und schrecken aus
+macht es sinn
+man kann nur mutmaßungen anstellen
 nicht unerwähnt
 nicht unerwähnt bleiben
-schwerwiegende Erkenntnis
-sehr wichtiger Faktor
-solides Grundwissen
+schlüsselfrage
+schreckgespenst betrachtet
+schwerwiegende erkenntnis
+sehr wichtiger faktor
+solides grundwissen
 soll nicht unerwähnt bleiben
-soziale Kitt
-spielt im Bereich
-umfangreiche Quellen
-unermesslichen Breite
+soziale kitt
+spielt im bereich
+umfangreiche quellen
+unermesslichen breite
 war durchaus positiv
-werden wir auf eine Katastrophe zusteuern
+werden wir auf eine katastrophe zusteuern
 zu entzaubern
-ältesten Disziplinen
+ältesten disziplinen
 äußerst wichtig
-öffentlichen Hand
+öffentlichen hand
 """
 NEGATIVE = smarty.utils.init(NEGATIVE)
 
