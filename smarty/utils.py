@@ -7,7 +7,11 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import collections
+import re
+
 import german
+import utila
 
 
 def init(text: str) -> set:
@@ -38,3 +42,39 @@ def sentences(texts, numbers: bool = False):
                     else:
                         number += 1
                     yield page, number, sentence
+
+
+class AdviceTable(collections.UserDict):
+
+    def __or__(self, value) -> set:
+        if isinstance(value, AdviceTable):
+            value = value.keys()
+        return set(self.keys()) | value
+
+    def __ror__(self, value) -> set:
+        if isinstance(value, AdviceTable):
+            value = value.keys()
+        return set(self.keys()) | value
+
+
+def init_table(data: str) -> AdviceTable:
+    r"""\
+    >>> init_table('''
+    ... ausgangsvoraussetzungen             voraussetzung
+    ... auslandsexport                      export
+    ... \n
+    ... no right column
+    ... einzelindividuum                    individuum
+    ... ''')
+    {'einzelindividuum': 'individuum', 'no right column': '',...}
+    """
+    lines = utila.splitlines(data)
+    result = AdviceTable()
+    for line in lines:
+        splitted = re.split(r'\s{5,}', line)
+        assert len(splitted) in (1, 2), splitted
+        if len(splitted) == 2:
+            result[splitted[0]] = splitted[1]
+        else:
+            result[splitted[0]] = ''
+    return result
