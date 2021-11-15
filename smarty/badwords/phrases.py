@@ -46,6 +46,8 @@ jeder hat schon einmal
 knapp bemessen
 kostbares gut
 kurz erwähnt
+kurz umrissen werden
+kurz und knapp
 leben lassen mussten
 löst angst und schrecken aus
 macht es sinn
@@ -60,8 +62,10 @@ solides grundwissen
 soll nicht unerwähnt bleiben
 soziale kitt
 spielt im bereich
+suboptimal
 umfangreiche quellen
 unermesslichen breite
+verschwimmt immer mehr
 war durchaus positiv
 werden wir auf eine katastrophe zusteuern
 zu entzaubern

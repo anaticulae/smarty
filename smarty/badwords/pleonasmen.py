@@ -108,6 +108,7 @@ kommunaler sektor
 landwirtschaftlicher sektor
 politischer raum
 problemkreis
+sicherheitsrelevanten bereichen
 sprachlicher bereich
 technischer bereich
 themenbereich
