@@ -134,9 +134,12 @@ def pleonasmen_search(sentence: str):
     return matched
 
 
-def pleonasmen_fromtext(text) -> smarty.serialize.Phrases:
+def pleonasmen_fromtext(sentences) -> smarty.serialize.Phrases:
     result = []
-    for page, number, sentence in smarty.utils.sentences(text, numbers=True):
+    for page, number, sentence in smarty.utils.sentences(
+            sentences,
+            numbers=True,
+    ):
         detected = pleonasmen_search(sentence)
         if not detected:
             continue

@@ -18,8 +18,7 @@ WORKPLAN = [
     utila.create_step(
         'badwords',
         inputs=[
-            utila.ResultFile('words', 'word_result'),
-            utila.ResultFile('words', 'headlines_headlines'),
+            utila.ResultFile('words', 'sentences_sentences'),
         ],
         output=('phrases', 'pleonasms', 'invalid_prefix'),
     ),

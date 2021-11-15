@@ -80,9 +80,12 @@ def phrases_search(sentence: str):
     return matched
 
 
-def phrases_fromtext(text) -> smarty.serialize.Phrases:
+def phrases_fromtext(sentences) -> smarty.serialize.Phrases:
     result = []
-    for page, number, sentence in smarty.utils.sentences(text, numbers=True):
+    for page, number, sentence in smarty.utils.sentences(
+            sentences,
+            numbers=True,
+    ):
         detected = phrases_search(sentence)
         if not detected:
             continue

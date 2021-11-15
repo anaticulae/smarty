@@ -67,9 +67,12 @@ def prefix_not_required_search(sentence: str):
     return matched
 
 
-def prefix_not_required_fromtext(text):
+def prefix_not_required_fromtext(sentences):
     result = []
-    for page, number, sentence in smarty.utils.sentences(text, numbers=True):
+    for page, number, sentence in smarty.utils.sentences(
+            sentences,
+            numbers=True,
+    ):
         detected = prefix_not_required_search(sentence)
         if not detected:
             continue

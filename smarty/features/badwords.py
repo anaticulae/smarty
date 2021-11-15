@@ -16,25 +16,22 @@ import smarty.badwords.phrases
 
 
 def work(
-    text: str,
-    headlines: str,
+    sentences: str,
     pages: tuple = None,
 ) -> typing.Tuple[str, str, str]:
-    headlines = serializeraw.load_headlines(headlines, pages=pages)
-    text = serializeraw.load_text(text, headlines=headlines, pages=pages)
-
+    sentences = serializeraw.load_text(sentences, pages=pages)
     with utila.GeorgFork(process=True, returncode=False, worker=3) as parallel:
         parallel.fork(
             smarty.badwords.phrases.phrases_fromtext,
-            text=text,
+            sentences=sentences,
         )
         parallel.fork(
             smarty.badwords.pleonasmen.pleonasmen_fromtext,
-            text=text,
+            sentences=sentences,
         )
         parallel.fork(
             smarty.badwords.prefix.prefix_not_required_fromtext,
-            text=text,
+            sentences=sentences,
         )
     # dump results
     # phrases, pleonasmen, prefix = parallel.result
