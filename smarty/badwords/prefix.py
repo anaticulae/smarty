@@ -11,7 +11,7 @@ import german
 
 import smarty.utils
 
-NOT_REQUIRED = """\
+NOT_REQUIRED = smarty.utils.init("""\
 abblocken
 abklären
 abmildern
@@ -54,8 +54,7 @@ weglöschen
 zuliefern
 zuschicken
 überprüfen
-"""
-NOT_REQUIRED = smarty.utils.init(NOT_REQUIRED)
+""")
 
 
 def prefix_not_required_search(sentence: str):

@@ -13,7 +13,7 @@ import utila
 import smarty.serialize
 import smarty.utils
 
-ABBREVIATION = """\
+ABBREVIATION = smarty.utils.init_table("""\
 abm-maßnahme                        arbeitsbeschaffungsmaßnahme
 abs-system                          anti-blockier-system
 ascii-code                          amarican standard code of information exchange
@@ -28,10 +28,9 @@ lcd-screen                          liquid cristal display
 pin-nummer                          persönliche indentifikations nummber
 ram-speicher                        random access memory
 sms-dienst                          short message service
-"""
-ABBREVIATION = smarty.utils.init(ABBREVIATION)
+""")
 
-DUPLICATED = """\
+DUPLICATED = smarty.utils.init_table("""\
 angeblich sollen                    sollen
 auseinanderdividieren
 durchkalkulieren                    kalkulieren
@@ -44,10 +43,9 @@ reinvestieren                       investieren
 runterreduzieren                    reduzieren
 wahrscheinlich scheinen             scheinen
 zusammenaddieren                    addieren
-"""
-DUPLICATED = smarty.utils.init(DUPLICATED)
+""")
 
-NOUN = smarty.utils.init("""\
+NOUN = smarty.utils.init_table("""\
 attentatsversuch                    attentat
 ausgangsvoraussetzungen             voraussetzung
 auslandsexport                      export
