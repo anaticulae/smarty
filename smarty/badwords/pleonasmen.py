@@ -50,7 +50,7 @@ attentatsversuch                    attentat
 ausgangsvoraussetzungen             voraussetzung
 auslandsexport                      export
 außenfassade                        fassade
-der einzigste
+der einzigste                       einzige
 düsenjet                            jet
 einzelindividuum                    individuum
 endergebnis                         ergebnis
@@ -58,39 +58,39 @@ freitextfeld                        textfeld
 frontlinie                          front
 frühpionier                         pionier
 fußpedal                            pedal
-gehbewegung
-gesichtsmimik
-gesprächsaustausch
-glasvitrine
-gratisgeschenk
-grundkonzept
-grundprinzip
-haarfrisur
-heizkamin
-heizofen
-kampfhandlung
-mitbeteiligung
-mitkollegen
-mitkonkurrenten
-musikband
-niederschlagstätigkeit
-pulsschlag
-restrisiko
-rückantwort
-rückerinnerung
-rückerstattung
-rückstau
-standdüne
-subkomponente
-testversuch
-verkehrsaufkommen
-volksdemokratie
-vorderfront
-vorermittlungen
-zukunftsperspektiven
-zukunftspläne
-zukunftsprognosen
-zwangsexekution
+gehbewegung                         bewegung
+gesichtsmimik                       mimik
+gesprächsaustausch                  gespräch
+glasvitrine                         vitrine
+gratisgeschenk                      geschenk
+grundkonzept                        konzept
+grundprinzip                        prinzip
+haarfrisur                          frisur
+heizkamin                           kamin
+heizofen                            ofen
+kampfhandlung                       kampf
+mitbeteiligung                      beteiligung
+mitkollegen                         kollegen
+mitkonkurrenten                     konkurrenten
+musikband                           band
+niederschlagstätigkeit              niederschlag
+pulsschlag                          puls
+restrisiko                          risiko
+rückantwort                         antwort
+rückerinnerung                      erinnerung
+rückerstattung                      erstattung
+rückstau                            stau
+standdüne                           düne
+subkomponente                       komponente
+testversuch                         versuch oder test
+verkehrsaufkommen                   verkehr
+volksdemokratie                     demokratie
+vorderfront                         front
+vorermittlungen                     ermittlungen
+zukunftsperspektiven                perspektiven
+zukunftspläne                       pläne
+zukunftsprognosen                   prognose
+zwangsexekution                     exekution
 """)
 
 WORDHULL = utila.splitlines("""\
