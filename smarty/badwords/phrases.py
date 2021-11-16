@@ -8,6 +8,7 @@
 # =============================================================================
 
 import german
+import iamraw
 import utila
 
 import smarty.serialize
@@ -81,6 +82,8 @@ def phrases_search(sentence: str):
         tokenslist=NEGATIVE,
         sentence=sentence,
         tokens_complex=False,
+        neighbours_merge=True,
+        verbose=True,
     )
     return matched
 
@@ -94,10 +97,16 @@ def phrases_fromtext(sentences) -> smarty.serialize.Phrases:
         detected = phrases_search(sentence)
         if not detected:
             continue
-        result.append(
-            smarty.serialize.Phrase(
-                page=page,
-                sentence=number,
-                marked=detected,
-            ))
+        marked, raw = detected
+        docref = iamraw.DocRef(
+            page=page,
+            sentence=number,
+            marked=marked,
+        )
+        raw: str = ', '.join([' '.join(item) for item in raw])
+        advice = iamraw.TextAdviceDelete(
+            raw=raw,
+            docref=docref,
+        )
+        result.append(advice)
     return result

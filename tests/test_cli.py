@@ -9,10 +9,10 @@
 
 import power
 import pytest
+import serializeraw
 import utilatest
 
 import smarty.path
-import smarty.serialize
 import tests
 
 
@@ -29,5 +29,5 @@ def test_cli_badwords(source, testdir, monkeypatch):
     source = power.link(source)
     tests.run(f'-i {source} --phrases', monkeypatch=monkeypatch)
     path = smarty.path.smarty_phrases(testdir.tmpdir)
-    loaded = smarty.serialize.load_phrases(path)
+    loaded = serializeraw.load_textadvices(path)
     assert loaded
