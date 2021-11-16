@@ -7,10 +7,10 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import german
 import iamraw
 import utila
 
+import smarty.badwords
 import smarty.serialize
 import smarty.utils
 
@@ -74,39 +74,13 @@ zu entzaubern
 äußerst wichtig
 öffentlichen hand
 """)
+PROCESS = smarty.badwords.FromText(tokens=NEGATIVE)
 
 
 @utila.cacheme
 def phrases_search(sentence: str):
-    matched = german.searches(
-        tokenslist=NEGATIVE,
-        sentence=sentence,
-        tokens_complex=False,
-        neighbours_merge=True,
-        verbose=True,
-    )
-    return matched
+    return PROCESS.search(sentence)
 
 
-def phrases_fromtext(sentences) -> smarty.serialize.Phrases:
-    result = []
-    for page, number, sentence in smarty.utils.sentences(
-            sentences,
-            numbers=True,
-    ):
-        detected = phrases_search(sentence)
-        if not detected:
-            continue
-        marked, raw = detected
-        docref = iamraw.DocRef(
-            page=page,
-            sentence=number,
-            marked=marked,
-        )
-        raw: str = ', '.join([' '.join(item) for item in raw])
-        advice = iamraw.TextAdviceDelete(
-            raw=raw,
-            docref=docref,
-        )
-        result.append(advice)
-    return result
+def phrases_fromtext(sentences) -> iamraw.TextAdviceDelete:
+    return PROCESS.callme(sentences)
