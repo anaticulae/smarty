@@ -67,6 +67,9 @@ def init_table(data: str) -> AdviceTable:
     lines = utila.splitlines(data)
     result = AdviceTable()
     for line in lines:
+        line = line.strip()
+        if line[0] == '#':
+            continue
         splitted = re.split(r'\s{5,}', line)
         assert len(splitted) in (1, 2), splitted
         if len(splitted) == 2:
