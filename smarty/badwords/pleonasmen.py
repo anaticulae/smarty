@@ -7,7 +7,7 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import german
+import iamraw
 import utila
 
 import smarty.serialize
@@ -93,7 +93,7 @@ zukunftsprognosen                   prognose
 zwangsexekution                     exekution
 """)
 
-WORDHULL = utila.splitlines("""\
+WORDHULL = smarty.utils.init_table("""\
 bankenbereich
 bankenkreis
 bankensektor
@@ -123,29 +123,34 @@ wissenschaftlicher bereich
 """)
 
 
+class Pleonasma(smarty.badwords.FromText):
+
+    def __init__(self):
+        super().__init__(tokens=ABBREVIATION | DUPLICATED | NOUN | WORDHULL)
+        self.lookup = utila.dicts_united(
+            ABBREVIATION,
+            DUPLICATED,
+            NOUN,
+            WORDHULL,
+        )
+
+    def advice(self, docref, raw):
+        replacement = self.lookup.get(raw, 'NO ADVICE')
+        result = iamraw.TextAdviceReplacement(
+            docref=docref,
+            raw=raw,
+            replacement=replacement,
+        )
+        return result
+
+
+PROCESS = Pleonasma()
+
+
 @utila.cacheme
 def pleonasmen_search(sentence: str):
-    matched = german.searches(
-        tokenslist=ABBREVIATION | DUPLICATED | NOUN | WORDHULL,
-        sentence=sentence,
-        tokens_complex=False,
-    )
-    return matched
+    return PROCESS.search(sentence)
 
 
-def pleonasmen_fromtext(sentences) -> smarty.serialize.Phrases:
-    result = []
-    for page, number, sentence in smarty.utils.sentences(
-            sentences,
-            numbers=True,
-    ):
-        detected = pleonasmen_search(sentence)
-        if not detected:
-            continue
-        result.append(
-            smarty.serialize.Phrase(
-                page=page,
-                sentence=number,
-                marked=detected,
-            ))
-    return result
+def pleonasmen_fromtext(sentences) -> iamraw.TextAdviceReplacement:
+    return PROCESS.callme(sentences)

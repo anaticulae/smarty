@@ -16,8 +16,9 @@ import smarty.utils
 
 class FromText:
 
-    def __init__(self, tokens):
+    def __init__(self, tokens, neighbours_merge: bool = True):
         self.tokens = tokens
+        self.neighbours_merge = neighbours_merge
 
     def callme(self, sentences):
         result = []
@@ -45,7 +46,7 @@ class FromText:
             tokenslist=self.tokens,
             sentence=sentence,
             tokens_complex=False,
-            neighbours_merge=True,
+            neighbours_merge=self.neighbours_merge,
             verbose=True,
         )
         return matched

@@ -9,7 +9,7 @@
 
 import serializeraw
 
-import smarty.badwords.phrases
+import smarty.badwords.pleonasmen
 
 
 def work(
@@ -18,5 +18,5 @@ def work(
 ) -> str:
     sentences = serializeraw.load_text(sentences, pages=pages)
     detected = smarty.badwords.pleonasmen.pleonasmen_fromtext(sentences)
-    dumped = smarty.serialize.dump_phrases(detected)
+    dumped = serializeraw.dump_textadvices(detected)
     return dumped
