@@ -7,12 +7,12 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import german
+import iamraw
 import utila
 
 import smarty.utils
 
-NOT_REQUIRED = smarty.utils.init("""\
+NOT_REQUIRED = smarty.utils.init_table("""\
 abblocken
 abklären
 abmildern
@@ -58,29 +58,29 @@ zuschicken
 """)
 
 
+class RemovePrefix(smarty.badwords.FromText):
+
+    def __init__(self, tokens=NOT_REQUIRED):
+        super().__init__(tokens=tokens)
+        self.lookup = tokens
+
+    def advice(self, docref, raw):
+        replacement = self.lookup.get(raw, 'NO ADVICE')
+        result = iamraw.TextAdviceReplacement(
+            docref=docref,
+            raw=raw,
+            replacement=replacement,
+        )
+        return result
+
+
+PROCESS = RemovePrefix()
+
+
 @utila.cacheme
-def prefix_not_required_search(sentence: str):
-    matched = german.searches(
-        tokenslist=NOT_REQUIRED,
-        sentence=sentence,
-        tokens_complex=False,
-    )
-    return matched
+def prefix_not_required_search(sentence: str) -> list:
+    return PROCESS.search(sentence)
 
 
-def prefix_not_required_fromtext(sentences):
-    result = []
-    for page, number, sentence in smarty.utils.sentences(
-            sentences,
-            numbers=True,
-    ):
-        detected = prefix_not_required_search(sentence)
-        if not detected:
-            continue
-        result.append(
-            smarty.serialize.Phrase(
-                page=page,
-                sentence=number,
-                marked=detected,
-            ))
-    return result
+def prefix_not_required_fromtext(sentences) -> iamraw.TextAdviceReplacement:
+    return PROCESS.callme(sentences)

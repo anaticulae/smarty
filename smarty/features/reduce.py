@@ -18,5 +18,5 @@ def work(
 ) -> str:
     sentences = serializeraw.load_text(sentences, pages=pages)
     detected = smarty.badwords.prefix.prefix_not_required_fromtext(sentences)
-    dumped = smarty.serialize.dump_phrases(detected)
+    dumped = serializeraw.dump_textadvices(detected)
     return dumped
