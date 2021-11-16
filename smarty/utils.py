@@ -14,10 +14,6 @@ import german
 import utila
 
 
-def init(text: str) -> set:
-    return {item.lower() for item in text.splitlines() if item}
-
-
 def words_fromtext(text, nomarks: bool = False) -> list:
     collected = []
     for _, sentence in sentences(text):
