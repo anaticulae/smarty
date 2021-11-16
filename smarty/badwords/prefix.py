@@ -8,6 +8,7 @@
 # =============================================================================
 
 import german
+import utila
 
 import smarty.utils
 
@@ -57,6 +58,7 @@ zuschicken
 """)
 
 
+@utila.cacheme
 def prefix_not_required_search(sentence: str):
     matched = german.searches(
         tokenslist=NOT_REQUIRED,

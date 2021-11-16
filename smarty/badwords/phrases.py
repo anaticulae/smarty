@@ -75,6 +75,7 @@ zu entzaubern
 """)
 
 
+@utila.cacheme
 def phrases_search(sentence: str):
     matched = german.searches(
         tokenslist=NEGATIVE,

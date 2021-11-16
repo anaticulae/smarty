@@ -123,6 +123,7 @@ wissenschaftlicher bereich
 """)
 
 
+@utila.cacheme
 def pleonasmen_search(sentence: str):
     matched = german.searches(
         tokenslist=ABBREVIATION | DUPLICATED | NOUN | WORDHULL,
