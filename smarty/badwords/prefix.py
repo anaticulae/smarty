@@ -13,48 +13,48 @@ import utila
 import smarty.utils
 
 NOT_REQUIRED = smarty.utils.init_table("""\
-abblocken
-abklären
-abmildern
-abprüfen
-absegnen
-absenken
-absichern
-absinken
-abstoppen
-abstützen
-abtesten
-abzielen
-anbetreffen
-anheben
-ankaufen
-anschwellen
-ansteigen
-anwachsen
-aufaddieren
-auffülllen
-auflisten
-aufoktroyieren
-aufspalten
-aufsummieren
-aufzeigen
-ausborgen
-auseinanderklaffen
-ausleihen
-befüllen
-hochskalieren
-losstarten
-mit einbeziehen
-mit einschließen
-mithelfen
-verbuchen
-verfüllen
+abblocken                       blocken
+abklären                        klären
+abmildern                       mildern
+abprüfen                        prüfen
+absegnen                        sengen
+absenken                        senken
+absichern                       sichern
+absinken                        sinken
+abstoppen                       stoppen
+abstützen                       stützen
+abtesten                        testen
+abzielen                        zielen
+anbetreffen                     betreffen
+anheben                         heben
+ankaufen                        kaufen
+anschwellen                     schwellen
+ansteigen                       steigen
+anwachsen                       wachsen
+aufaddieren                     addieren
+auffülllen                      füllen
+auflisten                       listen
+aufoktroyieren                  oktroyieren
+aufspalten                      spalten
+aufsummieren                    summieren
+aufzeigen                       zeigen
+ausborgen                       borgen
+auseinanderklaffen              klaffen
+ausleihen                       leihen
+befüllen                        füllen
+hochskalieren                   skalieren
+losstarten                      starten
+mit einbeziehen                 einbeziehen/einschließen
+mit einschließen                einschließen
+mithelfen                       helfen
+verbuchen                       buchen
+verfüllen                       füllen
 vorankommen
-vorwarnen
-weglöschen
-zuliefern
-zuschicken
-überprüfen
+vorwarnen                       warnen
+weglöschen                      löschen
+zuliefern                       liefen
+zuschicken                      schicken
+überprüfen                      prüfen
 """)
 
 
