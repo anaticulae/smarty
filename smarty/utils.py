@@ -53,7 +53,7 @@ class AdviceTable(collections.UserDict):
         return set(self.keys()) | value
 
 
-def init_table(data: str) -> AdviceTable:
+def init_table(data: str, columns: int = 2) -> AdviceTable:
     r"""\
     >>> init_table('''
     ... ausgangsvoraussetzungen             voraussetzung
@@ -66,14 +66,17 @@ def init_table(data: str) -> AdviceTable:
     """
     lines = utila.splitlines(data)
     result = AdviceTable()
+    valid = utila.ranged_tuple(start=1, end=columns + 1)
     for line in lines:
         line = line.strip()
         if line[0] == '#':
             continue
-        splitted = re.split(r'\s{5,}', line)
-        assert len(splitted) in (1, 2), splitted
-        if len(splitted) == 2:
+        splitted = re.split(r'\s{5,}', line, maxsplit=columns - 1)
+        assert len(splitted) in valid, splitted
+        if len(splitted) == 1:
+            result[splitted[0]] = ''
+        elif len(splitted) == 2:
             result[splitted[0]] = splitted[1]
         else:
-            result[splitted[0]] = ''
+            result[splitted[0]] = splitted[1:]
     return result
