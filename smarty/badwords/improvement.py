@@ -14,9 +14,41 @@ replacement to the user.
 There can be a optional description why this improvement is required.
 """
 
-IMPROVEMENT = """\
-höchste Exaktheit
-höchste Genauigkeit
-TODO
+import iamraw
+import utila
 
-"""
+import smarty.utils
+
+# yapf:disable
+IMPROVEMENT = smarty.utils.init_table("""\
+höchste Exaktheit             höchste Genauigkeit                 Exaktheit ist nicht steigerbar. Es ist entweder exakt oder nicht.
+""", columns=3)
+# yapf:enable
+
+
+class Improvement(smarty.badwords.FromText):
+
+    def __init__(self):
+        super().__init__(tokens=IMPROVEMENT)
+
+    def advice(self, docref, raw):
+        replacement, hint = self.tokens.get(raw)
+        result = iamraw.TextAdviceReplacement(
+            docref=docref,
+            raw=raw,
+            replacement=replacement,
+            hint=hint,
+        )
+        return result
+
+
+PROCESS = Improvement()
+
+
+@utila.cacheme
+def improvement_search(sentence: str):
+    return PROCESS.search(sentence)
+
+
+def improvement_fromtext(sentences) -> iamraw.TextAdviceReplacement:
+    return PROCESS.callme(sentences)
