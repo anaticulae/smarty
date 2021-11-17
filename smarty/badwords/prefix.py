@@ -10,6 +10,7 @@
 import iamraw
 import utila
 
+import smarty.badwords
 import smarty.utils
 
 NOT_REQUIRED = smarty.utils.init_table("""\

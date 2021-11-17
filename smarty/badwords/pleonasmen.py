@@ -10,6 +10,7 @@
 import iamraw
 import utila
 
+import smarty.badwords
 import smarty.serialize
 import smarty.utils
 

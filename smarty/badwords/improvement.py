@@ -17,6 +17,7 @@ There can be a optional description why this improvement is required.
 import iamraw
 import utila
 
+import smarty.badwords
 import smarty.utils
 
 # yapf:disable
