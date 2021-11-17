@@ -21,7 +21,10 @@ import smarty.utils
 
 # yapf:disable
 IMPROVEMENT = smarty.utils.init_table("""\
-höchste Exaktheit             höchste Genauigkeit                 Exaktheit ist nicht steigerbar. Es ist entweder exakt oder nicht.
+dynamische Wandlung                 Wandel                              Ist ein statischer Wandel möglich?
+höchste exaktheit                   höchste Genauigkeit                 Exaktheit ist nicht steigerbar. Es ist entweder exakt oder nicht.
+standart                            Standard                            Meinen Sie wirklich die Art zu stehen?
+weltweite globalisierung            Globalisierung                      Global umfasst die ganze Welt.
 """, columns=3)
 # yapf:enable
 
