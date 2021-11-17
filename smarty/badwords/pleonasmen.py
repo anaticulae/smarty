@@ -123,16 +123,85 @@ wissenschaftlichen disziplinen
 wissenschaftlicher bereich
 """)
 
+MIXED = smarty.utils.init_table("""\
+abgewandelte Variante
+aktive Informationssuche
+aktive Suche
+aktiver Anwender
+aktiver Informationssuche
+aktiver Suche
+andere Alternative
+anfängliche Startschwierigkeiten                 Startschwierigkeiten
+berühmter Star
+dichtes Gedränge
+eignenes Ego
+erste Vorboten
+falsche Illusion
+fest Konstante
+fest Überzeugung
+finaler Schluss
+finales Ende
+finales Ergebnis
+fundamentale Grundkenntnisse
+fundamentale Grundvorraussetzungen
+ganz neue Innovation
+gemeinsame Schnittmenge
+geschiedene Exehefrau
+gezielte Maßnahme
+grundlegendes Fundament
+im augenblicklichen Moment
+in bunten Farben
+inneres Gefühl
+internationale Auslandstätigkeit
+interpersonale Kommunikation
+jeweilige Relationen
+kleiner Obolus                                   Obolus                     bedeutet: ein kleiner Geldbetrag
+komparativer Vergleich
+kummulative Erfahrung
+langfristige Strategie
+lästiges Ärgernis
+manuelle Handarbeit
+marginale Randerscheinung
+mehrfacher Multimilliardär
+mehrfacher Multimillionär
+methodisches Verfahren
+mögliche Variante
+natürlicher Instinkt
+neue Innovation
+persönliche Erfahrung
+persönliche Interaktion
+persönliche Meinung
+potentielles Risiko
+resultierendes Ergebnis
+runde Kugel
+schwarzer Rappe
+seltene Rarität
+semantische Bedeutung
+situative Gelegenheit
+situativer Kontext
+spontaner Reflex
+starker Kurseinbruch
+unerklärliches Phänomen
+ursächlicher Kausalzusammenhang
+vorbeugende Präventivmaßnahme
+wechselseitiger Leistungsaustausch
+weibliche Kandidatin
+zweite Alternative
+zwischenmenschliche Interaktion
+""")
+
 
 class Pleonasma(smarty.badwords.FromText):
 
     def __init__(self):
-        super().__init__(tokens=ABBREVIATION | DUPLICATED | NOUN | WORDHULL)
+        super().__init__(tokens=ABBREVIATION | DUPLICATED | NOUN | WORDHULL |
+                         MIXED)
         self.lookup = utila.dicts_united(
             ABBREVIATION,
             DUPLICATED,
             NOUN,
             WORDHULL,
+            MIXED,
         )
 
     def advice(self, docref, raw):
