@@ -15,12 +15,19 @@ import smarty.serialize
 import smarty.utils
 
 NEGATIVE = utila.splitlines("""\
+nadel im heuhaufen
+spitze des eisbergs
+am puls der zeit
 arbeitswelt
 auf den punkt gebracht
 bereits heute
 beschleunigten alltagskultur
+bitterer ernst
 blickfeld der öffentlichkeit
 breites spektrum
+das bittere ende
+die breite masse
+die goldene mitte
 eine immense zahl
 eine wichtige rolle
 einige aufgeführt
@@ -33,6 +40,7 @@ etwas positives abzugewinnen
 fruchtbarer boden
 gesamtpaket
 gewinnt im zuge
+grünes licht
 heutige arbeitswelt
 heutige lebenswelt
 heutigen zeit
@@ -43,6 +51,7 @@ ihr leben lassen mussten
 im stich gelassen
 immer wieder aufs neue
 in aller munde
+in die höhe schießen
 jeder hat schon einmal
 knapp bemessen
 kostbares gut

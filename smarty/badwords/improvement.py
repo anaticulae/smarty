@@ -22,7 +22,14 @@ import smarty.utils
 
 # yapf:disable
 IMPROVEMENT = smarty.utils.init_table("""\
+# Lichtzeichenanlage                Ampel
+# literarisches Werk                Buch
+ansonsten                           sonst
+ausgestalltung                      Gestalltung
+beantwortung                        Antwort
 dynamische Wandlung                 Wandel                              Ist ein statischer Wandel möglich?
+eine Vielzahl von                   viele
+grundbefindlichkeit                 Zustand
 hohe Abhängigkeit                   starke Abhängigkeit
 hohe Bereitschaft                   große Bereitschaft
 hohe Kenntnisse                     fundierte/umfangreiche Kenntnisse
@@ -38,8 +45,25 @@ hohes Marktpotential                erfolgsversprechendes/großes Marktpotential
 hohes Risiko                        großes Risiko
 hohes Volumen                       großes Volumen
 höchste exaktheit                   höchste Genauigkeit                 Exaktheit ist nicht steigerbar. Es ist entweder exakt oder nicht.
+in Zusammenhang mit                 bei
+in ihrer Gesamtheit                 alle
+in vollem Umfang                    ganz
+keine Seltenheit                    häufig
+kritische Anmerkungen               Kritik
+positive Entwicklung                Steigerung
+postwertzeichen                     Briefmarke
+problematik                         Problem
+problemlösungsaktivitäten           Problem lösen
+räumlichkeit                        Raum
 standart                            Standard                            Meinen Sie wirklich die Art zu stehen?
+strengstes Stillschweigen           schweigen
+thematik                            Thema
+themenkomplex                       Thema
 weltweite globalisierung            Globalisierung                      Global umfasst die ganze Welt.
+zielsetzung                         Ziel
+zielstellung                        Ziel
+zu einem späteren Zeitpunkt         später
+zum wiederholten Male               wieder
 """, columns=3)
 # yapf:enable
 
