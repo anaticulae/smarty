@@ -11,14 +11,36 @@ import iamraw
 import utila
 
 import smarty.badwords
+import smarty.utils
 
-AVOID = utila.splitlines("""\
+# yapf:disable
+AVOID = smarty.utils.init_table("""\
 eklatant
 geflissentlich
+hochkarätig
+optimal
+spektakulär
 ungeahnt
 unmissverständlich
 zukunftsweisend
-""")
+akzeptierbar                    akzeptabel
+bewältigbar                     zu bewältigen
+diskutierbar                    diskutabel
+leistbar                        zu leisten
+unaufhaltbar                    unaufhaltsam
+unaufhörbar                     unaufhörlich
+unentbehrbar                    unentbehrlich
+unertragbar                     unerträglich
+einzigste                       einzige                 nicht steigerbar
+minimalste                      minimale                nicht steigerbar
+maximalste                      maximale                nicht steigerbar
+erstklassigsten                 erstklassig             nicht steigerbar
+einfallsloseste                 einfallslos             nicht steigerbar
+vorurteilsfreiste               vorurteilsfrei          nicht steigerbar
+valider                         valide                  nicht steigerbar
+reliabler                       reliable                nicht steigerbar
+""", columns=3)
+# yapf: enable
 
 
 class AvoidAdjective(smarty.badwords.FromText):
@@ -27,9 +49,13 @@ class AvoidAdjective(smarty.badwords.FromText):
         super().__init__(tokens=AVOID)
 
     def advice(self, docref, raw):
+        replacement = AVOID.get(raw, None)
+        if replacement and len(replacement) == 2:
+            replacement = replacement[0]
         result = iamraw.TextAdviceDelete(
             docref=docref,
             raw=raw,
+            replacement=replacement,
         )
         return result
 
