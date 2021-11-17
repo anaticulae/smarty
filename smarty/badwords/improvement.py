@@ -22,6 +22,20 @@ import smarty.utils
 # yapf:disable
 IMPROVEMENT = smarty.utils.init_table("""\
 dynamische Wandlung                 Wandel                              Ist ein statischer Wandel möglich?
+hohe Abhängigkeit                   starke Abhängigkeit
+hohe Bereitschaft                   große Bereitschaft
+hohe Kenntnisse                     fundierte/umfangreiche Kenntnisse
+hohe Marktdynamik                   dynamischer Markt
+hohe Neigung                        starke Neigung
+hohe Nutzung                        intensive Nutzung
+hohe Wirkung                        intensive/starke Wirkung
+hoher Aufwand                       großer Aufwand
+hoher Spielraum                     großer/weiter Spielraum
+hoher Zeitaufwand                   großer Zeitaufwand
+hohes Bedürfnis                     ausgepgrägtes/starkes Bedürfnis
+hohes Marktpotential                erfolgsversprechendes/großes Marktpotential
+hohes Risiko                        großes Risiko
+hohes Volumen                       großes Volumen
 höchste exaktheit                   höchste Genauigkeit                 Exaktheit ist nicht steigerbar. Es ist entweder exakt oder nicht.
 standart                            Standard                            Meinen Sie wirklich die Art zu stehen?
 weltweite globalisierung            Globalisierung                      Global umfasst die ganze Welt.
