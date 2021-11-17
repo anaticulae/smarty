@@ -35,7 +35,11 @@ class Improvement(smarty.badwords.FromText):
         super().__init__(tokens=IMPROVEMENT)
 
     def advice(self, docref, raw):
-        replacement, hint = self.tokens.get(raw)
+        improvement = self.tokens.get(raw)
+        try:
+            replacement, hint = improvement
+        except TypeError:
+            replacement, hint = improvement, ''
         result = iamraw.TextAdviceReplacement(
             docref=docref,
             raw=raw,
