@@ -2,6 +2,33 @@
 
 Every noteable change is logged here.
 
+## v1.0.0
+
+### Feature
+
+* add hint to replace word (fa5e9b07e78b)
+* add more phrases and improvements (a7d23f40b600)
+* add list with more pleonasma (63609186700f)
+* add step to avoid words (329d9696b907)
+* extend list of improvements (69b79d0ff1f8)
+* add improvement without special hint (c23330e6c010)
+* extend list of improvements (56ae0bcaac86)
+* add improvement step with more details (d7c4a42ee158)
+* add improvement with further explanations (a92851001d72)
+* add option to parse more than two columns (60327cd15ca0)
+* skip lines with starting # (a790dc12c4ab)
+* add advice list (7e8c6d91b769)
+* replace with advice approach (2d2e7d4e10ce)
+* give advice for improving text (74639c8deaf2)
+* complete advise list (65bb3b4c6bdc)
+* replace detection with new TextAdvice (febdc4410925)
+* use cache to reduce computation effort (a76789dd51a9)
+* split into several steps (4a849ab2d440)
+* add more phrases (06a9053bbcb7)
+* use table parser (e10a73350d4b)
+* add table set parser (ae72cff0c8ac)
+* use sentences instead of words (349dda77f5d4)
+
 ## v0.3.1
 
 ## v0.3.0
