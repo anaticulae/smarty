@@ -11,7 +11,7 @@ import enum
 
 import utila
 
-import smarty.badwords.adjective
+import smarty.badwords.avoid
 import smarty.badwords.fat
 import smarty.badwords.pleonasmen
 import smarty.badwords.prefix
@@ -29,7 +29,7 @@ def badwords_judge(wordlist: list, skip_empty: bool = False) -> list:
     result = []
     for word in wordlist:
         current = set()
-        if word in smarty.badwords.adjective.AVOID:
+        if word in smarty.badwords.avoid.AVOID:
             current.add(BadWord.AVOID_ADJECTIVE)
         if word in smarty.badwords.fat.FAT:
             current.add(BadWord.FAT)

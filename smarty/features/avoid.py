@@ -7,12 +7,16 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import utila
+import serializeraw
 
-AVOID = utila.splitlines("""\
-eklatant
-geflissentlich
-ungeahnt
-unmissverständlich
-zukunftsweisend
-""")
+import smarty.badwords.avoid
+
+
+def work(
+    sentences: str,
+    pages: tuple = None,
+) -> str:
+    sentences = serializeraw.load_text(sentences, pages=pages)
+    detected = smarty.badwords.avoid.avoid_fromtext(sentences)
+    dumped = serializeraw.dump_textadvices(detected)
+    return dumped

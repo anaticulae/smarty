@@ -16,6 +16,13 @@ DESCRIPTION = ''
 
 WORKPLAN = [
     utila.create_step(
+        'avoid',
+        inputs=[
+            utila.ResultFile('words', 'sentences_sentences'),
+        ],
+        output=('avoid',),
+    ),
+    utila.create_step(
         'improvement',
         inputs=[
             utila.ResultFile('words', 'sentences_sentences'),

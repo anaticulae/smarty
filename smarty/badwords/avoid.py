@@ -1,0 +1,46 @@
+# =============================================================================
+# C O P Y R I G H T
+# -----------------------------------------------------------------------------
+# Copyright (c) 2020-2021 by Helmut Konrad Fahrendholz. All rights reserved.
+# This file is property of Helmut Konrad Fahrendholz. Any unauthorized copy,
+# use or distribution is an offensive act against international law and may
+# be prosecuted under federal law. Its content is company confidential.
+# =============================================================================
+
+import iamraw
+import utila
+
+import smarty.badwords
+
+AVOID = utila.splitlines("""\
+eklatant
+geflissentlich
+ungeahnt
+unmissverständlich
+zukunftsweisend
+""")
+
+
+class AvoidAdjective(smarty.badwords.FromText):
+
+    def __init__(self):
+        super().__init__(tokens=AVOID)
+
+    def advice(self, docref, raw):
+        result = iamraw.TextAdviceDelete(
+            docref=docref,
+            raw=raw,
+        )
+        return result
+
+
+PROCESS = AvoidAdjective()
+
+
+@utila.cacheme
+def avoid_search(sentence: str) -> list:
+    return PROCESS.search(sentence)
+
+
+def avoid_fromtext(sentences) -> iamraw.TextAdviceReplacement:
+    return PROCESS.callme(sentences)
