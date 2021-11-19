@@ -15,8 +15,6 @@ import smarty.serialize
 import smarty.utils
 
 NEGATIVE = utila.splitlines("""\
-nadel im heuhaufen
-spitze des eisbergs
 am puls der zeit
 arbeitswelt
 auf den punkt gebracht
@@ -62,6 +60,7 @@ leben lassen mussten
 löst angst und schrecken aus
 macht es sinn
 man kann nur mutmaßungen anstellen
+nadel im heuhaufen
 nicht unerwähnt
 nicht unerwähnt bleiben
 schlüsselfrage
@@ -72,9 +71,11 @@ solides grundwissen
 soll nicht unerwähnt bleiben
 soziale kitt
 spielt im bereich
+spitze des eisbergs
 suboptimal
 umfangreiche quellen
 unermesslichen breite
+verdacht erhärtet sich
 verschwimmt immer mehr
 war durchaus positiv
 werden wir auf eine katastrophe zusteuern
