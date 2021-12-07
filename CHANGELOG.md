@@ -2,6 +2,12 @@
 
 Every noteable change is logged here.
 
+## v1.0.1
+
+### Feature
+
+* add phrases (96feda6e262b)
+
 ## v1.0.0
 
 ### Feature
