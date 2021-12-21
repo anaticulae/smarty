@@ -27,7 +27,8 @@ IMPROVEMENT = smarty.utils.init_table("""\
 ansonsten                           sonst
 ausgestalltung                      Gestalltung
 beantwortung                        Antwort
-dynamische Wandlung                 Wandel                              Ist ein statischer Wandel möglich?
+dynamischer Wandel                  groß/schnell/stark Wandel                   Wandel ist nie statisch.
+dynamische Wandlung                 Wandel                                      Ist ein statischer Wandel möglich?
 eine Vielzahl von                   viele
 grundbefindlichkeit                 Zustand
 hohe Abhängigkeit                   starke Abhängigkeit
@@ -44,7 +45,7 @@ hohes Bedürfnis                     ausgepgrägtes/starkes Bedürfnis
 hohes Marktpotential                erfolgsversprechendes/großes Marktpotential
 hohes Risiko                        großes Risiko
 hohes Volumen                       großes Volumen
-höchste exaktheit                   höchste Genauigkeit                 Exaktheit ist nicht steigerbar. Es ist entweder exakt oder nicht.
+höchste exaktheit                   höchste Genauigkeit                         Exaktheit ist nicht steigerbar. Es ist entweder exakt oder nicht.
 in Zusammenhang mit                 bei
 in ihrer Gesamtheit                 alle
 in vollem Umfang                    ganz
@@ -55,11 +56,11 @@ postwertzeichen                     Briefmarke
 problematik                         Problem
 problemlösungsaktivitäten           Problem lösen
 räumlichkeit                        Raum
-standart                            Standard                            Meinen Sie wirklich die Art zu stehen?
+standart                            Standard                                    Meinen Sie wirklich die Art zu stehen?
 strengstes Stillschweigen           schweigen
 thematik                            Thema
 themenkomplex                       Thema
-weltweite globalisierung            Globalisierung                      Global umfasst die ganze Welt.
+weltweite globalisierung            Globalisierung                              Global umfasst die ganze Welt.
 zielsetzung                         Ziel
 zielstellung                        Ziel
 zu einem späteren Zeitpunkt         später
