@@ -35,6 +35,8 @@ erschütternde zahlen
 es spielen
 etwas abschauen
 etwas positives abzugewinnen
+findet seine einschätzung widerklang
+findet widerklang
 fruchtbarer boden
 gesamtpaket
 gewinnt im zuge
