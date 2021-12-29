@@ -78,7 +78,7 @@ class Improvement(smarty.badwords.FromText):
         improvement = self.tokens.get(raw)
         try:
             replacement, hint = improvement
-        except TypeError:
+        except (TypeError, ValueError):
             replacement, hint = improvement, ''
         result = iamraw.TextAdviceReplacement(
             docref=docref,
