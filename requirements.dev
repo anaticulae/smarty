@@ -11,5 +11,5 @@
 utilatest==0.11.0
 
 # generate test resources
-power==2.2.1
+power==2.4.0
 genex==0.21.3
