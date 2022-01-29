@@ -2,6 +2,23 @@
 
 Every noteable change is logged here.
 
+## v1.1.0
+
+### Feature
+
+* extend phrases list (1db68a14a43e)
+* extend phrases list (b2fa35ca8d9a)
+* add further improvement example (6057cf7a32d5)
+
+### Fix
+
+* do not fail on lookup error (ab91c401724f)
+
+### Documentation
+
+* adjust modules path (8cc9e02e427b)
+* Happy New Year! (64fd1b2fd1d5)
+
 ## v1.0.1
 
 ### Feature
