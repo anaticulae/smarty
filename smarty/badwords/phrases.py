@@ -15,6 +15,7 @@ import smarty.serialize
 import smarty.utils
 
 NEGATIVE = utila.splitlines("""\
+alles in allem
 am puls der zeit
 arbeitswelt
 auf den punkt gebracht
@@ -28,6 +29,7 @@ die breite masse
 die goldene mitte
 eine immense zahl
 eine wichtige rolle
+einer ausgiebigen betrachtung
 einige aufgeführt
 enorm
 erschreckende schlagzeilen
@@ -74,6 +76,7 @@ soll nicht unerwähnt bleiben
 soziale kitt
 spielt im bereich
 spitze des eisbergs
+stößt man
 suboptimal
 umfangreiche quellen
 unermesslichen breite
