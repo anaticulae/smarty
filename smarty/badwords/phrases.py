@@ -54,6 +54,7 @@ im stich gelassen
 immer wieder aufs neue
 in aller munde
 in die höhe schießen
+in irgendeiner weise
 jeder hat schon einmal
 knapp bemessen
 kostbares gut
