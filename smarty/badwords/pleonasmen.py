@@ -205,7 +205,7 @@ class Pleonasma(smarty.badwords.FromText):
         )
 
     def advice(self, docref, raw):
-        replacement = self.lookup.get(raw, 'NO ADVICE')
+        replacement = self.lookup.get(raw.lower(), 'NO ADVICE')
         result = iamraw.TextAdviceReplacement(
             docref=docref,
             raw=raw,

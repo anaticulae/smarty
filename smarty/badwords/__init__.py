@@ -58,5 +58,10 @@ class FromText:
         )
         return result
 
+    def fromtable(self, raw):
+        raw = raw.lower()
+        result = self.tokens.get(raw, 'NO ADVICE')
+        return result
+
     def rawme(self, raw):  # pylint:disable=R0201
         return ', '.join([' '.join(item) for item in raw])

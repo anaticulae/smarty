@@ -49,7 +49,7 @@ class AvoidAdjective(smarty.badwords.FromText):
         super().__init__(tokens=AVOID)
 
     def advice(self, docref, raw):
-        replacement = AVOID.get(raw, None)
+        replacement = self.fromtable(raw)
         if replacement and len(replacement) == 2:
             replacement = replacement[0]
         result = iamraw.TextAdviceDelete(

@@ -66,7 +66,11 @@ class RemovePrefix(smarty.badwords.FromText):
         self.lookup = tokens
 
     def advice(self, docref, raw):
-        replacement = self.lookup.get(raw, 'NO ADVICE')
+        """\
+        >>> RemovePrefix().advice(None, 'Absinken')
+        TextAdviceReplacement(raw='Absinken',...replacement='sinken'...)
+        """
+        replacement = self.fromtable(raw)
         result = iamraw.TextAdviceReplacement(
             docref=docref,
             raw=raw,
