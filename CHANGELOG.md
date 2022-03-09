@@ -2,6 +2,17 @@
 
 Every noteable change is logged here.
 
+## v1.1.1
+
+### Feature
+
+* extend phrases list (14516ac7f06c)
+
+### Fix
+
+* adjust interface (2c2147ee22f6)
+* make lookup case insensitive (9d8282966e96)
+
 ## v1.1.0
 
 ### Feature
