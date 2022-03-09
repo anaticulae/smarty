@@ -43,7 +43,7 @@ class FromText:
     @utila.cacheme
     def search(self, sentence):
         matched = german.searches(
-            tokenslist=self.tokens,
+            patterns=self.tokens,
             sentence=sentence,
             tokens_complex=False,
             neighbours_merge=self.neighbours_merge,
