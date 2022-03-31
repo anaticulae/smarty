@@ -26,6 +26,7 @@ RESOURCES = [
     power.MASTER072_PDF,
     power.MASTER099_PDF,
     power.MASTER110_PDF,
+    (power.BACHELOR111_PDF, '20:30'),
 ]
 
 WORKER = 4
