@@ -64,4 +64,9 @@ class FromText:
         return result
 
     def rawme(self, raw):  # pylint:disable=R0201
-        return ', '.join([' '.join(item) for item in raw])
+        converted = []
+        for finding in raw:
+            matching_raw = ' '.join(str(item) for item in finding)
+            converted.append(matching_raw)
+        result = ', '.join(converted)
+        return result
