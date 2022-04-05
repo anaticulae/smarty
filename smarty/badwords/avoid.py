@@ -15,30 +15,30 @@ import smarty.utils
 
 # yapf:disable
 AVOID = smarty.utils.init_table("""\
-eklatant
-geflissentlich
-hochkarätig
-optimal
-spektakulär
-ungeahnt
-unmissverständlich
-zukunftsweisend
 akzeptierbar                    akzeptabel
 bewältigbar                     zu bewältigen
 diskutierbar                    diskutabel
+einfallsloseste                 einfallslos             nicht steigerbar
+einzigste                       einzige                 nicht steigerbar
+eklatant
+erstklassigsten                 erstklassig             nicht steigerbar
+geflissentlich
+hochkarätig
 leistbar                        zu leisten
+maximalste                      maximale                nicht steigerbar
+minimalste                      minimale                nicht steigerbar
+optimal
+reliabler                       reliable                nicht steigerbar
+spektakulär
 unaufhaltbar                    unaufhaltsam
 unaufhörbar                     unaufhörlich
 unentbehrbar                    unentbehrlich
 unertragbar                     unerträglich
-einzigste                       einzige                 nicht steigerbar
-minimalste                      minimale                nicht steigerbar
-maximalste                      maximale                nicht steigerbar
-erstklassigsten                 erstklassig             nicht steigerbar
-einfallsloseste                 einfallslos             nicht steigerbar
-vorurteilsfreiste               vorurteilsfrei          nicht steigerbar
+ungeahnt
+unmissverständlich
 valider                         valide                  nicht steigerbar
-reliabler                       reliable                nicht steigerbar
+vorurteilsfreiste               vorurteilsfrei          nicht steigerbar
+zukunftsweisend
 """, columns=3)
 # yapf: enable
 
