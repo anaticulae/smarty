@@ -16,6 +16,7 @@ import smarty.utils
 # yapf:disable
 AVOID = smarty.utils.init_table("""\
 akzeptierbar                    akzeptabel
+beeindruckend
 bewältigbar                     zu bewältigen
 diskutierbar                    diskutabel
 einfallsloseste                 einfallslos             nicht steigerbar
