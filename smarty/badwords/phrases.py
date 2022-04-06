@@ -72,6 +72,7 @@ schlüsselfrage
 schreckgespenst betrachtet
 schwerwiegende erkenntnis
 sehr wichtiger faktor
+sieht jedenfalls anders aus
 solides grundwissen
 soll nicht unerwähnt bleiben
 soziale kitt
