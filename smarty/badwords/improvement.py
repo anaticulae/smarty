@@ -65,6 +65,7 @@ zielsetzung                         Ziel
 zielstellung                        Ziel
 zu einem späteren Zeitpunkt         später
 zum wiederholten Male               wieder
+zwischenfazit                       zwischenstand
 """, columns=3)
 # yapf:enable
 
