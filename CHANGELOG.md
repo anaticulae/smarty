@@ -2,6 +2,19 @@
 
 Every noteable change is logged here.
 
+## v1.2.0
+
+### Feature
+
+* add word (93093c1c23be)
+* extend phrases list (c3fb4c4918b8)
+* add jargon category (b6b049b4ed70)
+* this is not science (a599761c3461)
+
+### Fix
+
+* convert Marks to join them to str (af43a04808e3)
+
 ## v1.1.1
 
 ### Feature
