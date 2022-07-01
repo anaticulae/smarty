@@ -44,5 +44,4 @@ from smarty.statistics import ratio_questions_fromtext
 __version__ = '1.2.0'
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-PACKAGE = 'smarty'
 PROCESS = 'smarty'

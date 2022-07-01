@@ -15,7 +15,7 @@ import smarty
 
 pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
 
-PACKAGE = smarty.PACKAGE
+PACKAGE = smarty.PROCESS
 
 power.setup(smarty.ROOT)
 
