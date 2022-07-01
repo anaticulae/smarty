@@ -13,6 +13,7 @@ import utila
 import smarty.badwords
 
 SCIENCELESS = utila.splitlines("""\
+atemberaubend
 beeindruckend
 sensationell
 """)
