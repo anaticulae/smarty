@@ -10,7 +10,6 @@
 import genex
 import power
 import pytest
-import utila
 
 import smarty
 
@@ -38,15 +37,8 @@ def pytest_sessionstart():
 
 
 def extract(resources):
-    # ensure to handle single file generation or common resource subfolder
-    # correctly. To determine the output path it is required to determine
-    # the parent path of at least two files. If resources provide only a
-    # single file the parental determination is not possible. Therefore we
-    # have to add the data root of all test files.
-    utila.log(f'root: {power.REPOSITORY}')
     genex.extract(
         files=resources,
-        destination=power.generated(),
         groupme=True,
         headlines=True,
         lists=True,
@@ -54,6 +46,4 @@ def extract(resources):
         sections=True,
         words=True,
         worker=WORKER,
-        pages=':',
-        base=power.REPOSITORY,
     )
