@@ -141,4 +141,3 @@ Every noteable change is logged here.
 * add package overview (6f57b8a0e44b)
 
 ## v0.0.0 Initial release
-
