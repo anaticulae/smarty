@@ -46,6 +46,7 @@ if __name__ == "__main__":
             'smarty',
             'smarty.badwords',
             'smarty.features',
+            'smarty.pair',
         ],
         entry_points={
             'console_scripts': ['smarty = smarty.cli:main'],
