@@ -26,7 +26,7 @@ RESOURCES = [
     power.MASTER072_PDF,
     power.MASTER099_PDF,
     power.MASTER110_PDF,
-    (power.BACHELOR111_PDF, '20:30'),
+    (power.BACHELOR111_PDF, '0:30'),
 ]
 
 WORKER = 4
@@ -48,9 +48,11 @@ def extract(resources):
         files=resources,
         destination=power.generated(),
         groupme=True,
+        headlines=True,
+        lists=True,
+        magic=True,
         sections=True,
         words=True,
-        magic=True,
         worker=WORKER,
         pages=':',
         base=power.REPOSITORY,

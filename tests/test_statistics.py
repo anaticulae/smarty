@@ -26,7 +26,7 @@ def test_count_questions():
     source = power.MASTER072_PDF
     text = tests.load_text(source)
     result = smarty.count_questions(text)
-    assert result >= 7  # not validated yet
+    assert result >= 5  # not validated yet
 
 
 @pytest.mark.parametrize('source, expected', [
