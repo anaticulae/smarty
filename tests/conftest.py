@@ -21,6 +21,7 @@ power.setup(smarty.ROOT)
 
 RESOURCES = [
     (power.BACHELOR111_PDF, '0:30'),
+    power.BACHELOR077_PDF,
     power.BACHELOR090_PDF,
     power.BACHELOR128_PDF,
     power.MASTER072_PDF,
