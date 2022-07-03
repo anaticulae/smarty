@@ -2,6 +2,16 @@
 
 Every noteable change is logged here.
 
+## v1.3.0
+
+### Feature
+
+* add spelling detector (1eb0484c24b5)
+* add a more complex data structure (a4512493bf92)
+* add method to determine valid five/three-gram (aa15201c7859)
+* add method to find word-hyphen-pairs (34300125fa92)
+* extend less (eb7e2c882c08)
+
 ## v1.2.0
 
 ### Feature
