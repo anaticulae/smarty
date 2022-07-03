@@ -18,3 +18,10 @@ def test_minus_grams_bachelor077():
     sentences = tests.load_text(source)
     threes, fives = smarty.pair.minus.grams(sentences)
     assert threes, fives
+
+
+def test_minus_missing_bachelor077():
+    source = power.BACHELOR077_PDF
+    sentences = tests.load_text(source)
+    missing = smarty.pair.minus.missing(sentences)
+    assert len(missing) >= 58
