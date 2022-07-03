@@ -50,6 +50,13 @@ WORKPLAN = [
         ],
         output=('reduce',),
     ),
+    utila.create_step(
+        'spelling',
+        inputs=[
+            utila.ResultFile('words', 'sentences_sentences'),
+        ],
+        output=('hyphen',),
+    ),
 ]
 
 

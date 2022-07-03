@@ -20,3 +20,7 @@ def smarty_pleonasmas(path: str, prefix: str = '') -> str:
 
 def smarty_reduces(path: str, prefix: str = '') -> str:
     return utila.pathconnector(path, 'smarty', 'reduce_reduce', prefix)
+
+
+def smarty_spelling_hyphen(path: str, prefix: str = '') -> str:
+    return utila.pathconnector(path, 'smarty', 'spelling_hyphen', prefix)
