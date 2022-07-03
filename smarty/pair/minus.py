@@ -21,6 +21,8 @@ FIVE_GRAM_MIN = configo.HV_INT_PLUS(default=5)
 
 THREE_GRAM_MIN = configo.HV_INT_PLUS(default=8)
 
+HyphenError = collections.namedtuple('HypenError', 'page sentence token raw')
+
 
 def missing(sentences) -> list:  # pylint:disable=R0914
     threes, fives = grams(sentences)
@@ -51,9 +53,17 @@ def missing(sentences) -> list:  # pylint:disable=R0914
             verbose=True,
         )
         if triple_failure:
-            failures.append((page, number, triple_failure))
-            for failure in triple_failure[0]:
-                for index in utila.rlist(*failure):
+            triple_failure = [
+                HyphenError(
+                    page=page,
+                    sentence=number,
+                    token=tokens,
+                    raw=tuple(raws),
+                ) for tokens, raws, in zip(*triple_failure)
+            ]
+            failures.extend(triple_failure)
+            for failure in triple_failure:
+                for index in utila.rlist(*failure.token):
                     # overwrite failure words to avoid double detection
                     tokens[index] = None
         double_failure = german.searches(
@@ -63,7 +73,15 @@ def missing(sentences) -> list:  # pylint:disable=R0914
             verbose=True,
         )
         if double_failure:
-            failures.append((page, number, double_failure))
+            double_failure = [
+                HyphenError(
+                    page=page,
+                    sentence=number,
+                    token=tokens,
+                    raw=tuple(raws),
+                ) for tokens, raws, in zip(*double_failure)
+            ]
+            failures.extend(double_failure)
     return failures
 
 
