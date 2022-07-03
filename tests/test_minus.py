@@ -8,11 +8,13 @@
 # =============================================================================
 
 import power
+import utilatest
 
 import smarty.pair.minus
 import tests
 
 
+@utilatest.requires(power.BACHELOR077_PDF)
 def test_minus_grams_bachelor077():
     source = power.BACHELOR077_PDF
     sentences = tests.load_text(source)
@@ -20,6 +22,7 @@ def test_minus_grams_bachelor077():
     assert threes, fives
 
 
+@utilatest.requires(power.BACHELOR077_PDF)
 def test_minus_missing_bachelor077():
     source = power.BACHELOR077_PDF
     sentences = tests.load_text(source)

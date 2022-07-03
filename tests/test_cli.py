@@ -26,6 +26,7 @@ def test_help(monkeypatch):
 ])
 @utilatest.longrun
 def test_cli_badwords(source, testdir, monkeypatch):
+    utilatest.fixture_requires(source)
     source = power.link(source)
     tests.run(f'-i {source}', monkeypatch=monkeypatch)
     path = smarty.path.smarty_phrases(testdir.tmpdir)

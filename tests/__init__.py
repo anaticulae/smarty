@@ -16,6 +16,7 @@ import smarty
 
 
 def load_text(source: str, pages: tuple = None) -> iamraw.PageContentTexts:
+    utilatest.fixture_requires(source)
     source = power.link(source)
     headlines = serializeraw.load_headlines(source, pages=pages)
     text = serializeraw.load_text(
