@@ -24,3 +24,7 @@ def smarty_reduces(path: str, prefix: str = '') -> str:
 
 def smarty_spelling_hyphen(path: str, prefix: str = '') -> str:
     return utila.pathconnector(path, 'smarty', 'spelling_hyphen', prefix)
+
+
+def smarty_spelling_guess(path: str, prefix: str = '') -> str:
+    return utila.pathconnector(path, 'smarty', 'spelling_guess', prefix)

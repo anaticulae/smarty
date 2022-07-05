@@ -7,25 +7,31 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
+import typing
+
 import iamraw
 import serializeraw
 import utila
 
+import smarty.pair.guess
 import smarty.pair.minus
 
 
 def work(
     sentences: str,
     pages: tuple = None,
-) -> str:
+) -> typing.Tuple[str, str]:
     sentences = serializeraw.load_text(
         sentences,
         pages=pages,
     )
     missing = smarty.pair.minus.missing(sentences)
-    detected = convert(missing)
-    dumped = serializeraw.dump_textadvices(detected)
-    return dumped
+    guesses = smarty.pair.guess.guess(sentences)
+    detected_missing = convert(missing)
+    detected_guesses = convert(guesses)
+    dumped_missing = serializeraw.dump_textadvices(detected_missing)
+    dumped_guesses = serializeraw.dump_textadvices(detected_guesses)
+    return dumped_missing, dumped_guesses
 
 
 def convert(failures) -> list:

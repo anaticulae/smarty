@@ -55,7 +55,7 @@ WORKPLAN = [
         inputs=[
             utila.ResultFile('words', 'sentences_sentences'),
         ],
-        output=('hyphen',),
+        output=('hyphen', 'guess'),
     ),
 ]
 
