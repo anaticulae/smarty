@@ -8,7 +8,7 @@
 # =============================================================================
 
 # test environment
-utilatest==0.13.0
+utilatest==0.14.0
 
 # generate test resources
 power==2.9.0

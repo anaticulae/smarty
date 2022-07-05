@@ -39,4 +39,4 @@ def test_cli_spelling(testdir, monkeypatch):
     path = smarty.path.smarty_spelling_hyphen(testdir.tmpdir)
     loaded = serializeraw.load_textadvices(path)
     assert loaded
-    assert len(loaded) >= 58
+    assert len(loaded) >= 56
