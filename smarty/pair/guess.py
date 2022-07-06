@@ -43,6 +43,8 @@ def guess(sentences) -> list:  # pylint:disable=R0914
                 hyphen_before = tokens[index - start - 1] == konrad.Mark.HYPHEN
                 if hyphen_before:
                     continue
+                if any(simple_gramar(item) for item in ngram):
+                    continue
                 raw = ' '.join(ngram)
                 hypen = HyphenGuess(
                     page=page,
@@ -68,3 +70,28 @@ def left_strip(tokens):
     if tokens:
         start += 1
     return tokens, start
+
+
+@utila.cacheme
+def simple_gramar(token: str) -> bool:
+    if token.lower() in SKIP:
+        return True
+    if '.' in token:
+        # TODO: MAY REMOVE LATER
+        # skip vgl.
+        return True
+    return False
+
+
+ARTICLES = utila.splititems('DAS DIE DER')
+
+NUMBERS = utila.splititems(
+    'EINS ERSTE ERSTER ZWEI ZWEITE ZWEITER DREI DRITTE DRITTER '
+    'VIER VIERTER VIERTE FÜNF FÜNFTE FÜNFTER SECHS SECHTE SECHTER '
+    'SIEBEN SIEBTE SIEBTER ACHT ACTE ACTER NEUN NEUNTE NEUNTER '
+    'ZEHN ELF ZWÖLF DREIZEHN VIERZEHN HUNDERT TAUSEND MILLION MILLIONEN '
+    'MILLIARDE MILLIARDEN ')
+
+PRONOMS = utila.splititems('MEIN MEINER DEIN DEINER IHR IHRER SEIN SEINER')
+
+SKIP = ARTICLES | NUMBERS | PRONOMS
