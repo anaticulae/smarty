@@ -2,6 +2,18 @@
 
 Every noteable change is logged here.
 
+## v1.4.0
+
+### Feature
+
+* improve guesses due skip list (a1906d86ab3c)
+* ensure correct order in one sentence (162f284233c1)
+* add method to guess hyphen (eeb322949b81)
+
+### Fix
+
+* also skip highnotes (2ac9bdc78358)
+
 ## v1.3.0
 
 ### Feature
