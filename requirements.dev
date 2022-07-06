@@ -13,3 +13,5 @@ utilatest==0.14.0
 # generate test resources
 power==2.9.0
 genex==0.30.0
+# TODO: REMOVE LATER
+rawmaker>=2.37.3<3.0.0
