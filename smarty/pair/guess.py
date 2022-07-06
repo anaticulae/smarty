@@ -10,6 +10,7 @@
 import collections
 
 import german
+import knlp
 import konrad
 import utila
 
@@ -96,6 +97,6 @@ NUMBERS = utila.splititems(
 
 PRONOMS = utila.splititems('MEIN MEINER DEIN DEINER IHR IHRER SEIN SEINER')
 
-SKIP = ARTICLES | NUMBERS | PRONOMS
+SKIP = ARTICLES | NUMBERS | PRONOMS | knlp.stopwords()
 
 INVALIDS = ',;:!?=()[]{}'
