@@ -24,7 +24,7 @@ def test_help(monkeypatch):
     pytest.param(power.MASTER110_PDF, id='master110'),
     pytest.param(power.BACHELOR128_PDF, id='bachelor128'),
 ])
-@utilatest.longrun
+@utilatest.nightly
 def test_cli_badwords(source, testdir, monkeypatch):
     utilatest.fixture_requires(source)
     source = power.link(source)
