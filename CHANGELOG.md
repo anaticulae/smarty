@@ -2,6 +2,16 @@
 
 Every noteable change is logged here.
 
+## v1.5.0
+
+### Feature
+
+* skip german stop words (7d69b2377cfb)
+
+### Fix
+
+* skip invalid detection (11d09a6cee68)
+
 ## v1.4.0
 
 ### Feature
