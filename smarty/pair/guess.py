@@ -46,6 +46,8 @@ def guess(sentences) -> list:  # pylint:disable=R0914
                 if any(simple_gramar(item) for item in ngram):
                     continue
                 raw = ' '.join(ngram)
+                if any(char in raw for char in INVALIDS):
+                    continue
                 hypen = HyphenGuess(
                     page=page,
                     sentence=number,
@@ -95,3 +97,5 @@ NUMBERS = utila.splititems(
 PRONOMS = utila.splititems('MEIN MEINER DEIN DEINER IHR IHRER SEIN SEINER')
 
 SKIP = ARTICLES | NUMBERS | PRONOMS
+
+INVALIDS = ',;:!?=()[]{}'
