@@ -35,6 +35,10 @@ def work(
 
 
 def convert(failures) -> list:
+    # ensure that 2,3,4,5 and five grams are sorted in result correctly.
+    failures = sorted(failures, key=lambda x: x.token[0])
+    failures.sort(key=lambda x: x.sentence)
+    failures.sort(key=lambda x: x.page)
     result = []
     paged = utila.groupby_x(failures, selector=lambda x: x.page)
     for page in paged:
