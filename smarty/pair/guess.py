@@ -60,7 +60,7 @@ def guess(sentences) -> list:  # pylint:disable=R0914
 def left_strip(tokens):
     """Remove sentence signs and first upper cased word."""
     start = 0
-    while tokens and isinstance(tokens[0], konrad.Mark):
+    while tokens and konrad.isspecial(tokens[0]):
         tokens = tokens[1:]
         start += 1
     # remove first upper char
