@@ -10,9 +10,9 @@
 import collections
 
 import german
+import konrad
 import utila
 
-import konrad
 import smarty.utils
 
 HyphenGuess = collections.namedtuple('HypenError', 'page sentence token raw')
