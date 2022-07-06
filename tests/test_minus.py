@@ -33,7 +33,7 @@ def test_minus_missing_bachelor077():
 
 
 @utilatest.requires(power.BACHELOR077_PDF)
-def test_cli_spelling(testdir, monkeypatch):
+def test_cli_spelling_hyphen(testdir, monkeypatch):
     source = power.link(power.BACHELOR077_PDF)
     tests.run(f'-i {source} --spelling', monkeypatch=monkeypatch)
     path = smarty.path.smarty_spelling_hyphen(testdir.tmpdir)
