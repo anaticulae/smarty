@@ -19,7 +19,7 @@ import smarty.utils
 HyphenGuess = collections.namedtuple('HypenError', 'page sentence token raw')
 
 
-def guess(sentences) -> list:  # pylint:disable=R0914
+def guess(sentences) -> list:  # pylint:disable=R0914,R1260
     guesses = []
     for page, number, sentence in smarty.utils.sentences(
             sentences,
