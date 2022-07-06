@@ -1,0 +1,73 @@
+# =============================================================================
+# C O P Y R I G H T
+# -----------------------------------------------------------------------------
+# Copyright (c) 2022 by Helmut Konrad Fahrendholz. All rights reserved.
+# This file is property of Helmut Konrad Fahrendholz. Any unauthorized copy,
+# use or distribution is an offensive act against international law and may
+# be prosecuted under federal law. Its content is company confidential.
+# =============================================================================
+
+import functools
+
+import german
+import power
+import pytest
+import serializeraw
+import utila
+import utilatest
+
+import smarty
+import tests
+import tests.conftest
+
+ARCHIVE = utila.join(smarty.ROOT, 'tests/spelling/expected_hyphen', exist=True)
+
+
+@pytest.mark.parametrize(
+    'source',
+    utilatest.test_resources(tests.conftest.RESOURCES),
+)
+@utilatest.nightly
+def test_validate_spelling_hyphen(source, testdir, monkeypatch):
+    Evaluate(
+        source=source,
+        workdir=testdir.tmpdir,
+        monkeypatch=monkeypatch,
+    ).evaluate()
+
+
+class Evaluate(utilatest.BaseLiner):
+
+    def __init__(self, source, workdir, monkeypatch):
+        super().__init__(
+            program=functools.partial(
+                tests.run,
+                monkeypatch=monkeypatch,
+            ),
+            step='spelling',
+            pages=power.ctext(source, default=':'),
+            source=power.link(source),
+            workdir=workdir,
+            archive=ARCHIVE,
+            loader=self.frompath,
+            convert_source=False,
+        )
+
+    def frompath(self, path):  # pylint:disable=R0201
+        path = smarty.path.smarty_spelling_hyphen(path)
+        loaded = serializeraw.load_textadvices(path)
+        return loaded
+
+    def raw(self, value) -> str:
+        result = [rawline(item) for item in value]
+        result: str = utila.NEWLINE.join(result)
+        return result
+
+
+def rawline(item) -> str:
+    result = str(item.docref.page).zfill(3) + ' '
+    result += str(item.docref.sentence).zfill(2) + ' '
+    result += ',     '.join(german.token_plain(item) for item in item.docref.raw) + ' '  # yapf:disable
+    result += ' ' * (85 - len(result))
+    result += ' '.join(str(item) for item in item.docref.marked)
+    return result
