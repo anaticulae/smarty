@@ -66,6 +66,8 @@ def invalid(ngram: tuple) -> bool:
     raw = ' '.join(ngram)
     if any(char in raw for char in INVALIDS):
         return True
+    if any(german.isperson(item) for item in ngram):
+        return True
     return False
 
 
