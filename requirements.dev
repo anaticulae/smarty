@@ -14,4 +14,4 @@ utilatest==0.14.0
 power==2.9.0
 genex==0.30.0
 # TODO: REMOVE LATER
-rawmaker>=2.37.3<3.0.0
+rawmaker>=2.37.4<3.0.0
