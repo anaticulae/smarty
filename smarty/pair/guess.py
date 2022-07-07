@@ -19,7 +19,7 @@ import smarty.utils
 HyphenGuess = collections.namedtuple('HypenError', 'page sentence token raw')
 
 
-def guess(sentences) -> list:  # pylint:disable=R0914,R1260
+def guess(sentences) -> list:
     guesses = []
     for page, number, sentence in smarty.utils.sentences(
             sentences,
@@ -35,31 +35,38 @@ def guess(sentences) -> list:  # pylint:disable=R0914,R1260
         for length in (5, 4, 3, 2):
             ngrams = german.ngram(tokens, length=length)
             for index, ngram in enumerate(ngrams, start=start):
-                try:
-                    if any(not item[0].isupper() for item in ngram):
-                        continue
-                except TypeError:
-                    # Mark inside
+                if invalid(ngram):
                     continue
                 hyphen_before = tokens[index - start - 1] == konrad.Mark.HYPHEN
                 if hyphen_before:
-                    continue
-                if any(simple_gramar(item) for item in ngram):
-                    continue
-                raw = ' '.join(ngram)
-                if any(char in raw for char in INVALIDS):
                     continue
                 hypen = HyphenGuess(
                     page=page,
                     sentence=number,
                     token=utila.rtuple(index, index + len(ngram)),
-                    raw=raw,
+                    raw=' '.join(ngram),
                 )
                 guesses.append(hypen)
                 # overwrite word to avoid double detection
                 for word in range(length):
                     tokens[index - start + word] = None
     return guesses
+
+
+def invalid(ngram: tuple) -> bool:
+    try:
+        if any(not item[0].isupper() for item in ngram):
+            # first char of any word is not upper cased
+            return True
+    except TypeError:
+        # Mark inside
+        return True
+    if any(simple_gramar(item) for item in ngram):
+        return True
+    raw = ' '.join(ngram)
+    if any(char in raw for char in INVALIDS):
+        return True
+    return False
 
 
 def left_strip(tokens):
