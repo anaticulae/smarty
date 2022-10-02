@@ -8,11 +8,11 @@
 # =============================================================================
 
 # test environment
-utilatest==0.14.0
+utilatest==0.20.1
 
 # generate test resources
-power==2.9.0
-genex==0.30.0
+power==2.14.1
+genex==0.35.5
 # TODO: REMOVE LATER
-rawmaker>=2.37.4<3.0.0
-sdata>=0.7.2<1.0.0
+rawmaker>=2.40.0<3.0.0
+sdata>=0.7.4<1.0.0
