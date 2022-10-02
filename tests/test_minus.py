@@ -33,10 +33,10 @@ def test_minus_missing_bachelor077():
 
 
 @utilatest.requires(power.BACHELOR077_PDF)
-def test_cli_spelling_hyphen(testdir, monkeypatch):
+def test_cli_spelling_hyphen(td, mp):
     source = power.link(power.BACHELOR077_PDF)
-    tests.run(f'-i {source} --spelling', monkeypatch=monkeypatch)
-    path = smarty.path.smarty_spelling_hyphen(testdir.tmpdir)
+    tests.run(f'-i {source} --spelling', mp=mp)
+    path = smarty.path.smarty_spelling_hyphen(td.tmpdir)
     loaded = serializeraw.load_textadvices(path)
     assert loaded
     assert len(loaded) >= 56

@@ -16,13 +16,13 @@ import tests
 
 
 @utilatest.requires(power.BACHELOR077_PDF)
-def test_cli_spelling_guess(testdir, monkeypatch):
+def test_cli_spelling_guess(td, mp):
     source = power.link(power.BACHELOR077_PDF)
     pages = '7:66'
     tests.run(
         f'-i {source} --spelling --pages={pages}',
-        monkeypatch=monkeypatch,
+        mp=mp,
     )
-    path = smarty.path.smarty_spelling_guess(testdir.tmpdir)
+    path = smarty.path.smarty_spelling_guess(td.tmpdir)
     loaded = serializeraw.load_textadvices(path)
     assert len(loaded) >= 150

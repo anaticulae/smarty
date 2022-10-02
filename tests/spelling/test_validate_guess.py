@@ -27,21 +27,21 @@ ARCHIVE = utila.join(smarty.ROOT, 'tests/spelling/expected_guess', exist=True)
     utilatest.test_resources(tests.conftest.RESOURCES),
 )
 @utilatest.nightly
-def test_validate_spelling_guess(source, testdir, monkeypatch):
+def test_validate_spelling_guess(source, td, mp):
     Evaluate(
         source=source,
-        workdir=testdir.tmpdir,
-        monkeypatch=monkeypatch,
+        workdir=td.tmpdir,
+        mp=mp,
     ).evaluate()
 
 
 class Evaluate(utilatest.BaseLiner):
 
-    def __init__(self, source, workdir, monkeypatch):
+    def __init__(self, source, workdir, mp):
         super().__init__(
             program=functools.partial(
                 tests.run,
-                monkeypatch=monkeypatch,
+                mp=mp,
             ),
             step='spelling',
             pages=power.ctext(source, default=':'),

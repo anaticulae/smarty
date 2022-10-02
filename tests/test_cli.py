@@ -16,8 +16,8 @@ import smarty.path
 import tests
 
 
-def test_help(monkeypatch):
-    tests.run('--help', monkeypatch=monkeypatch)
+def test_help(mp):
+    tests.run('--help', mp=mp)
 
 
 @pytest.mark.parametrize('source', [
@@ -25,10 +25,10 @@ def test_help(monkeypatch):
     pytest.param(power.BACHELOR128_PDF, id='bachelor128'),
 ])
 @utilatest.nightly
-def test_cli_badwords(source, testdir, monkeypatch):
+def test_cli_badwords(source, td, mp):
     utilatest.fixture_requires(source)
     source = power.link(source)
-    tests.run(f'-i {source}', monkeypatch=monkeypatch)
-    path = smarty.path.smarty_phrases(testdir.tmpdir)
+    tests.run(f'-i {source}', mp=mp)
+    path = smarty.path.smarty_phrases(td.tmpdir)
     loaded = serializeraw.load_textadvices(path)
     assert loaded
