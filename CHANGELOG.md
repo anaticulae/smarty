@@ -2,6 +2,20 @@
 
 Every noteable change is logged here.
 
+## v1.6.0 (2022-10-02)
+
+### Fix
+
+* skip persons from ngram guesser (d1edccf58ac7)
+
+### Chore
+
+* add missing dev references (642e875121e3)
+* add Jenkinsfile (8cad6d18c847)
+* upgrade requirements.txt (6c42d53bdecf)
+* increase required sdata (5132c1f02e4d)
+* upgrade requirements.txt (1afb907267b0)
+
 ## v1.5.0
 
 ### Feature
