@@ -2,6 +2,18 @@
 
 Every noteable change is logged here.
 
+## v1.6.1 (2022-11-11)
+
+### Chore
+
+* increase worker on CI (4bc9a245c8e2)
+* upgrade environment (67edb867fad9)
+* upgrade requirements.txt (84f4ea3b993c)
+* do not run in privileged mode (21803d0a1cd0)
+* publish generated data if resource is not generated (5858b2c41a13)
+* add separate generator step (b31b85d401da)
+* add missing test data generator (1561a1ab73c1)
+
 ## v1.6.0 (2022-10-02)
 
 ### Fix
