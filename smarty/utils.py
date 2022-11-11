@@ -67,7 +67,7 @@ def init_table(data: str, columns: int = 2) -> AdviceTable:
     # TODO: REPLACE WITH UTILA CODE
     lines = utila.splitlines(data)
     result = AdviceTable()
-    valid = utila.ranged_tuple(start=1, end=columns + 1)
+    valid = utila.rtuple(start=1, end=columns + 1)
     for line in lines:
         line = line.strip()
         if line[0] == '#':

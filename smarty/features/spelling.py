@@ -7,8 +7,6 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import typing
-
 import iamraw
 import serializeraw
 import utila
@@ -20,7 +18,7 @@ import smarty.pair.minus
 def work(
     sentences: str,
     pages: tuple = None,
-) -> typing.Tuple[str, str]:
+) -> tuple[str, str]:
     sentences = serializeraw.load_text(
         sentences,
         pages=pages,

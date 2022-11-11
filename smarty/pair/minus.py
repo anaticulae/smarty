@@ -162,7 +162,7 @@ def create_pattern_five(fives) -> tuple:
         result.append(tuple(five[:1] + five[2:]))
         result.append(tuple(five[0:3] + five[4:]))
         result.append((five[0], five[2], five[4]))
-    result: tuple = tuple(utila.make_unique(result))
+    result: tuple = tuple(utila.unique(result))
     return result
 
 
