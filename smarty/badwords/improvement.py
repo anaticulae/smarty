@@ -15,7 +15,7 @@ There can be a optional description why this improvement is required.
 """
 
 import iamraw
-import utila
+import utilo
 
 import smarty.badwords
 import smarty.utils
@@ -93,7 +93,7 @@ class Improvement(smarty.badwords.FromText):
 PROCESS = Improvement()
 
 
-@utila.cacheme
+@utilo.cacheme
 def improvement_search(sentence: str):
     return PROCESS.search(sentence)
 

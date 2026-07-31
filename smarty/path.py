@@ -7,24 +7,24 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import utila
+import utilo
 
 
 def smarty_phrases(path: str, prefix: str = '') -> str:
-    return utila.pathconnector(path, 'smarty', 'phrases_phrases', prefix)
+    return utilo.pathconnector(path, 'smarty', 'phrases_phrases', prefix)
 
 
 def smarty_pleonasmas(path: str, prefix: str = '') -> str:
-    return utila.pathconnector(path, 'smarty', 'pleonasma_pleonasma', prefix)
+    return utilo.pathconnector(path, 'smarty', 'pleonasma_pleonasma', prefix)
 
 
 def smarty_reduces(path: str, prefix: str = '') -> str:
-    return utila.pathconnector(path, 'smarty', 'reduce_reduce', prefix)
+    return utilo.pathconnector(path, 'smarty', 'reduce_reduce', prefix)
 
 
 def smarty_spelling_hyphen(path: str, prefix: str = '') -> str:
-    return utila.pathconnector(path, 'smarty', 'spelling_hyphen', prefix)
+    return utilo.pathconnector(path, 'smarty', 'spelling_hyphen', prefix)
 
 
 def smarty_spelling_guess(path: str, prefix: str = '') -> str:
-    return utila.pathconnector(path, 'smarty', 'spelling_guess', prefix)
+    return utilo.pathconnector(path, 'smarty', 'spelling_guess', prefix)

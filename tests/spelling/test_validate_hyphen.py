@@ -9,25 +9,25 @@
 
 import functools
 
-import german
-import power
+import germania
+import hoverpower
 import pytest
 import serializeraw
-import utila
-import utilatest
+import utilo
+import utilotest
 
 import smarty
 import tests
 import tests.conftest
 
-ARCHIVE = utila.join(smarty.ROOT, 'tests/spelling/expected_hyphen', exist=True)
+ARCHIVE = utilo.join(smarty.ROOT, 'tests/spelling/expected_hyphen', exist=True)
 
 
 @pytest.mark.parametrize(
     'source',
-    utilatest.test_resources(tests.conftest.RESOURCES),
+    utilotest.test_resources(tests.conftest.RESOURCES),
 )
-@utilatest.nightly
+@utilotest.nightly
 def test_validate_spelling_hyphen(source, td, mp):
     Evaluate(
         source=source,
@@ -36,7 +36,7 @@ def test_validate_spelling_hyphen(source, td, mp):
     ).evaluate()
 
 
-class Evaluate(utilatest.BaseLiner):
+class Evaluate(utilotest.BaseLiner):
 
     def __init__(self, source, workdir, mp):
         super().__init__(
@@ -45,8 +45,8 @@ class Evaluate(utilatest.BaseLiner):
                 mp=mp,
             ),
             step='spelling',
-            pages=power.ctext(source, default=':'),
-            source=power.link(source),
+            pages=hoverpower.ctext(source, default=':'),
+            source=hoverpower.link(source),
             workdir=workdir,
             archive=ARCHIVE,
             loader=self.frompath,
@@ -60,14 +60,14 @@ class Evaluate(utilatest.BaseLiner):
 
     def raw(self, value) -> str:
         result = [rawline(item) for item in value]
-        result: str = utila.NEWLINE.join(result)
+        result: str = utilo.NEWLINE.join(result)
         return result
 
 
 def rawline(item) -> str:
     result = str(item.docref.page).zfill(3) + ' '
     result += str(item.docref.sentence).zfill(2) + ' '
-    result += ',     '.join(german.token_plain(item) for item in item.docref.raw) + ' '  # yapf:disable
+    result += ',     '.join(germania.token_plain(item) for item in item.docref.raw) + ' '  # yapf:disable
     result += ' ' * (85 - len(result))
     result += ' '.join(str(item) for item in item.docref.marked)
     return result

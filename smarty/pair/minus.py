@@ -9,17 +9,17 @@
 
 import collections
 
-import configo
-import german
-import konrad
-import utila
+import configos
+import germania
+import konradus
+import utilo
 
 import smarty.utils
 
 # TODO: MAKE DOCUMENT/MAINPART LENGHT DEPENDENT
-FIVE_GRAM_MIN = configo.HV_INT_PLUS(default=5)
+FIVE_GRAM_MIN = configos.HV_INT_PLUS(default=5)
 
-THREE_GRAM_MIN = configo.HV_INT_PLUS(default=8)
+THREE_GRAM_MIN = configos.HV_INT_PLUS(default=8)
 
 HyphenError = collections.namedtuple('HypenError', 'page sentence token raw')
 
@@ -41,12 +41,12 @@ def missing(sentences) -> list:  # pylint:disable=R0914
             sentences,
             numbers=True,
     ):
-        tokens = german.word_tokenize(
+        tokens = germania.word_tokenize(
             sentence,
             token_normalize=True,
             validate_sentences=False,
         )
-        triple_failure = german.searches(
+        triple_failure = germania.searches(
             patterns=pattern_five,
             sentence=tokens,
             tokens_complex=False,
@@ -63,10 +63,10 @@ def missing(sentences) -> list:  # pylint:disable=R0914
             ]
             failures.extend(triple_failure)
             for failure in triple_failure:
-                for index in utila.rlist(*failure.token):
+                for index in utilo.rlist(*failure.token):
                     # overwrite failure words to avoid double detection
                     tokens[index] = None
-        double_failure = german.searches(
+        double_failure = germania.searches(
             patterns=pattern_three,
             sentence=tokens,
             tokens_complex=False,
@@ -91,7 +91,7 @@ def grams(sentences) -> list:
             sentences,
             numbers=True,
     ):
-        words = german.word_tokenize(sentence, validate_sentences=False)
+        words = germania.word_tokenize(sentence, validate_sentences=False)
         five = five_gram(words)
         if five:
             fives.append((page, number, five))
@@ -116,40 +116,40 @@ def determine_valid(items, count_min: int):
 
 def five_gram(words) -> str:
     result = []
-    ngrams = german.ngram(words, length=5)
+    ngrams = germania.ngram(words, length=5)
     for ngram in ngrams:
-        minus = ngram[1] == konrad.Mark.HYPHEN
+        minus = ngram[1] == konradus.Mark.HYPHEN
         if not minus:
             continue
-        minus &= ngram[3] == konrad.Mark.HYPHEN
+        minus &= ngram[3] == konradus.Mark.HYPHEN
         if not minus:
             continue
         ngram = list(ngram)
         try:
-            ngram[0] = german.word_normalize(ngram[0]).lower()
-            ngram[2] = german.word_normalize(ngram[2]).lower()
-            ngram[4] = german.word_normalize(ngram[4]).lower()
+            ngram[0] = germania.word_normalize(ngram[0]).lower()
+            ngram[2] = germania.word_normalize(ngram[2]).lower()
+            ngram[4] = germania.word_normalize(ngram[4]).lower()
         except TypeError:
             continue
-        item = german.token_plain(ngram)
+        item = germania.token_plain(ngram)
         result.append(item)
     return result
 
 
 def three_gram(words) -> str:
     result = []
-    ngrams = german.ngram(words, length=3)
+    ngrams = germania.ngram(words, length=3)
     for ngram in ngrams:
-        minus = ngram[1] == konrad.Mark.HYPHEN
+        minus = ngram[1] == konradus.Mark.HYPHEN
         if not minus:
             continue
         ngram = list(ngram)
         try:
-            ngram[0] = german.word_normalize(ngram[0]).lower()
-            ngram[2] = german.word_normalize(ngram[2]).lower()
+            ngram[0] = germania.word_normalize(ngram[0]).lower()
+            ngram[2] = germania.word_normalize(ngram[2]).lower()
         except TypeError:
             continue
-        item = german.token_plain(ngram)
+        item = germania.token_plain(ngram)
         result.append(item)
     return result
 
@@ -158,11 +158,11 @@ def create_pattern_five(fives) -> tuple:
     fives = [item[0] for item in fives]
     result = []
     for five in fives:
-        five = german.word_tokenize(five, validate_sentences=False)
+        five = germania.word_tokenize(five, validate_sentences=False)
         result.append(tuple(five[:1] + five[2:]))
         result.append(tuple(five[0:3] + five[4:]))
         result.append((five[0], five[2], five[4]))
-    result: tuple = tuple(utila.unique(result))
+    result: tuple = tuple(utilo.unique(result))
     return result
 
 

@@ -7,10 +7,10 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import power
+import hoverpower
 import pytest
 import serializeraw
-import utilatest
+import utilotest
 
 import smarty.path
 import tests
@@ -21,13 +21,13 @@ def test_help(mp):
 
 
 @pytest.mark.parametrize('source', [
-    pytest.param(power.MASTER110_PDF, id='master110'),
-    pytest.param(power.BACHELOR128_PDF, id='bachelor128'),
+    pytest.param(hoverpower.MASTER110_PDF, id='master110'),
+    pytest.param(hoverpower.BACHELOR128_PDF, id='bachelor128'),
 ])
-@utilatest.nightly
+@utilotest.nightly
 def test_cli_badwords(source, td, mp):
-    utilatest.fixture_requires(source)
-    source = power.link(source)
+    utilotest.fixture_requires(source)
+    source = hoverpower.link(source)
     tests.run(f'-i {source}', mp=mp)
     path = smarty.path.smarty_phrases(td.tmpdir)
     loaded = serializeraw.load_textadvices(path)

@@ -7,53 +7,53 @@
 # be prosecuted under federal law. Its content is company confidential.
 #==============================================================================
 
-import utila
-import utila.cli
+import utilo
+import utilo.cli
 
 import smarty
 
 DESCRIPTION = ''
 
 WORKPLAN = [
-    utila.create_step(
+    utilo.create_step(
         'avoid',
         inputs=[
-            utila.ResultFile('words', 'sentences_sentences'),
+            utilo.ResultFile('words', 'sentences_sentences'),
         ],
         output=('avoid',),
     ),
-    utila.create_step(
+    utilo.create_step(
         'improvement',
         inputs=[
-            utila.ResultFile('words', 'sentences_sentences'),
+            utilo.ResultFile('words', 'sentences_sentences'),
         ],
         output=('improvement',),
     ),
-    utila.create_step(
+    utilo.create_step(
         'phrases',
         inputs=[
-            utila.ResultFile('words', 'sentences_sentences'),
+            utilo.ResultFile('words', 'sentences_sentences'),
         ],
         output=('phrases',),
     ),
-    utila.create_step(
+    utilo.create_step(
         'pleonasma',
         inputs=[
-            utila.ResultFile('words', 'sentences_sentences'),
+            utilo.ResultFile('words', 'sentences_sentences'),
         ],
         output=('pleonasma',),
     ),
-    utila.create_step(
+    utilo.create_step(
         'reduce',
         inputs=[
-            utila.ResultFile('words', 'sentences_sentences'),
+            utilo.ResultFile('words', 'sentences_sentences'),
         ],
         output=('reduce',),
     ),
-    utila.create_step(
+    utilo.create_step(
         'spelling',
         inputs=[
-            utila.ResultFile('words', 'sentences_sentences'),
+            utilo.ResultFile('words', 'sentences_sentences'),
         ],
         output=('hyphen', 'guess'),
     ),
@@ -61,11 +61,11 @@ WORKPLAN = [
 
 
 def main():
-    utila.featurepack(
+    utilo.featurepack(
         root=smarty.ROOT,
         workplan=WORKPLAN,
         featurepackage='smarty.features',
-        config=utila.FeaturePackConfig(
+        config=utilo.FeaturePackConfig(
             description=DESCRIPTION,
             multiprocessed=True,
             name=smarty.PROCESS,

@@ -9,7 +9,7 @@
 
 import iamraw
 import serializeraw
-import utila
+import utilo
 
 import smarty.pair.guess
 import smarty.pair.minus
@@ -38,9 +38,9 @@ def convert(failures) -> list:
     failures.sort(key=lambda x: x.sentence)
     failures.sort(key=lambda x: x.page)
     result = []
-    paged = utila.groupby_x(failures, selector=lambda x: x.page)
+    paged = utilo.groupby_x(failures, selector=lambda x: x.page)
     for page in paged:
-        sentenced = utila.groupby_x(page, selector=lambda x: x.sentence)
+        sentenced = utilo.groupby_x(page, selector=lambda x: x.sentence)
         for group in sentenced:
             page, sentence = group[0].page, group[0].sentence
             tokens = [item.token for item in group]

@@ -9,10 +9,10 @@
 
 import collections
 
-import german
+import germania
 import knlp
-import konrad
-import utila
+import konradus
+import utilo
 
 import smarty.utils
 
@@ -25,7 +25,7 @@ def guess(sentences) -> list:
             sentences,
             numbers=True,
     ):
-        tokens = german.word_tokenize(
+        tokens = germania.word_tokenize(
             sentence,
             validate_sentences=False,
         )
@@ -33,17 +33,18 @@ def guess(sentences) -> list:
         # letter.
         tokens, start = left_strip(tokens)
         for length in (5, 4, 3, 2):
-            ngrams = german.ngram(tokens, length=length)
+            ngrams = germania.ngram(tokens, length=length)
             for index, ngram in enumerate(ngrams, start=start):
                 if invalid(ngram):
                     continue
-                hyphen_before = tokens[index - start - 1] == konrad.Mark.HYPHEN
+                hyphen_before = tokens[index - start -
+                                       1] == konradus.Mark.HYPHEN
                 if hyphen_before:
                     continue
                 hypen = HyphenGuess(
                     page=page,
                     sentence=number,
-                    token=utila.rtuple(index, index + len(ngram)),
+                    token=utilo.rtuple(index, index + len(ngram)),
                     raw=' '.join(ngram),
                 )
                 guesses.append(hypen)
@@ -66,7 +67,7 @@ def invalid(ngram: tuple) -> bool:
     raw = ' '.join(ngram)
     if any(char in raw for char in INVALIDS):
         return True
-    if any(german.isperson(item) for item in ngram):
+    if any(germania.isperson(item) for item in ngram):
         return True
     return False
 
@@ -74,7 +75,7 @@ def invalid(ngram: tuple) -> bool:
 def left_strip(tokens):
     """Remove sentence signs and first upper cased word."""
     start = 0
-    while tokens and konrad.isspecial(tokens[0]):
+    while tokens and konradus.isspecial(tokens[0]):
         tokens = tokens[1:]
         start += 1
     # remove first upper char
@@ -84,7 +85,7 @@ def left_strip(tokens):
     return tokens, start
 
 
-@utila.cacheme
+@utilo.cacheme
 def simple_gramar(token: str) -> bool:
     if token.lower() in SKIP:
         return True
@@ -95,16 +96,16 @@ def simple_gramar(token: str) -> bool:
     return False
 
 
-ARTICLES = utila.splititems('DAS DIE DER')
+ARTICLES = utilo.splititems('DAS DIE DER')
 
-NUMBERS = utila.splititems(
+NUMBERS = utilo.splititems(
     'EINS ERSTE ERSTER ZWEI ZWEITE ZWEITER DREI DRITTE DRITTER '
     'VIER VIERTER VIERTE FÜNF FÜNFTE FÜNFTER SECHS SECHTE SECHTER '
     'SIEBEN SIEBTE SIEBTER ACHT ACTE ACTER NEUN NEUNTE NEUNTER '
     'ZEHN ELF ZWÖLF DREIZEHN VIERZEHN HUNDERT TAUSEND MILLION MILLIONEN '
     'MILLIARDE MILLIARDEN ')
 
-PRONOMS = utila.splititems('MEIN MEINER DEIN DEINER IHR IHRER SEIN SEINER')
+PRONOMS = utilo.splititems('MEIN MEINER DEIN DEINER IHR IHRER SEIN SEINER')
 
 SKIP = ARTICLES | NUMBERS | PRONOMS | knlp.stopwords()
 

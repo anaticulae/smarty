@@ -7,12 +7,12 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import genex
-import power
+import gennex
+import hoverpower
 import pytest
-import utilatest
-from utilatest import mp  # pylint:disable=W0611
-from utilatest import td  # pylint:disable=W0611
+import utilotest
+from utilotest import mp  # pylint:disable=W0611
+from utilotest import td  # pylint:disable=W0611
 
 import smarty
 
@@ -20,28 +20,28 @@ pytest_plugins = ['pytester', 'xdist']  # pylint: disable=invalid-name
 
 PACKAGE = smarty.PROCESS
 
-power.setup(smarty.ROOT)
+hoverpower.setup(smarty.ROOT)
 
 RESOURCES = [
-    (power.BACHELOR111_PDF, '0:30'),
-    power.BACHELOR077_PDF,
-    power.BACHELOR090_PDF,
-    power.BACHELOR128_PDF,
-    power.MASTER072_PDF,
-    power.MASTER099_PDF,
-    power.MASTER110_PDF,
+    (hoverpower.BACHELOR111_PDF, '0:30'),
+    hoverpower.BACHELOR077_PDF,
+    hoverpower.BACHELOR090_PDF,
+    hoverpower.BACHELOR128_PDF,
+    hoverpower.MASTER072_PDF,
+    hoverpower.MASTER099_PDF,
+    hoverpower.MASTER110_PDF,
 ]
 
-WORKER = utilatest.worker_count(4, onci=len(RESOURCES))
+WORKER = utilotest.worker_count(4, onci=len(RESOURCES))
 
 
 @pytest.mark.usefixtures('session')
 def pytest_sessionstart():
-    power.run()
+    hoverpower.run()
 
 
 def extract(resources):
-    genex.extract(
+    gennex.extract(
         files=resources,
         caption=True,
         cleanup=True,

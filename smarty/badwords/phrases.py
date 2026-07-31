@@ -8,13 +8,13 @@
 # =============================================================================
 
 import iamraw
-import utila
+import utilo
 
 import smarty.badwords
 import smarty.serialize
 import smarty.utils
 
-NEGATIVE = utila.splitlines("""\
+NEGATIVE = utilo.splitlines("""\
 alles in allem
 am puls der zeit
 arbeitswelt
@@ -94,7 +94,7 @@ zu entzaubern
 PROCESS = smarty.badwords.FromText(tokens=NEGATIVE)
 
 
-@utila.cacheme
+@utilo.cacheme
 def phrases_search(sentence: str):
     return PROCESS.search(sentence)
 

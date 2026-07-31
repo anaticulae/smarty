@@ -8,7 +8,7 @@
 # =============================================================================
 
 import iamraw
-import utila
+import utilo
 
 import smarty.badwords
 import smarty.serialize
@@ -196,7 +196,7 @@ class Pleonasma(smarty.badwords.FromText):
     def __init__(self):
         super().__init__(tokens=ABBREVIATION | DUPLICATED | NOUN | WORDHULL |
                          MIXED)
-        self.lookup = utila.dicts_united(
+        self.lookup = utilo.dicts_united(
             ABBREVIATION,
             DUPLICATED,
             NOUN,
@@ -217,7 +217,7 @@ class Pleonasma(smarty.badwords.FromText):
 PROCESS = Pleonasma()
 
 
-@utila.cacheme
+@utilo.cacheme
 def pleonasmen_search(sentence: str):
     return PROCESS.search(sentence)
 

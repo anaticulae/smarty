@@ -7,17 +7,17 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import power
+import hoverpower
 import serializeraw
-import utilatest
+import utilotest
 
 import smarty.path
 import tests
 
 
-@utilatest.requires(power.BACHELOR077_PDF)
+@utilotest.requires(hoverpower.BACHELOR077_PDF)
 def test_cli_spelling_guess(td, mp):
-    source = power.link(power.BACHELOR077_PDF)
+    source = hoverpower.link(hoverpower.BACHELOR077_PDF)
     pages = '7:66'
     tests.run(
         f'-i {source} --spelling --pages={pages}',

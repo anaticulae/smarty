@@ -9,7 +9,7 @@
 
 import enum
 
-import utila
+import utilo
 
 import smarty.badwords.avoid
 import smarty.badwords.fat
@@ -51,9 +51,9 @@ def ratio_fat(wordlist: list) -> float:
     wordlist = [item for item in wordlist if isinstance(item, str)]
     # judge word list
     bad = badwords_judge(wordlist, skip_empty=True)
-    flat = utila.flat(bad)
+    flat = utilo.flat(bad)
     fat = [item for item in flat if item == BadWord.FAT]
-    ratio = utila.roundme(len(fat) / len(wordlist))
+    ratio = utilo.roundme(len(fat) / len(wordlist))
     return ratio
 
 

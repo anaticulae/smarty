@@ -7,9 +7,9 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import utila
+import utilo
 
-FAT = utila.splitlines("""\
+FAT = utilo.splitlines("""\
 aber
 abermals
 allein

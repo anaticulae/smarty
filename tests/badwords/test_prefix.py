@@ -7,15 +7,15 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import power
-import utilatest
+import hoverpower
+import utilotest
 
 import smarty
 import tests
 
 
-@utilatest.longrun
+@utilotest.longrun
 def test_prefix_fromtext_bachelor128():
-    text = tests.load_text(power.BACHELOR128_PDF)
+    text = tests.load_text(hoverpower.BACHELOR128_PDF)
     detected = smarty.prefix_not_required_fromtext(text)
     assert len(detected) >= 4

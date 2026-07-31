@@ -7,17 +7,17 @@
 # be prosecuted under federal law. Its content is company confidential.
 #==============================================================================
 
+import hoverpower
 import iamraw
-import power
 import serializeraw
-import utilatest
+import utilotest
 
 import smarty
 
 
 def load_text(source: str, pages: tuple = None) -> iamraw.PageContentTexts:
-    utilatest.fixture_requires(source)
-    source = power.link(source)
+    utilotest.fixture_requires(source)
+    source = hoverpower.link(source)
     headlines = serializeraw.load_headlines(source, pages=pages)
     text = serializeraw.load_text(
         content=source,
@@ -27,4 +27,4 @@ def load_text(source: str, pages: tuple = None) -> iamraw.PageContentTexts:
     return text
 
 
-run, fail = utilatest.create_cli_runner(smarty)
+run, fail = utilotest.create_cli_runner(smarty)

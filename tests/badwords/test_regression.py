@@ -7,7 +7,7 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import power
+import hoverpower
 
 import smarty
 import tests
@@ -15,6 +15,6 @@ import tests
 
 def test_bachelor111page26_mark_converter():
     """Mark converter produces an error."""
-    text = tests.load_text(power.BACHELOR111_PDF, pages=(26,))
+    text = tests.load_text(hoverpower.BACHELOR111_PDF, pages=(26,))
     detected = smarty.pleonasmen_fromtext(text)
     assert len(detected) == 1

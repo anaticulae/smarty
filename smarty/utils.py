@@ -10,14 +10,15 @@
 import collections
 import re
 
-import german
-import utila
+import germania
+import utilo
 
 
 def words_fromtext(text, nomarks: bool = False) -> list:
     collected = []
     for _, sentence in sentences(text):
-        splitted = german.split_words(items=sentence, validate_sentences=False)
+        splitted = germania.split_words(items=sentence,
+                                        validate_sentences=False)
         collected.extend(splitted)
     if nomarks:
         collected = [item for item in collected if isinstance(item, str)]
@@ -65,9 +66,9 @@ def init_table(data: str, columns: int = 2) -> AdviceTable:
     {'einzelindividuum': 'individuum', 'no right column': '',...}
     """
     # TODO: REPLACE WITH UTILA CODE
-    lines = utila.splitlines(data)
+    lines = utilo.splitlines(data)
     result = AdviceTable()
-    valid = utila.rtuple(start=1, end=columns + 1)
+    valid = utilo.rtuple(start=1, end=columns + 1)
     for line in lines:
         line = line.strip()
         if line[0] == '#':

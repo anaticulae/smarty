@@ -8,7 +8,7 @@
 # =============================================================================
 
 import iamraw
-import utila
+import utilo
 
 import smarty.badwords
 import smarty.utils
@@ -82,7 +82,7 @@ class RemovePrefix(smarty.badwords.FromText):
 PROCESS = RemovePrefix()
 
 
-@utila.cacheme
+@utilo.cacheme
 def prefix_not_required_search(sentence: str) -> list:
     return PROCESS.search(sentence)
 

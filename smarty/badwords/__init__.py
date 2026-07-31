@@ -7,9 +7,9 @@
 # be prosecuted under federal law. Its content is company confidential.
 # =============================================================================
 
-import german
+import germania
 import iamraw
-import utila
+import utilo
 
 import smarty.utils
 
@@ -40,9 +40,9 @@ class FromText:
             result.append(item)
         return result
 
-    @utila.cacheme
+    @utilo.cacheme
     def search(self, sentence):
-        matched = german.searches(
+        matched = germania.searches(
             patterns=self.tokens,
             sentence=sentence,
             tokens_complex=False,

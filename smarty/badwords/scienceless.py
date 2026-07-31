@@ -8,11 +8,11 @@
 # =============================================================================
 
 import iamraw
-import utila
+import utilo
 
 import smarty.badwords
 
-SCIENCELESS = utila.splitlines("""\
+SCIENCELESS = utilo.splitlines("""\
 atemberaubend
 beeindruckend
 sensationell
@@ -20,7 +20,7 @@ sensationell
 PROCESS = smarty.badwords.FromText(tokens=SCIENCELESS)
 
 
-@utila.cacheme
+@utilo.cacheme
 def scienceless_search(sentence: str):
     return PROCESS.search(sentence)
 

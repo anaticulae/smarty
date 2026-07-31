@@ -8,7 +8,7 @@
 # =============================================================================
 
 import iamraw
-import utila
+import utilo
 
 import smarty.badwords
 import smarty.utils
@@ -64,7 +64,7 @@ class AvoidAdjective(smarty.badwords.FromText):
 PROCESS = AvoidAdjective()
 
 
-@utila.cacheme
+@utilo.cacheme
 def avoid_search(sentence: str) -> list:
     return PROCESS.search(sentence)
 
