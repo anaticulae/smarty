@@ -47,7 +47,7 @@ def extract(resources):
         cleanup=True,
         codero=True,
         figureo=True,
-        formulero=True,
+        # formulero=True,
         groupme=True,
         pagenumber=True,
         headnote=True,
