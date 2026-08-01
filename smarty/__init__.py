@@ -24,6 +24,7 @@ class Advice:
 # ['kann sein', 'großen']
 """
 
+import importlib.metadata
 import os
 
 import smarty.__patch__
@@ -41,7 +42,7 @@ from smarty.statistics import count_questions
 from smarty.statistics import count_words
 from smarty.statistics import ratio_questions_fromtext
 
-__version__ = '1.6.1'
-
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 PROCESS = 'smarty'
+
+__version__ = importlib.metadata.version(PROCESS)
