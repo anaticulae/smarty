@@ -9,8 +9,8 @@
 
 import collections
 
+import analp
 import germania
-import knlp
 import konradus
 import utilo
 
@@ -107,6 +107,6 @@ NUMBERS = utilo.splititems(
 
 PRONOMS = utilo.splititems('MEIN MEINER DEIN DEINER IHR IHRER SEIN SEINER')
 
-SKIP = ARTICLES | NUMBERS | PRONOMS | knlp.stopwords()
+SKIP = ARTICLES | NUMBERS | PRONOMS | analp.stopwords()
 
 INVALIDS = ',;:!?=()[]{}'
