@@ -56,14 +56,15 @@ class AdviceTable(collections.UserDict):
 
 def init_table(data: str, columns: int = 2) -> AdviceTable:
     r"""\
-    >>> init_table('''
+    >>> result = init_table('''
     ... ausgangsvoraussetzungen             voraussetzung
     ... auslandsexport                      export
     ... \n
     ... no right column
     ... einzelindividuum                    individuum
     ... ''')
-    {'einzelindividuum': 'individuum', 'no right column': '',...}
+
+    >>> {'einzelindividuum': 'individuum', 'no right column': ''} in result
     """
     # TODO: REPLACE WITH UTILA CODE
     lines = utilo.splitlines(data)
