@@ -6,7 +6,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "smarty"
+name = "callidus"
 version = "1.6.1"
 description = ""
 requires-python = ">=3.12"
