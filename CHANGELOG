@@ -1,201 +1,712 @@
-# Changelog
+# CHANGELOG
 
-Every noteable change is logged here.
+
+## v1.7.0 (2026-08-03)
+
+### Bug Fixes
+
+- **packages**: Adjust package
+  ([`b9b41fe`](https://github.com/anaticulae/smarty/commit/b9b41fe3df1390a38404df8302bf4b9301faed9f))
+
+### Chores
+
+- **conftest**: Disable formulero
+  ([`d0a3866`](https://github.com/anaticulae/smarty/commit/d0a3866ad624b74a5a9f19f64907db521d0143b9))
+
+- **github**: Add .github
+  ([`c33f2bd`](https://github.com/anaticulae/smarty/commit/c33f2bdb29def34740d5e5ce25a7a8d4873c4b50))
+
+- **pyproject**: Add missing generators
+  ([`099c4f2`](https://github.com/anaticulae/smarty/commit/099c4f24135de3acbde28de10bd1f420b561338b))
+
+- **pyproject**: Add modern layout
+  ([`2816bfb`](https://github.com/anaticulae/smarty/commit/2816bfbecc966da5279afe8a4b9e793f2848c67b))
+
+- **pyproject**: Remove outdated files
+  ([`cee3ff6`](https://github.com/anaticulae/smarty/commit/cee3ff6571b5c6aeab03b12e109daf79658b6053))
+
+- **pyproject**: Sort dependencies
+  ([`2bd6822`](https://github.com/anaticulae/smarty/commit/2bd6822f61421658ed2341a704377d8a2f797e29))
+
+### Documentation
+
+- **readme**: Adjust file names
+  ([`8efddf1`](https://github.com/anaticulae/smarty/commit/8efddf1f37d721890ea085ae291bf20389679d5a))
+
+### Features
+
+- **pyproject**: Adjust project name
+  ([`b0288a0`](https://github.com/anaticulae/smarty/commit/b0288a0d306972e6b2f7001ea61be55f8c0e4aae))
+
+### Refactoring
+
+- **packages**: Adjust names
+  ([`e997bb6`](https://github.com/anaticulae/smarty/commit/e997bb6721d809c5bd929830f455a373feb65abd))
+
+### Testing
+
+- **baseline**: Adjust baseline
+  ([`0084cef`](https://github.com/anaticulae/smarty/commit/0084ceffe299d5a67d22ddbbf2f7d600ffa33714))
+
+- **utils**: Adjust unit test
+  ([`13917b1`](https://github.com/anaticulae/smarty/commit/13917b11096dbfb9cd69dfd264228caf74f1ec8f))
+
 
 ## v1.6.1 (2022-11-11)
 
-### Chore
+### Chores
 
-* increase worker on CI (4bc9a245c8e2)
-* upgrade environment (67edb867fad9)
-* upgrade requirements.txt (84f4ea3b993c)
-* do not run in privileged mode (21803d0a1cd0)
-* publish generated data if resource is not generated (5858b2c41a13)
-* add separate generator step (b31b85d401da)
-* add missing test data generator (1561a1ab73c1)
+- **Jenkins**: Add separate generator step
+  ([`b31b85d`](https://github.com/anaticulae/smarty/commit/b31b85d401da05d4288e7b983a774cb741830fcb))
+
+- **Jenkins**: Do not run in privileged mode
+  ([`21803d0`](https://github.com/anaticulae/smarty/commit/21803d0a1cd065f8c05729f078fc0f67198f7374))
+
+- **Jenkins**: Publish generated data if resource is not generated
+  ([`5858b2c`](https://github.com/anaticulae/smarty/commit/5858b2c41a13e875281512fb9ed70ec2b027a59e))
+
+- **Jenkins**: Upgrade environment
+  ([`67edb86`](https://github.com/anaticulae/smarty/commit/67edb867fad9972713fa9f141a00c4b4620c2b44))
+
+- **requirements**: Upgrade requirements.txt
+  ([`84f4ea3`](https://github.com/anaticulae/smarty/commit/84f4ea3b993c18945e8c5a39b0cbd6be78a6f4d3))
+
+- **resources**: Add missing test data generator
+  ([`1561a1a`](https://github.com/anaticulae/smarty/commit/1561a1ab73c1d08eefd751c0f96ada08d9c2aa67))
+
+- **resources**: Increase worker on CI
+  ([`4bc9a24`](https://github.com/anaticulae/smarty/commit/4bc9a245c8e20fbc3175460c03102b111f8fe2d3))
+
+### Refactoring
+
+- **replace**: Automated replacement
+  ([`870f5ff`](https://github.com/anaticulae/smarty/commit/870f5ffd7efda3248c9959bcaf70e308a46d4efc))
+
+### Testing
+
+- **baseline**: Adjust baseline
+  ([`fdc3b8b`](https://github.com/anaticulae/smarty/commit/fdc3b8b647ec7ef3860656153cc3c2cf2149970c))
+
 
 ## v1.6.0 (2022-10-02)
 
-### Fix
+### Bug Fixes
 
-* skip persons from ngram guesser (d1edccf58ac7)
+- **guess**: Skip persons from ngram guesser
+  ([`d1edccf`](https://github.com/anaticulae/smarty/commit/d1edccf58ac7d7727bf98ce111916fa1964fc9fa))
 
-### Chore
+### Chores
 
-* add missing dev references (642e875121e3)
-* add Jenkinsfile (8cad6d18c847)
-* upgrade requirements.txt (6c42d53bdecf)
-* increase required sdata (5132c1f02e4d)
-* upgrade requirements.txt (1afb907267b0)
+- **ci**: Add Jenkinsfile
+  ([`8cad6d1`](https://github.com/anaticulae/smarty/commit/8cad6d18c847ecd11f18a8fc7e8579cf2b7f779e))
 
-## v1.5.0
+- **requirements**: Add missing dev references
+  ([`642e875`](https://github.com/anaticulae/smarty/commit/642e875121e3515453c47061082a92f041ee1f9c))
 
-### Feature
+- **requirements**: Increase required sdata
+  ([`5132c1f`](https://github.com/anaticulae/smarty/commit/5132c1f02e4dcdc552bc16c2b6281722278f095f))
 
-* skip germania stop words (7d69b2377cfb)
+- **requirements**: Upgrade requirements.txt
+  ([`6c42d53`](https://github.com/anaticulae/smarty/commit/6c42d53bdecf96d14e4d77dd80b6b6bd8dc79f46))
 
-### Fix
+- **requirements**: Upgrade requirements.txt
+  ([`1afb907`](https://github.com/anaticulae/smarty/commit/1afb907267b0702c82b1bd9e0686e9b4d401e773))
 
-* skip invalid detection (11d09a6cee68)
+### Code Style
 
-## v1.4.0
+- **changelog**: Adjust for automation tool
+  ([`2ea85e7`](https://github.com/anaticulae/smarty/commit/2ea85e759ece2a99d303a8d97764c262926807b8))
 
-### Feature
+### Refactoring
 
-* improve guesses due skip list (a1906d86ab3c)
-* ensure correct order in one sentence (162f284233c1)
-* add method to guess hyphen (eeb322949b81)
+- **guess**: Reduce complexity
+  ([`7b0b5a8`](https://github.com/anaticulae/smarty/commit/7b0b5a8b06b5b4ee1d246e0868667e5dda0869c4))
 
-### Fix
+### Testing
 
-* also skip highnotes (2ac9bdc78358)
+- **refactor**: Use fixture shortcuts
+  ([`aeed7cc`](https://github.com/anaticulae/smarty/commit/aeed7cc0c6c97c29b8fddb761b32ec99642bc078))
 
-## v1.3.0
 
-### Feature
+## v1.5.0 (2022-07-06)
 
-* add spelling detector (1eb0484c24b5)
-* add a more complex data structure (a4512493bf92)
-* add method to determine valid five/three-gram (aa15201c7859)
-* add method to find word-hyphen-pairs (34300125fa92)
-* extend less (eb7e2c882c08)
+### Bug Fixes
 
-## v1.2.0
+- **guess**: Skip invalid detection
+  ([`11d09a6`](https://github.com/anaticulae/smarty/commit/11d09a6cee68e485e814cf6b34b5db48e4fce9f3))
 
-### Feature
+### Chores
 
-* add word (93093c1c23be)
-* extend phrases list (c3fb4c4918b8)
-* add jargon category (b6b049b4ed70)
-* this is not science (a599761c3461)
+- **requirements**: Add knlp
+  ([`25b80fc`](https://github.com/anaticulae/smarty/commit/25b80fc317e08ed34fa02245b606a799ce6a41ec))
 
-### Fix
+- **resources**: Adjust rawmaker version
+  ([`ce648b9`](https://github.com/anaticulae/smarty/commit/ce648b99604acbfc4a767230ec1878e23f353336))
 
-* convert Marks to join them to str (af43a04808e3)
+- **test**: Keep longrun fast
+  ([`47ba8a3`](https://github.com/anaticulae/smarty/commit/47ba8a362cbcdad46c0f698cd01f4e7e9ecc7e60))
 
-## v1.1.1
+### Code Style
 
-### Feature
+- **imports**: Organize imports
+  ([`63fd268`](https://github.com/anaticulae/smarty/commit/63fd26892c58793a3d6308e94d1d316ecb7fb2dc))
 
-* extend phrases list (14516ac7f06c)
+### Features
 
-### Fix
+- **guess**: Skip german stop words
+  ([`7d69b23`](https://github.com/anaticulae/smarty/commit/7d69b2377cfba2e8d8c57e86e5b208006141f755))
 
-* adjust interface (2c2147ee22f6)
-* make lookup case insensitive (9d8282966e96)
+### Testing
 
-## v1.1.0
+- **guess**: Validate guesses
+  ([`47a0f3e`](https://github.com/anaticulae/smarty/commit/47a0f3eb4f4e7a6c124564ab9b4fe6c09254b419))
 
-### Feature
+- **hyphen**: Validate a huge list with hyphen
+  ([`8b20d46`](https://github.com/anaticulae/smarty/commit/8b20d465954d94d3c3b8d57c17194058912aae1d))
 
-* extend phrases list (1db68a14a43e)
-* extend phrases list (b2fa35ca8d9a)
-* add further improvement example (6057cf7a32d5)
 
-### Fix
+## v1.4.0 (2022-07-06)
 
-* do not fail on lookup error (ab91c401724f)
+### Bug Fixes
+
+- **guess**: Also skip highnotes
+  ([`2ac9bdc`](https://github.com/anaticulae/smarty/commit/2ac9bdc78358af8a58abbd6599bc8dda6a975e4b))
+
+### Chores
+
+- **requirements**: Add konrad
+  ([`7550148`](https://github.com/anaticulae/smarty/commit/7550148d70bcf9a0abc6d769218025c26ee3bd5f))
+
+- **requirements**: Upgrade requirements.txt
+  ([`0056de2`](https://github.com/anaticulae/smarty/commit/0056de2805fc6f6d6f3b80bd16d9062572f292aa))
+
+- **resources**: Extend test data generator
+  ([`14d3b61`](https://github.com/anaticulae/smarty/commit/14d3b61f3ddb79f018607e230c9e4206c428ba0f))
+
+### Features
+
+- **guess**: Improve guesses due skip list
+  ([`a1906d8`](https://github.com/anaticulae/smarty/commit/a1906d86ab3cb3a87f2d952d6d062de35a93376f))
+
+- **spelling**: Add method to guess hyphen
+  ([`eeb3229`](https://github.com/anaticulae/smarty/commit/eeb322949b81051135fd71e301c8e554703fefca))
+
+- **spelling**: Ensure correct order in one sentence
+  ([`162f284`](https://github.com/anaticulae/smarty/commit/162f284233c11f8b01be15cb5244ef71e6a44aeb))
+
+### Testing
+
+- **guess**: Adjust unit test
+  ([`ded1788`](https://github.com/anaticulae/smarty/commit/ded1788cc3008eb4b552a97e5f29869bf3e5328f))
+
+- **minus**: Make test name unique
+  ([`5318961`](https://github.com/anaticulae/smarty/commit/5318961a49b82514d54b6236079aaa8895b69905))
+
+
+## v1.3.0 (2022-07-03)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`5a901ba`](https://github.com/anaticulae/smarty/commit/5a901ba5bf120cf438cfcb5fae04d2d916835f6e))
+
+- **resources**: Extend test data generator
+  ([`a65706b`](https://github.com/anaticulae/smarty/commit/a65706b49103327340bbffa21bd3b079b411704b))
+
+- **resources**: Remove default behavior
+  ([`b4ae1fd`](https://github.com/anaticulae/smarty/commit/b4ae1fd9ca9f9a9741034f1d14562e9b51c821a1))
+
+- **resources**: Sort resources alphabetically
+  ([`39b9149`](https://github.com/anaticulae/smarty/commit/39b9149df93fa26488db3fcc512310e75f66a5e8))
+
+### Code Style
+
+- **changelog**: Remove trailing whitespace
+  ([`c44844d`](https://github.com/anaticulae/smarty/commit/c44844df0f5170f9253fa7417a791dcd7684ad22))
+
+- **project**: Add missing copyright header
+  ([`ac6f815`](https://github.com/anaticulae/smarty/commit/ac6f8158e266a4adfd9bde69961c7aa9894183ee))
+
+### Features
+
+- **minus**: Add a more complex data structure
+  ([`a451249`](https://github.com/anaticulae/smarty/commit/a4512493bf92c706c6b32fd69284d0b451016bac))
+
+- **minus**: Add method to determine valid five/three-gram
+  ([`aa15201`](https://github.com/anaticulae/smarty/commit/aa15201c785907f267962064ff920d3efa68b4c9))
+
+- **noscience**: Extend less
+  ([`eb7e2c8`](https://github.com/anaticulae/smarty/commit/eb7e2c882c08ae53462cf0c260bcfcef86fb34e7))
+
+- **pair**: Add method to find word-hyphen-pairs
+  ([`3430012`](https://github.com/anaticulae/smarty/commit/34300125fa92352a2511152774fb028af3feb34d))
+
+- **spelling**: Add spelling detector
+  ([`1eb0484`](https://github.com/anaticulae/smarty/commit/1eb0484c24b591d850d159d1bf42e8edf5fd813a))
+
+### Refactoring
+
+- **smarty**: Reduce amount of code
+  ([`eaa6df7`](https://github.com/anaticulae/smarty/commit/eaa6df76b58611ae258b77e7b742b0381490e5eb))
+
+### Testing
+
+- **refactor**: Use modern test runner
+  ([`5c792dd`](https://github.com/anaticulae/smarty/commit/5c792dd88c5082beff043d541c6101f1627d2bab))
+
+- **resource**: Skip non generated tests
+  ([`9ca387a`](https://github.com/anaticulae/smarty/commit/9ca387a38a4a0224b513b49134901a06545bdfd7))
+
+
+## v1.2.0 (2022-06-22)
+
+### Bug Fixes
+
+- **badwords**: Convert Marks to join them to str
+  ([`af43a04`](https://github.com/anaticulae/smarty/commit/af43a04808e341fdefc3f10be26e3f9e249b1382))
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`1cbafd7`](https://github.com/anaticulae/smarty/commit/1cbafd78a04ec231f60860b50ba19004c6a0bc97))
+
+- **resources**: Extend test data generator
+  ([`fff6191`](https://github.com/anaticulae/smarty/commit/fff619121314884330feae5106eaf0f558360b02))
+
+### Code Style
+
+- **avoid**: Sort alphabetically
+  ([`92645e2`](https://github.com/anaticulae/smarty/commit/92645e296ae705ace116bf329cfea9892013d782))
+
+### Features
+
+- **avoid**: This is not science
+  ([`a599761`](https://github.com/anaticulae/smarty/commit/a599761c346140c1fed6742383f2f05dc90e11f7))
+
+- **badwords**: Add jargon category
+  ([`b6b049b`](https://github.com/anaticulae/smarty/commit/b6b049b4ed70d39cda792b3fd190f5305951bb00))
+
+- **improvement**: Add word
+  ([`93093c1`](https://github.com/anaticulae/smarty/commit/93093c1c23befae328b6ea189d0d19767408339b))
+
+- **phrases**: Extend phrases list
+  ([`c3fb4c4`](https://github.com/anaticulae/smarty/commit/c3fb4c4918b86340b7574c56cfbf800cc41c3ec8))
+
+### Testing
+
+- **pleonasma**: Add regression test
+  ([`2ae83e0`](https://github.com/anaticulae/smarty/commit/2ae83e087c9b3ce27ba1501670d7bb041de7c349))
+
+
+## v1.1.1 (2022-03-09)
+
+### Bug Fixes
+
+- **badwords**: Adjust interface
+  ([`2c2147e`](https://github.com/anaticulae/smarty/commit/2c2147ee22f6997284a186d133e4b0b190728efb))
+
+- **prefix**: Make lookup case insensitive
+  ([`9d82829`](https://github.com/anaticulae/smarty/commit/9d8282966e96a0cc6b8b1d040cb05012a4552aff))
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`3a7c6b9`](https://github.com/anaticulae/smarty/commit/3a7c6b9ba7b7ec78a529198dc212a415ff52904b))
+
+### Code Style
+
+- **docs**: Adjust headline
+  ([`1077647`](https://github.com/anaticulae/smarty/commit/1077647491b0aeef6df103f2e122aa895992e44e))
+
+### Features
+
+- **phrases**: Extend phrases list
+  ([`14516ac`](https://github.com/anaticulae/smarty/commit/14516ac7f06c59f78ddaa2308ccdbd3195de353a))
+
+
+## v1.1.0 (2022-01-29)
+
+### Bug Fixes
+
+- **improvement**: Do not fail on lookup error
+  ([`ab91c40`](https://github.com/anaticulae/smarty/commit/ab91c401724f75a569e2282e94ba32f6490a30df))
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`be57bd8`](https://github.com/anaticulae/smarty/commit/be57bd83965b89fa21dd71359810c42d95a0e7e3))
 
 ### Documentation
 
-* adjust modules path (8cc9e02e427b)
-* Happy New Year! (64fd1b2fd1d5)
+- **copyright**: Happy New Year!
+  ([`64fd1b2`](https://github.com/anaticulae/smarty/commit/64fd1b2fd1d5095b589734859890317657a2534c))
 
-## v1.0.1
+- **fix**: Adjust modules path
+  ([`8cc9e02`](https://github.com/anaticulae/smarty/commit/8cc9e02e427b7167703f0eedbda250cb017d0560))
 
-### Feature
+### Features
 
-* add phrases (96feda6e262b)
+- **improvement**: Add further improvement example
+  ([`6057cf7`](https://github.com/anaticulae/smarty/commit/6057cf7a32d5eb4aad41e34757b0aac304a2c30f))
 
-## v1.0.0
+- **phrases**: Extend phrases list
+  ([`1db68a1`](https://github.com/anaticulae/smarty/commit/1db68a14a43ebfd1211073ab3843c95009047742))
 
-### Feature
+- **phrases**: Extend phrases list
+  ([`b2fa35c`](https://github.com/anaticulae/smarty/commit/b2fa35ca8d9a6e2a9df54442923324711d96cf9e))
 
-* add hint to replace word (fa5e9b07e78b)
-* add more phrases and improvements (a7d23f40b600)
-* add list with more pleonasma (63609186700f)
-* add step to avoid words (329d9696b907)
-* extend list of improvements (69b79d0ff1f8)
-* add improvement without special hint (c23330e6c010)
-* extend list of improvements (56ae0bcaac86)
-* add improvement step with more details (d7c4a42ee158)
-* add improvement with further explanations (a92851001d72)
-* add option to parse more than two columns (60327cd15ca0)
-* skip lines with starting # (a790dc12c4ab)
-* add advice list (7e8c6d91b769)
-* replace with advice approach (2d2e7d4e10ce)
-* give advice for improving text (74639c8deaf2)
-* complete advise list (65bb3b4c6bdc)
-* replace detection with new TextAdvice (febdc4410925)
-* use cache to reduce computation effort (a76789dd51a9)
-* split into several steps (4a849ab2d440)
-* add more phrases (06a9053bbcb7)
-* use table parser (e10a73350d4b)
-* add table set parser (ae72cff0c8ac)
-* use sentences instead of words (349dda77f5d4)
 
-## v0.3.1
+## v1.0.1 (2021-12-07)
 
-## v0.3.0
+### Chores
 
-### Feature
+- **requirements**: Upgrade requirements.txt
+  ([`470e70d`](https://github.com/anaticulae/smarty/commit/470e70dd4a7f5a25533dcce3a4952db9d5cf5d25))
 
-* add user advices (15a62f8f7cac)
-* extend phrase list (9d7d6b141eb4)
+### Features
 
-## v0.2.1
+- **phrases**: Add phrases
+  ([`96feda6`](https://github.com/anaticulae/smarty/commit/96feda6e262baa9bfd4a833b760dd920d4d180fb))
 
-### Feature
 
-* add more phrases (7a37a82b5905)
+## v1.0.0 (2021-11-17)
 
-## v0.2.0
+### Chores
 
-### Feature
+- **config**: Move project config
+  ([`06d5569`](https://github.com/anaticulae/smarty/commit/06d5569729e2d360618f4af1b5b533a07f88b114))
 
-* use process to improve speed (75f568b8580b)
+- **requirements**: Upgrade requirements.txt
+  ([`fd3edf9`](https://github.com/anaticulae/smarty/commit/fd3edf901a310b2ac68071b52fb6e3c63dc65927))
+
+- **test**: Keep dev build fast
+  ([`1026232`](https://github.com/anaticulae/smarty/commit/10262322bad49c4f0be8d424d1df64365f235c9f))
+
+### Code Style
+
+- **imports**: Add missing imports
+  ([`68ab2e3`](https://github.com/anaticulae/smarty/commit/68ab2e3023aa6001d13e33f5330dc45a232381e0))
+
+### Features
+
+- **avoid**: Add hint to replace word
+  ([`fa5e9b0`](https://github.com/anaticulae/smarty/commit/fa5e9b07e78b4787cc2a4aa11fab184671fc61b1))
+
+- **badwords**: Add more phrases and improvements
+  ([`a7d23f4`](https://github.com/anaticulae/smarty/commit/a7d23f40b600984378bbba3181bb896e3cb52a58))
+
+- **badwords**: Add step to avoid words
+  ([`329d969`](https://github.com/anaticulae/smarty/commit/329d9696b9071d9e4c62654ffa4cb6bb713adb07))
+
+- **badwords**: Split into several steps
+  ([`4a849ab`](https://github.com/anaticulae/smarty/commit/4a849ab2d4403b458ed83a3c1e75c00400a878f9))
+
+- **badwords**: Use cache to reduce computation effort
+  ([`a76789d`](https://github.com/anaticulae/smarty/commit/a76789dd51a9ecfc12b009a9f1abba6140c4a0c8))
+
+- **cli**: Add improvement step with more details
+  ([`d7c4a42`](https://github.com/anaticulae/smarty/commit/d7c4a42ee158403c6ae33e86a5e8d04353bf940a))
+
+- **cli**: Use sentences instead of words
+  ([`349dda7`](https://github.com/anaticulae/smarty/commit/349dda77f5d4043148108d33e74568fa0eb2c733))
+
+- **improvement**: Add improvement with further explanations
+  ([`a928510`](https://github.com/anaticulae/smarty/commit/a92851001d729ff57a77837b31e3820b3a66bc88))
+
+- **improvement**: Add improvement without special hint
+  ([`c23330e`](https://github.com/anaticulae/smarty/commit/c23330e6c0109b99567b2119728598cb0b2c8137))
+
+- **improvement**: Extend list of improvements
+  ([`69b79d0`](https://github.com/anaticulae/smarty/commit/69b79d0ff1f81f8a2a9681193e79744235a378ad))
+
+- **improvement**: Extend list of improvements
+  ([`56ae0bc`](https://github.com/anaticulae/smarty/commit/56ae0bcaac86d6e25162ac926a35d48f0b1e5c0a))
+
+- **parser**: Use table parser
+  ([`e10a733`](https://github.com/anaticulae/smarty/commit/e10a73350d4bf6f8bfe914b0d711de07b7e3a4bb))
+
+- **phrases**: Add more phrases
+  ([`06a9053`](https://github.com/anaticulae/smarty/commit/06a9053bbcb7c7872b75e45b7f16815ad9a61273))
+
+- **phrases**: Replace detection with new TextAdvice
+  ([`febdc44`](https://github.com/anaticulae/smarty/commit/febdc4410925dabca9ec8d8e7b39502843f98cb4))
+
+- **pleonasma**: Add list with more pleonasma
+  ([`6360918`](https://github.com/anaticulae/smarty/commit/63609186700fecd0f993f9d8b5efe53d814b722b))
+
+- **pleonasma**: Complete advise list
+  ([`65bb3b4`](https://github.com/anaticulae/smarty/commit/65bb3b4c6bdc272d0219d51beba692a736c9885a))
+
+- **pleonasma**: Give advice for improving text
+  ([`74639c8`](https://github.com/anaticulae/smarty/commit/74639c8deaf2c00a4b0c9cf39b7aad442692025b))
+
+- **prefix**: Add advice list
+  ([`7e8c6d9`](https://github.com/anaticulae/smarty/commit/7e8c6d91b76909c6a6a70fbdfdb11be4a66d8a18))
+
+- **reduce**: Replace with advice approach
+  ([`2d2e7d4`](https://github.com/anaticulae/smarty/commit/2d2e7d4e10cefbfa64dae951ae76f65a59f7b96d))
+
+- **table**: Skip lines with starting #
+  ([`a790dc1`](https://github.com/anaticulae/smarty/commit/a790dc12c4ab2473e88f98619583c0977db59ddc))
+
+- **utils**: Add option to parse more than two columns
+  ([`60327cd`](https://github.com/anaticulae/smarty/commit/60327cd15ca005ab94110119397524848b2e4401))
+
+- **utils**: Add table set parser
+  ([`ae72cff`](https://github.com/anaticulae/smarty/commit/ae72cff0c8ac2dda721703fc69f114ea51145f53))
+
+### Refactoring
+
+- **data**: Lowercase to ease sorting
+  ([`17bd33c`](https://github.com/anaticulae/smarty/commit/17bd33cbaa6789a2259d96d8a9e77099617ca13f))
+
+- **phrases**: Increase code re usability
+  ([`764d564`](https://github.com/anaticulae/smarty/commit/764d5645524446ce44c97666b08a7fbfce4b27a9))
+
+- **remove**: Remove unused code
+  ([`714d4d4`](https://github.com/anaticulae/smarty/commit/714d4d48b7c1b9ec9110030c1ff3fe0049916f81))
+
+- **replace**: Replace with utila code
+  ([`77a8793`](https://github.com/anaticulae/smarty/commit/77a8793363c1ca9ba83e5bf53076a2d23e962fdd))
+
+### Testing
+
+- **cli**: Increase test coverage
+  ([`3d1de66`](https://github.com/anaticulae/smarty/commit/3d1de66d08ba64462e8a1f3d4f3b0d1f62c5e191))
+
+
+## v0.3.1 (2021-11-02)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`29fc1da`](https://github.com/anaticulae/smarty/commit/29fc1dafce8342c8c74222709be95952ca6c8a77))
+
+- **resources**: Cleanup resource generator
+  ([`26a4305`](https://github.com/anaticulae/smarty/commit/26a4305c3a42f5b72116cce86c1da7d3b6adc973))
+
+### Refactoring
+
+- **remove**: Remove words dependency
+  ([`92d7ae1`](https://github.com/anaticulae/smarty/commit/92d7ae15d5340ebc0bc95fc75131b8f0f68c347c))
+
+
+## v0.3.0 (2021-09-24)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`01c7667`](https://github.com/anaticulae/smarty/commit/01c7667075c537b5c8b4dd260efed1f1c918e181))
+
+- **resources**: Shrink resource generator
+  ([`a904402`](https://github.com/anaticulae/smarty/commit/a90440266457ba028678aa7f4c6212e3fe8ff61f))
+
+- **resources**: Use base feature
+  ([`23f454e`](https://github.com/anaticulae/smarty/commit/23f454e0ee617da94281a2eb6324b8f6a681297c))
+
+- **setup**: Cleanup setup file
+  ([`dcaf3d2`](https://github.com/anaticulae/smarty/commit/dcaf3d26be74af83ef7c3708b3964a27646d03bd))
+
+### Code Style
+
+- **format**: Use improved formatter
+  ([`5e2a87e`](https://github.com/anaticulae/smarty/commit/5e2a87e2165f8441ae70f6ae9852666a83612987))
+
+### Features
+
+- **phrases**: Extend phrase list
+  ([`9d7d6b1`](https://github.com/anaticulae/smarty/commit/9d7d6b141eb4c6c5f6be0314c79cdca90da9fa73))
+
+- **pleonasma**: Add user advices
+  ([`15a62f8`](https://github.com/anaticulae/smarty/commit/15a62f8f7cac6c5e2fa4ebd9ba29b37dd1e8d7dc))
+
+
+## v0.2.1 (2021-03-11)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`8a014e1`](https://github.com/anaticulae/smarty/commit/8a014e12fb40adf60f8c8f220ea8b944c354879a))
+
+### Features
+
+- **phrases**: Add more phrases
+  ([`7a37a82`](https://github.com/anaticulae/smarty/commit/7a37a82b59057404dca6c485266b477e52954ed5))
+
+
+## v0.2.0 (2021-01-18)
 
 ### Documentation
 
-* Happy New Year! (5d19b3b89e32)
+- **copyright**: Happy New Year!
+  ([`5d19b3b`](https://github.com/anaticulae/smarty/commit/5d19b3b89e3215b7cf66a684435f0e4b5c7dd8ef))
 
-## v0.1.4
+### Features
 
-### Feature
+- **badwords**: Use process to improve speed
+  ([`75f568b`](https://github.com/anaticulae/smarty/commit/75f568b8580b56100fa1cfcd1048ffdb28a141db))
 
-* extends pleonasms (a55a1cc7ed17)
-* detect more phrases (55ebde499948)
-* add first draft of word improvement feature (7f8d677adc07)
-* extend phrases dictionary (e9f27d8e9048)
 
-## v0.1.3
+## v0.1.4 (2021-01-18)
 
-## v0.1.2
+### Chores
 
-## v0.1.1
+- **requirements**: Upgrade requirements.txt
+  ([`f6f4d20`](https://github.com/anaticulae/smarty/commit/f6f4d207772c5d7e62d556c64e7e9a218f0a40b6))
 
-## v0.1.0
+### Features
 
-### Feature
+- **badword**: Add first draft of word improvement feature
+  ([`7f8d677`](https://github.com/anaticulae/smarty/commit/7f8d677adc070956b1815e9396564fe0cd591a43))
 
-* convert phrases to bad word step (6b27994f7b54)
-* add not required prefix detector (ca8bacb80fb2)
-* add pleonasms detector (0327c5b2a700)
-* add method to determine count of questions (f3ee4cd367bf)
-* extend phrases list (526edb924c16)
-* add step to detect and dump phrases (4695b53816f3)
-* add phrases step (edbbbe166a4d)
-* add bad phrases detector (691ab0827cbb)
-* add method to count different words in text (806489c0d357)
-* add nomark flag to skip marks (656438da47ae)
-* add method to determine `fat ratio` for complete document (21c996045dc9)
-* add method to judge words and determine fat ratio (06bd7b0a85bf)
-* convert to sets to ease using (5c9d390022a6)
-* add list with fat words (53ee6fbb185a)
-* add basic some data from kornmeier (630c30cfe2e2)
+- **badwords**: Detect more phrases
+  ([`55ebde4`](https://github.com/anaticulae/smarty/commit/55ebde499948e669a69949804d2c8e6b57c51d74))
+
+- **badwords**: Extends pleonasms
+  ([`a55a1cc`](https://github.com/anaticulae/smarty/commit/a55a1cc7ed17f17b0e8b08b8f65311bcce626af5))
+
+- **phrases**: Extend phrases dictionary
+  ([`e9f27d8`](https://github.com/anaticulae/smarty/commit/e9f27d8e9048dae411cf6e49704764fb3d22d10f))
+
+
+## v0.1.3 (2021-01-04)
+
+### Chores
+
+- **requirements**: Do not release so often
+  ([`f8ad5eb`](https://github.com/anaticulae/smarty/commit/f8ad5eb40946bdd56359004643be8517df1be709))
+
+- **requirements**: Make requirement mandatory
+  ([`ca3de57`](https://github.com/anaticulae/smarty/commit/ca3de57c7ee03d4870a2b64df741b4fa41357cf2))
+
+- **requirements**: Upgrade requirements.txt
+  ([`7bdeb94`](https://github.com/anaticulae/smarty/commit/7bdeb941d68c85388b49e44808003a1f93e77c2d))
+
+
+## v0.1.2 (2020-12-09)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`0e8e79d`](https://github.com/anaticulae/smarty/commit/0e8e79db11baf84455cca0c85e9615e62571a475))
+
+
+## v0.1.1 (2020-12-04)
+
+### Chores
+
+- **requirements**: Upgrade requirements.txt
+  ([`21d4813`](https://github.com/anaticulae/smarty/commit/21d4813377c4350ab054c842470809c03a103ab9))
+
+
+## v0.1.0 (2020-12-04)
+
+### Chores
+
+- **requirements**: Add missing copyright header
+  ([`233d047`](https://github.com/anaticulae/smarty/commit/233d047880363e7f5cc9b9b361f731cd005be2fa))
+
+- **requirements**: Add sentence splitter
+  ([`f682d87`](https://github.com/anaticulae/smarty/commit/f682d870dcff514ccb80670958f75530117c6dff))
+
+- **requirements**: Add test data generator
+  ([`03be9a4`](https://github.com/anaticulae/smarty/commit/03be9a45497ddc0046e7b6b89810fb937e61ef7e))
+
+- **requirements**: Upgrade requirements.txt
+  ([`4439046`](https://github.com/anaticulae/smarty/commit/4439046e060c0b16aefb241171d648933b31d94e))
+
+- **test**: Extend test data generator
+  ([`f09e94c`](https://github.com/anaticulae/smarty/commit/f09e94cb602818177127cc075e8511976f312ac2))
+
+- **test**: Keep dev test fast
+  ([`d46548b`](https://github.com/anaticulae/smarty/commit/d46548ba704a8fd57904a93514990ff376065842))
+
+### Code Style
+
+- **imports**: Organize imports
+  ([`3d90942`](https://github.com/anaticulae/smarty/commit/3d909426288b615765f3fa83fabc2651fca7a13d))
 
 ### Documentation
 
-* add package overview (6f57b8a0e44b)
+- **overview**: Add package overview
+  ([`6f57b8a`](https://github.com/anaticulae/smarty/commit/6f57b8a0e44ba12eea8f391f7b104ceaee31c4ff))
 
-## v0.0.0 Initial release
+### Features
+
+- **bad**: Add basic some data from kornmeier
+  ([`630c30c`](https://github.com/anaticulae/smarty/commit/630c30cfe2e24d4170d69ba020c544bbb15db280))
+
+- **bad**: Add list with fat words
+  ([`53ee6fb`](https://github.com/anaticulae/smarty/commit/53ee6fbb185af5ef462d56c834c4ab567c6ae6e3))
+
+- **badword**: Add bad phrases detector
+  ([`691ab08`](https://github.com/anaticulae/smarty/commit/691ab0827cbb71b97df65f3c6c5200597a0c69b8))
+
+- **badword**: Add method to determine `fat ratio` for complete document
+  ([`21c9960`](https://github.com/anaticulae/smarty/commit/21c996045dc91af589a4359122eeba9a0e421856))
+
+- **badword**: Add method to judge words and determine fat ratio
+  ([`06bd7b0`](https://github.com/anaticulae/smarty/commit/06bd7b0a85bfebbc5f3f5af6da639e9a2f8eedbb))
+
+- **badword**: Add not required prefix detector
+  ([`ca8bacb`](https://github.com/anaticulae/smarty/commit/ca8bacb80fb2532dfab492688d0c1353c0376238))
+
+- **badwords**: Convert phrases to bad word step
+  ([`6b27994`](https://github.com/anaticulae/smarty/commit/6b27994f7b54edcbdfdf8e3297c50c485bee0af4))
+
+- **cli**: Add phrases step
+  ([`edbbbe1`](https://github.com/anaticulae/smarty/commit/edbbbe166a4d21c0e310067dd0594308a42d9a64))
+
+- **data**: Convert to sets to ease using
+  ([`5c9d390`](https://github.com/anaticulae/smarty/commit/5c9d390022a630d4c09d2531a2437912d406c9a7))
+
+- **phrases**: Add step to detect and dump phrases
+  ([`4695b53`](https://github.com/anaticulae/smarty/commit/4695b53816f34421a44d06d9f346d4ad1f618e5d))
+
+- **phrases**: Extend phrases list
+  ([`526edb9`](https://github.com/anaticulae/smarty/commit/526edb924c16710be592547ad436161af5bb2adb))
+
+- **pleonasms**: Add pleonasms detector
+  ([`0327c5b`](https://github.com/anaticulae/smarty/commit/0327c5b2a700ccda6142fcc0d2d3ffe6f3b15bd1))
+
+- **statistics**: Add method to count different words in text
+  ([`806489c`](https://github.com/anaticulae/smarty/commit/806489c0d35751d6bfe8810383f1370c102819ba))
+
+- **statistics**: Add method to determine count of questions
+  ([`f3ee4cd`](https://github.com/anaticulae/smarty/commit/f3ee4cd367bff3ee98beead596fe1c15e643e879))
+
+- **utils**: Add nomark flag to skip marks
+  ([`656438d`](https://github.com/anaticulae/smarty/commit/656438da47aed3b9336c1ab7498f22c7212bedb7))
+
+### Refactoring
+
+- **badword**: Move word collector to separate module
+  ([`f6df60d`](https://github.com/anaticulae/smarty/commit/f6df60d946a72bd9609f5c73db96da7010d8e44a))
+
+- **cli**: Remove cli package
+  ([`ede0499`](https://github.com/anaticulae/smarty/commit/ede0499731f3886a2fc8d970ecb8c2926abd1906))
+
+- **judge**: Avoid hiding scope
+  ([`18917f7`](https://github.com/anaticulae/smarty/commit/18917f7153e0d35bd2f46131d78bf598ed1a3367))
+
+- **move**: Move text load method
+  ([`d7a3ebc`](https://github.com/anaticulae/smarty/commit/d7a3ebc0f06e3a120c81dce091a61fecd735d41e))
+
+- **pleonasms**: Sort alphabetically
+  ([`8b1e648`](https://github.com/anaticulae/smarty/commit/8b1e6481325c3a145106cd957cf7b006108301ab))
+
+- **rename**: Avoid naming collision
+  ([`4d4f53d`](https://github.com/anaticulae/smarty/commit/4d4f53df9396029d24488fa16749cae6b437923e))
+
+### Testing
+
+- **cli**: Run smart help command
+  ([`e05d32c`](https://github.com/anaticulae/smarty/commit/e05d32c27e6704b8f19f7d00726405a898222913))
+
+- **fat**: Extend document fat ratio test
+  ([`12b7be2`](https://github.com/anaticulae/smarty/commit/12b7be2a3816a9e1538c4be9a4d2343789db6bff))
+
+
+## v0.0.0 (2020-10-12)
+
+- Initial Release
