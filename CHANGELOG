@@ -1,6 +1,28 @@
 # CHANGELOG
 
 
+## v1.7.1 (2026-08-04)
+
+### Bug Fixes
+
+- **smarty**: Load data
+  ([`c94318f`](https://github.com/anaticulae/smarty/commit/c94318fd027adbc69f6af21d5e3ec8cd3c0b678c))
+
+### Chores
+
+- **docker**: Add ghostscript for test data generator
+  ([`9a2e32d`](https://github.com/anaticulae/smarty/commit/9a2e32d8533a6fb5bf7f338e6f9c788b5e63c4be))
+
+- **make**: Add decryption step
+  ([`7458693`](https://github.com/anaticulae/smarty/commit/7458693dbfbf2ed074b4e392df0d02bd71287fa4))
+
+- **pyproject**: Do not fail on missing open cv
+  ([`eb9e813`](https://github.com/anaticulae/smarty/commit/eb9e813ab2529fa177d3171d350f84802ac64d6e))
+
+- **requirements**: Upgrade pyproject.toml
+  ([`3bc6eda`](https://github.com/anaticulae/smarty/commit/3bc6eda6560f91ceba63cae4e15a5c2951e6ad05))
+
+
 ## v1.7.0 (2026-08-03)
 
 ### Bug Fixes
