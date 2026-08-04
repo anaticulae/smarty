@@ -56,6 +56,8 @@ dev = [
     "titulum>=1.0.2,<2.0.0",
     "utilotest>=1.0.5,<2.0.0",
     "verbo>=1.23.4,<2.0.0",
+    # remove later
+    "layouta>=1.1.0,<2.0.0",
 ]
 
 [project.urls]
