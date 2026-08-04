@@ -107,6 +107,9 @@ NUMBERS = utilo.splititems(
 
 PRONOMS = utilo.splititems('MEIN MEINER DEIN DEINER IHR IHRER SEIN SEINER')
 
+# load lazy
+from analp import STEMMER  # pylint:disable=C0413,E0611,C0411,W0611
+
 SKIP = ARTICLES | NUMBERS | PRONOMS | analp.stopwords()
 
 INVALIDS = ',;:!?=()[]{}'
